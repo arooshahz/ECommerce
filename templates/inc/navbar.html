@@ -1,8 +1,94 @@
+{% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <div class="navbar-nav">
-            <a class="nav-link active" href="{% url 'home:home' %}">Home</a>
+<nav class="navbar" style="padding-top: 0">
+  <div class="header">
+    <div class="search">
+      <div id="logo">
+        <label for="search">
+          <input type="text" name="search" placeholder="جستجوی محصولات" />
+        </label>
+        <img src="{% static 'images/Group.png' %}" alt="logo" />
+      </div>
+      <div id="login">
+        <div>
+          <span>2</span>
+          <img src="{% static 'images/cart.png' %}" alt="cart" />
         </div>
+        <button>
+          ورود/ثبت نام <img src="{% static 'images/Vector.png' %}" />
+        </button>
+      </div>
     </div>
+    <div class="menu">
+      <div id="items">
+        <ul id="main">
+          <li id="home">صفحه اصلی</li>
+          <li>
+            <div class="dropdown">
+              <p
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                دسته بندی کالاها
+                <img
+                  width="15"
+                  height="15"
+                  src="https://img.icons8.com/ios-filled/15/expand-arrow--v1.png"
+                  alt="expand-arrow--v1"
+                />
+              </p>
+              <ul
+                id="dropdown"
+                class="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <div>
+                  <li class="main-category">
+                    <img
+                      width="15"
+                      height="15"
+                      src="https://img.icons8.com/material-rounded/15/sort-down.png"
+                      alt="sort-down"
+                    />
+                    البسه
+                  </li>
+                  <li>گان جراحی</li>
+                  <li>لباس بیمارستانی بیمار</li>
+                </div>
+                <div>
+                  <li class="main-category">
+                    <img
+                      width="15"
+                      height="15"
+                      src="https://img.icons8.com/material-rounded/15/sort-down.png"
+                      alt="sort-down"
+                    />
+                    کلاه
+                  </li>
+                  <li>کلاه جراح</li>
+                  <li>کلاه آکاردئونی</li>
+                  <li>کلاه بیمار</li>
+                </div>
+              </ul>
+            </div>
+          </li>
+          <li>همه محصولات</li>
+          <li>درباره ما</li>
+          <li>تخفیفات ویژه</li>
+        </ul>
+      </div>
+      <div id="favourit">
+        <div>
+          <span>0</span>
+          <img src="{% static 'images/fav.png' %}" alt="favourit" />
+        </div>
+        <div>
+          <p>محصولات مورد علاقه</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>

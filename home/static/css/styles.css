@@ -1,0 +1,210 @@
+.header {
+  width: 100%;
+  height: 176px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 71%;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 55px;
+}
+
+.search div#logo {
+  width: 50%;
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.search div#logo label {
+  position: relative;
+  width: 80%;
+}
+
+.search div#logo label::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 10px;
+  bottom: 0;
+  width: 24px;
+  background: url("https://img.icons8.com/ios-filled/24/search--v1.png");
+  background-repeat: no-repeat;
+}
+
+.search div#logo input[type="text"] {
+  width: 100%;
+  padding: 10px 19px;
+  background-color: #ecf4fa;
+  border: none;
+  border-radius: 10px;
+}
+
+.search div#login {
+  width: 12%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.search div#login div {
+  position: relative;
+}
+
+.search div#login div span {
+  position: absolute;
+  background-color: #00999a;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -7px;
+  top: 3px;
+}
+
+.search div#login button {
+  border-radius: 30px;
+  border-width: 1px;
+  border-color: #b7b7b7;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 70%;
+  height: 100%;
+  padding-left: 14px;
+  padding-right: 14px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.menu {
+  background-color: #ecf4fa;
+  height: 29%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 55px;
+}
+
+.menu div#items {
+  width: 52%;
+}
+
+.menu div#items ul#main {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #505051;
+}
+.menu div#items ul#main li#home {
+  color: #008384;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.menu div#items ul#dropdown {
+  background-color: #fbfbfb;
+  border-radius: 15px;
+  padding: 16px 25px;
+  width: 350px;
+  height: 230px;
+}
+
+.menu div#items .dropdown-menu.show {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.menu div#items ul#dropdown li.main-category {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  padding-right: 0;
+}
+
+.menu div#items ul#dropdown li {
+  padding-right: 20px;
+  color: #5b5b5b;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.menu div#items .dropdown-toggle::after {
+  display: none;
+}
+.menu div#items .dropdown-toggle {
+  padding: 0;
+  margin: 0;
+}
+
+.menu div#favourit {
+  width: 12%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu div#favourit div {
+  position: relative;
+}
+
+.menu div#favourit div span {
+  position: absolute;
+  background-color: #00999a;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  color: white;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -7px;
+  top: 3px;
+}
+
+.menu div#favourit p {
+  color: #464646;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+}
+
+.banner {
+  padding: 50px 80px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
