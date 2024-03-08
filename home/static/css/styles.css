@@ -104,6 +104,10 @@ body {
   background-color: #b7b7b7;
 }
 
+.search div#login p {
+  color: #008384;
+}
+
 .menu {
   background-color: #ecf4fa;
   height: 29%;
