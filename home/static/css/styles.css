@@ -56,10 +56,10 @@ body {
 }
 
 .search div#login {
-  width: 12%;
+  width: 24%;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row-reverse;
 }
 
@@ -90,7 +90,7 @@ body {
   justify-content: space-around;
   align-items: center;
   display: flex;
-  width: 70%;
+  width: 40%;
   height: 100%;
   padding-left: 14px;
   padding-right: 14px;
@@ -106,6 +106,11 @@ body {
 
 .search div#login p {
   color: #008384;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 
 .menu {
@@ -222,6 +227,20 @@ body {
   top: 3px;
 }
 
+.menu div#favourit button#language {
+  border-width: 1px;
+  border-color: #b7b7b7;
+  border-radius: 25px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
 .menu div#favourit p {
   color: #464646;
   font-size: 17px;
@@ -242,6 +261,52 @@ body {
   width: 100%;
   height: 100%;
 }
+.categories h1 {
+  color: #009a9b;
+  font-size: 30px;
+  line-height: 46px;
+  font-weight: 600;
+  text-align: center;
+}
+.categories div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.categories div div {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2) 1%,
+    rgba(0, 0, 0, 0) 53%
+  );
+  height: 300px;
+  width: 25%;
+  border-radius: 50px;
+  transition: background 0.5s ease;
+  display: inline-block;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.categories div div img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+.categories div div img:hover {
+  transform: scale(1.2);
+}
+
+.categories div div:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2) 100%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -260,24 +325,32 @@ body {
   }
   .search div#logo,
   .menu div#items {
-    width: 65%;
+    width: 60%;
   }
-  .search div#login,
+  .search div#login {
+    width: 36%;
+    justify-content: space-between;
+  }
+  .search div#login button {
+    width: 45%;
+  }
   .menu div#favourit {
-    width: 22%;
+    width: 35%;
+    justify-content: space-around;
   }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .search div#login {
-    width: 20%;
+    width: 32%;
+    justify-content: space-between;
   }
   .search div#login button {
-    width: 65%;
+    width: 42%;
   }
   .menu div#favourit {
-    width: 20%;
+    width: 32%;
   }
   .search,
   .menu {
@@ -286,20 +359,22 @@ body {
   }
   .search div#logo,
   .menu div#items {
-    width: 50%;
+    width: 53%;
   }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
   .search div#login {
-    width: 16%;
+    width: 27%;
+    justify-content: space-between;
   }
   .search div#login button {
-    width: 70%;
+    width: 41%;
   }
   .menu div#favourit {
-    width: 16%;
+    width: 27%;
+    justify-content: space-around;
   }
   .search div#logo,
   .menu div#items {
@@ -314,13 +389,14 @@ body {
 
 @media (min-width: 1600px) {
   .search div#login {
-    width: 14%;
+    width: 24%;
   }
   .search div#login button {
-    width: 65%;
+    width: 40%;
   }
   .menu div#favourit {
-    width: 14%;
+    width: 22%;
+    justify-content: space-around;
   }
   .search div#logo,
   .menu div#items {
