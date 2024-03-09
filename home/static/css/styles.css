@@ -61,6 +61,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row-reverse;
+  height: 100%;
 }
 
 .search div#login div {
