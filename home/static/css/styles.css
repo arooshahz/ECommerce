@@ -8,6 +8,25 @@ body {
   background-color: #f9f9f9;
 }
 
+.offcanvas-footer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.offcanvas-footer div {
+  width: 20%;
+  height: 100%;
+}
+
+.offcanvas-footer div img {
+  width: 80%;
+  height: 80%;
+}
+
+#hamber-button {
+  font-size: 2.5rem;
+}
+
 .carousel-control-next-icon {
   background-image: url(https://icons8.com/icon/86517/forward);
 }
@@ -555,12 +574,39 @@ body {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .search div#login {
+    display: none;
+  }
+  .menu div#favourit {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .header {
+    height: 140px;
+  }
+  .search {
+    height: 100%;
+    padding-left: 70px;
+    padding-right: 35px;
+  }
+  .search div#logo label::before {
+    top: 20px;
+  }
+  .search div#logo input[type="text"] {
+    height: 100%;
+    font-size: 25px;
+  }
+  #logo img {
+    height: 100%;
+  }
   .search div#logo {
-    width: 53%;
+    width: 63%;
   }
   .search div#logo label {
     width: 70%;
@@ -572,7 +618,7 @@ body {
     align-items: flex-start;
   }
   .menu div div#items {
-    margin-right: 15px;
+    display: none;
   }
   .menu div div#items ul#main {
     align-items: flex-start;
@@ -613,11 +659,34 @@ body {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .header {
+    height: 176px;
+  }
+  .search {
+    height: 71%;
+  }
+  #hamber-button {
+    display: none;
+  }
+  .search div#logo label::before {
+    top: 10px;
+  }
+  .search div#logo input[type="text"] {
+    height: 100%;
+    font-size: inherit;
+  }
   .search,
   .menu {
     padding-left: 60px;
     padding-right: 40px;
     align-items: center;
+  }
+  .menu {
+    display: flex;
+  }
+
+  .menu div div#items {
+    display: block;
   }
   .search div#logo,
   .menu div#hamber {
@@ -628,6 +697,7 @@ body {
     width: 80%;
   }
   .search div#login {
+    display: flex;
     width: 36%;
     justify-content: space-between;
   }
@@ -635,6 +705,7 @@ body {
     width: 45%;
   }
   .menu div#favourit {
+    display: flex;
     width: 35%;
     justify-content: space-around;
   }
