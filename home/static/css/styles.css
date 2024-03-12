@@ -571,6 +571,10 @@ body {
     width: 35%;
     justify-content: space-around;
   }
+  .most-sell div div.ms-container {
+    height: 410px;
+  }
+
   .most-sell div.ms-maincontainer div.ms-container:hover p {
     width: 70%;
   }
@@ -623,6 +627,19 @@ body {
   .search div#logo label {
     width: 80%;
   }
+  .most-sell div div.ms-container {
+    height: 460px;
+  }
+  .most-sell div.ms-maincontainer div.ms-container:hover p {
+    width: 55%;
+  }
+  .most-sell div.ms-maincontainer div.ms-container:hover div.ms-totalprice p {
+    font-size: 14px;
+    width: 100%;
+  }
+  .most-sell div.ms-maincontainer div.ms-container:hover .ms-rate .star {
+    font-size: 22px;
+  }
   .most-sell div div p {
     width: 55%;
   }
@@ -666,6 +683,7 @@ body {
     padding-top: 0;
     align-items: center;
   }
+
   .most-sell div div p {
     width: 55%;
   }
@@ -709,6 +727,17 @@ body {
     padding-bottom: 0;
     padding-top: 0;
     align-items: center;
+  }
+
+  .most-sell div.ms-maincontainer div.ms-container:hover p {
+    width: 45%;
+  }
+  .most-sell div.ms-maincontainer div.ms-container:hover div.ms-totalprice p {
+    font-size: 17px;
+    width: 100%;
+  }
+  .most-sell div.ms-maincontainer div.ms-container:hover .ms-rate .star {
+    font-size: 25px;
   }
   .most-sell div div p {
     width: 45%;
