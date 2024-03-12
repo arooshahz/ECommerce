@@ -8,6 +8,33 @@ body {
   background-color: #f9f9f9;
 }
 
+.carousel-control-next-icon {
+  background-image: url(https://icons8.com/icon/86517/forward);
+}
+.carousel-control-prev-icon {
+  background-image: url(https://icons8.com/icon/86517/forward);
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  position: absolute;
+  top: 268px;
+  right: -5px;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: transparent;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
 .header {
   width: 100%;
   height: 176px;
@@ -274,6 +301,21 @@ body {
 
 .banner {
   padding: 50px 80px;
+}
+
+.banner #banner {
+  width: 100%;
+  height: 100%;
+  background-color: #090042;
+  display: flex;
+  justify-content: center;
+}
+
+.banner #banner h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  color: #ffffff;
 }
 
 .banner img {
