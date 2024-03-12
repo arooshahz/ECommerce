@@ -571,6 +571,25 @@ body {
     width: 35%;
     justify-content: space-around;
   }
+  .most-sell div.ms-maincontainer div.ms-container:hover p {
+    width: 70%;
+  }
+  .most-sell div.ms-maincontainer div.ms-container:hover div.ms-totalprice p {
+    font-size: 12px;
+    width: 100%;
+  }
+  .most-sell div.ms-maincontainer div.ms-container:hover .ms-rate .star {
+    font-size: 18px;
+  }
+  .most-sell div div p {
+    width: 60%;
+  }
+  .most-sell div.ms-price div div.ms-totalprice p {
+    font-size: 13px;
+  }
+  .ms-rate .star {
+    font-size: 20px;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -603,6 +622,15 @@ body {
   }
   .search div#logo label {
     width: 80%;
+  }
+  .most-sell div div p {
+    width: 55%;
+  }
+  .most-sell div.ms-price div div.ms-totalprice p {
+    font-size: 14px;
+  }
+  .ms-rate .star {
+    font-size: 22px;
   }
 }
 
@@ -638,6 +666,18 @@ body {
     padding-top: 0;
     align-items: center;
   }
+  .most-sell div div p {
+    width: 55%;
+  }
+  .most-sell div div p {
+    width: 55%;
+  }
+  .most-sell div.ms-price div div.ms-totalprice p {
+    font-size: 14px;
+  }
+  .ms-rate .star {
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -669,5 +709,14 @@ body {
     padding-bottom: 0;
     padding-top: 0;
     align-items: center;
+  }
+  .most-sell div div p {
+    width: 45%;
+  }
+  .most-sell div.ms-price div div.ms-totalprice p {
+    font-size: 17px;
+  }
+  .ms-rate .star {
+    font-size: 25px;
   }
 }
