@@ -5,6 +5,7 @@
 
 body {
   font-family: "vazirmatn";
+  background-color: #f9f9f9;
 }
 
 .header {
@@ -300,8 +301,8 @@ body {
     rgba(0, 0, 0, 0.2) 1%,
     rgba(0, 0, 0, 0) 53%
   );
-  height: 300px;
-  width: 25%;
+  height: 270px;
+  width: 20%;
   border-radius: 50px;
   transition: background 0.5s ease;
   display: inline-block;
@@ -324,6 +325,153 @@ body {
     rgba(0, 0, 0, 0.2) 100%,
     rgba(0, 0, 0, 0) 100%
   );
+}
+
+.most-sell h2 {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 55px;
+  color: #455568;
+  margin-bottom: 30px;
+}
+
+.most-sell div.ms-maincontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.most-sell div div.ms-container {
+  width: 22%;
+  height: 459px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.most-sell div div.ms-container div.ms-options {
+  box-shadow: 0px 0px 4px 0px #00000040;
+  width: 59px;
+  height: 148px;
+  border-radius: 10px;
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffffff;
+  display: none;
+}
+.most-sell div div.ms-container div.ms-options div img {
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+.most-sell div div.ms-container:hover {
+  box-shadow: 0px 0px 10px 0px #29292926;
+  border-radius: 30px;
+  padding: 20px 10px;
+}
+
+.most-sell div div.ms-container:hover div.ms-options {
+  display: flex;
+}
+
+.most-sell div div.ms-container:hover div.ms-shadow {
+  box-shadow: none;
+}
+
+.most-sell div.ms-shadow {
+  box-shadow: 0px 0px 10px 0px #3434341a;
+  width: 100%;
+  border-radius: 30px;
+  height: 55%;
+  transition: 0.5s ease;
+}
+
+.most-sell div div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.most-sell div div p {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 700;
+  width: 45%;
+  color: #434343;
+}
+
+.most-sell div.ms-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+
+.most-sell div.ms-price div {
+  width: 35%;
+}
+.most-sell div.ms-price div div.ms-discount {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.most-sell div.ms-price div div.ms-discount s {
+  color: #7d7d7d;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.most-sell div.ms-price div div.ms-discount div {
+  background-color: #006a6a;
+  border-radius: 20px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.most-sell div.ms-price div div.ms-discount div span {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.most-sell div.ms-price div div.ms-totalprice {
+  width: 100%;
+  text-align: end;
+}
+
+.most-sell div.ms-price div div.ms-totalprice p {
+  width: 100%;
+  color: #006a6a;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.most-sell div div.ms-container button {
+  background-color: #008384;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  height: 10%;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -374,6 +522,9 @@ body {
     width: 60%;
     align-items: center;
   }
+  .search div#logo label {
+    width: 80%;
+  }
   .search div#login {
     width: 36%;
     justify-content: space-between;
@@ -415,6 +566,9 @@ body {
     width: 53%;
     align-items: center;
   }
+  .search div#logo label {
+    width: 80%;
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
@@ -434,6 +588,9 @@ body {
   .menu div#hamber {
     width: 50%;
     align-items: center;
+  }
+  .search div#logo label {
+    width: 80%;
   }
   .search,
   .menu {
@@ -463,6 +620,9 @@ body {
   .menu div#hamber {
     width: 50%;
     align-items: center;
+  }
+  .search div#logo label {
+    width: 80%;
   }
   .search,
   .menu {
