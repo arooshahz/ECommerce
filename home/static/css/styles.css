@@ -415,7 +415,42 @@ body {
   flex-direction: row-reverse;
 }
 
-.most-sell div.ms-price div {
+.ms-rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+  width: 65%;
+}
+.ms-rate .star {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.ms-rate .checked {
+  color: #ffc700;
+}
+
+.ms-rate .one {
+  color: #ffc700;
+}
+
+.ms-rate .two {
+  color: #ffc700;
+}
+
+.ms-rate .three {
+  color: #ffc700;
+}
+
+.ms-rate .four {
+  color: #ffc700;
+}
+
+.ms-rate .five {
+  color: #ffc700;
+}
+
+.most-sell div.ms-price div.ms-payable {
   width: 35%;
 }
 .most-sell div.ms-price div div.ms-discount {
