@@ -458,6 +458,7 @@ body {
   flex-direction: row-reverse;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .most-sell div.ms-price div div.ms-discount s {
@@ -475,6 +476,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px;
 }
 
 .most-sell div.ms-price div div.ms-discount div span {
@@ -542,6 +544,29 @@ body {
     padding-bottom: 10px;
     padding-top: 10px;
   }
+  .most-sell div.ms-maincontainer {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .most-sell div div.ms-container {
+    width: 45%;
+  }
+  .most-sell div div p {
+    font-size: 19px;
+    width: 60%;
+  }
+  .most-sell div.ms-price div div.ms-discount div span {
+    font-size: 17px;
+  }
+  .most-sell div.ms-price div div.ms-discount s {
+    font-size: 16px;
+  }
+  .most-sell div.ms-price div div.ms-totalprice p {
+    font-size: 20px;
+  }
+  .most-sell div div.ms-container button {
+    font-size: 20px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -586,13 +611,34 @@ body {
     font-size: 18px;
   }
   .most-sell div div p {
-    width: 60%;
+    width: 65%;
+    font-size: 14px;
   }
   .most-sell div.ms-price div div.ms-totalprice p {
     font-size: 13px;
   }
   .ms-rate .star {
     font-size: 20px;
+  }
+  .most-sell div.ms-maincontainer {
+    flex-wrap: nowrap;
+    gap: 0px;
+  }
+  .most-sell div div.ms-container {
+    width: 22%;
+  }
+
+  .most-sell div.ms-price div div.ms-discount div span {
+    font-size: 12px;
+  }
+  .most-sell div.ms-price div div.ms-discount s {
+    font-size: 12px;
+  }
+  .most-sell div.ms-price div div.ms-totalprice p {
+    font-size: 13px;
+  }
+  .most-sell div div.ms-container button {
+    font-size: 14px;
   }
 }
 
@@ -644,7 +690,7 @@ body {
     width: 55%;
   }
   .most-sell div.ms-price div div.ms-totalprice p {
-    font-size: 14px;
+    font-size: 15px;
   }
   .ms-rate .star {
     font-size: 22px;
@@ -685,7 +731,7 @@ body {
   }
 
   .most-sell div div p {
-    width: 55%;
+    width: 50%;
   }
   .most-sell div div p {
     width: 55%;
