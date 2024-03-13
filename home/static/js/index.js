@@ -21,3 +21,13 @@ function remove() {
     i++;
   }
 }
+
+// function changeLang(language) {
+//   document.getElementById("lang").children[2].value = language.code;
+//   document.getElementById("lang").submit();
+//   if (language.code === "fa") {
+//     document.getRootNode().children[0].dir = "rtl";
+//   } else {
+//     document.getRootNode().children[0].dir = "ltr";
+//   }
+// }

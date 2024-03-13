@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en" dir="rtl">
+{% load static %} {% load i18n %} {% get_current_language as LANGUAGE_CODE %} 
+{% load set_var %}
+{% if LANGUAGE_CODE == 'en' %} 
+   {% set dir = "ltr" %} 
+   {% set test = "test" %}
+{% else %} 
+   {% set dir = "rtl" %} 
+{% endif %}
+
+<html lang="en" dir={{dir}}>
   <head>
     <meta charset="UTF-8" />
     <title>Online Shop</title>
