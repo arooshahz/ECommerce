@@ -28,6 +28,13 @@
           class="d-block w-100"
           alt="..."
         />
+        <div id="offers-banner">
+          <h1>جدیدترین تخفیفات در اینجا</h1>
+          <button>
+            مشاهده محصولات
+            <img src="{% static 'images/arrowUL.png' %}" alt="" />
+          </button>
+        </div>
       </div>
     </div>
     <button
@@ -53,11 +60,21 @@
 <div class="categories">
   <h1>دسته بندی محصولات</h1>
   <div>
-    <div id="c-one"><img src="{% static 'images/c-one.png' %}" alt="" /></div>
-    <div id="c-two"><img src="{% static 'images/c-two.png' %}" alt="" /></div>
-    <div id="c-four"><img src="{% static 'images/cat4.png' %}" alt="" /></div>
+    <div id="c-one">
+      <img src="{% static 'images/c-one.png' %}" alt="" />
+      <h2 class="category-name">لباس بیمارستانی</h2>
+    </div>
+    <div id="c-two">
+      <img src="{% static 'images/c-two.png' %}" alt="" />
+      <h2 class="category-name">روپوش پزشکی</h2>
+    </div>
+    <div id="c-four">
+      <img src="{% static 'images/cat4.png' %}" alt="" />
+      <h2 class="category-name">تجهیزات جراحی</h2>
+    </div>
     <div id="c-three">
       <img src="{% static 'images/c-three.png' %}" alt="" />
+      <h2 class="category-name">انواع کلاه</h2>
     </div>
   </div>
 </div>

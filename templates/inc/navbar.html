@@ -1,6 +1,10 @@
 {% load static %} {% load i18n %}
 
 <nav class="navbar navbar-expand-lg sidenav" style="padding-top: 0">
+  {% get_current_language as LANGUAGE_CODE %}
+  {% get_language_info for LANGUAGE_CODE as lang %} 
+  {% get_available_languages as LANGUAGES %} 
+  {% get_language_info_list for LANGUAGES as languages %}
   <div class="header">
     <div class="search">
       <button
@@ -52,7 +56,7 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                {% trans "دسته بندی کالاها" %}
+                  {% trans "دسته بندی کالاها" %}
                   <img
                     width="20"
                     height="20"
@@ -65,55 +69,97 @@
                   class="dropdown-menu dropdown-menu-end"
                   aria-labelledby="dropdownMenuButton1"
                 >
-                <div>
-                  <li class="main-category">
-                    <img
-                      width="20"
-                      height="20"
-                      src="https://img.icons8.com/material-rounded/20/sort-down.png"
-                      alt="sort-down"
-                    />
-                    {% trans "البسه" %}
-                  </li>
-                  <li>{% trans "گان جراحی" %}</li>
-                  <li>{% trans "لباس بیمارستانی بیمار" %}</li>
-                </div>
-                <div>
-                  <li class="main-category">
-                    <img
-                      width="20"
-                      height="20"
-                      src="https://img.icons8.com/material-rounded/20/sort-down.png"
-                      alt="sort-down"
-                    />
-                    {% trans "کلاه" %}
-                  </li>
-                  <li>{% trans "کلاه جراح" %}</li>
-                  <li>{% trans "کلاه آکاردئونی" %}</li>
-                  <li>{% trans "کلاه بیمار" %}</li>
-                </div>
-              </ul>
-            </div>
-          </li>
-          <li>{% trans "همه محصولات" %}</li>
-          <li>{% trans "درباره ما" %}</li>
-          <li>{% trans "تخفیفات ویژه" %}</li>
-        </ul>
+                  <div>
+                    <li class="main-category">
+                      <img
+                        width="20"
+                        height="20"
+                        src="https://img.icons8.com/material-rounded/20/sort-down.png"
+                        alt="sort-down"
+                      />
+                      {% trans "البسه" %}
+                    </li>
+                    <li>{% trans "گان جراحی" %}</li>
+                    <li>{% trans "لباس بیمارستانی بیمار" %}</li>
+                  </div>
+                  <div>
+                    <li class="main-category">
+                      <img
+                        width="20"
+                        height="20"
+                        src="https://img.icons8.com/material-rounded/20/sort-down.png"
+                        alt="sort-down"
+                      />
+                      {% trans "کلاه" %}
+                    </li>
+                    <li>{% trans "کلاه جراح" %}</li>
+                    <li>{% trans "کلاه آکاردئونی" %}</li>
+                    <li>{% trans "کلاه بیمار" %}</li>
+                  </div>
+                </ul>
+              </div>
+            </li>
+            <li>{% trans "همه محصولات" %}</li>
+            <li>{% trans "درباره ما" %}</li>
+            <li>{% trans "تخفیفات ویژه" %}</li>
+          </ul>
         </div>
         <div class="offcanvas-footer">
           <div><img src="{% static 'images/Vector.png' %}" /></div>
           <div>
             <img src="{% static 'images/fav.png' %}" alt="favourit" />
           </div>
-          <div>
-            <img src="{% static 'images/lang.png' %}" alt="" />
+
+          <div class="btn-group dropup" id="lang-container">
+            <form
+              style="width: 100%;"
+              name="language"
+              id="lang"
+              action="{% url 'set_language' %}"
+              method="post"
+            >
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ redirect_to }}" />
+              <input name="language" type="hidden" />
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="language"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="true"
+                aria-expanded="false"
+                style="width: 100%; height: 100%"
+              >
+                <img src="{% static 'images/lang.png' %}" alt="" />
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                {% for language in languages %}
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick=" document.getElementById('lang').children[2].value ='{{language.code}}';
+                      document.getElementById('lang').submit();"
+                    >{{ language.name_local }}</a
+                  >
+                </li>
+                {% endfor %}
+              </ul>
+            </form>
           </div>
           <div><img src="{% static 'images/cart.png' %}" alt="cart" /></div>
         </div>
       </div>
       <div id="logo">
-        <label for="search" class="{% if LANGUAGE_CODE == 'en' %}right19{% endif %}">
-          <input type="text" name="search" placeholder="{% trans 'جستجوی محصولات' %}"/>
+        <label
+          for="search"
+          class="{% if LANGUAGE_CODE == 'en' %}right19{% endif %}"
+        >
+          <input
+            type="text"
+            name="search"
+            placeholder="{% trans 'جستجوی محصولات' %}"
+          />
         </label>
         <img src="{% static 'images/Group.png' %}" alt="logo" />
       </div>
@@ -123,7 +169,8 @@
           <img src="{% static 'images/cart.png' %}" alt="cart" />
         </div>
         <button>
-          {% trans "ورود/ثبت نام" %} <img src="{% static 'images/Vector.png' %}" />
+          {% trans "ورود/ثبت نام" %}
+          <img src="{% static 'images/Vector.png' %}" />
         </button>
         <p>{% trans "درخواست خرید عمده" %}</p>
       </div>
@@ -142,7 +189,7 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                {% trans "دسته بندی کالاها" %}
+                  {% trans "دسته بندی کالاها" %}
                   <img
                     width="15"
                     height="15"
@@ -191,9 +238,7 @@
           </ul>
         </div>
       </div>
-      {% get_current_language as LANGUAGE_CODE %} 
-      {% get_language_info for LANGUAGE_CODE as lang %} {%get_available_languages as LANGUAGES %} 
-      {% get_language_info_list for LANGUAGES as languages %}
+
       <div id="favourit">
         <div class="btn-group" id="lang-container">
           <form
@@ -230,7 +275,6 @@
                   href="#"
                   onclick=" document.getElementById('lang').children[2].value ='{{language.code}}';
                   document.getElementById('lang').submit();"
-
                   >{{ language.name_local }}</a
                 >
               </li>
