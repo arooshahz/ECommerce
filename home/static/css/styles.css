@@ -83,6 +83,7 @@ body {
 .header {
   width: 100%;
   height: 176px;
+  background-color: #ffffff;
 }
 
 .search {
@@ -477,7 +478,12 @@ ul#dropdown-side .main-category {
   font-weight: 600;
   text-align: center;
 }
-.categories div {
+
+.categories div.overflow {
+  overflow-x: scroll;
+}
+
+.categories div.overflow div {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -485,7 +491,7 @@ ul#dropdown-side .main-category {
   margin-top: 50px;
 }
 
-.categories div div {
+.categories div.overflow div div {
   position: relative;
   background: linear-gradient(
     0deg,
@@ -501,16 +507,16 @@ ul#dropdown-side .main-category {
   display: flex;
   flex-direction: column;
 }
-.categories div div img {
+.categories div.overflow div div img {
   width: 100%;
   height: 100%;
   transition: transform 0.5s ease;
 }
-.categories div div img:hover {
+.categories div.overflow div div img:hover {
   transform: scale(1.2);
 }
 
-.categories div div:hover {
+.categories div.overflow div div:hover {
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.2) 100%,
@@ -702,12 +708,89 @@ ul#dropdown-side .main-category {
   height: 10%;
 }
 
+.our-customers {
+  margin-top: 95px;
+  margin-bottom: 105px;
+}
+
+.our-customers h1 {
+  color: #455568;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-bottom: 22px;
+}
+
+.our-customers div.overflow {
+  position: relative;
+  width: 100vw;
+  height: 17rem;
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+.our-customers div.overflow div {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.our-customers div.overflow div img {
+  width: 9%;
+}
+
+.primary {
+  animation: primary 20s linear infinite;
+  left: 0%;
+}
+
+.secondary {
+  animation: secondary 20s linear infinite;
+  left: 100%;
+}
+
+@keyframes primary {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes secondary {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
     max-width: 90%;
     margin-left: 50px;
     margin-right: 50px;
+  }
+
+  .categories div.overflow {
+    overflow-x: scroll;
+  }
+
+  .our-customers div.overflow div {
+    width: 100%;
+  }
+  .categories div.overflow div {
+    width: 150%;
+  }
+
+  .categories .category-name {
+    font-size: 32px;
   }
   .search div#login {
     display: none;
@@ -739,6 +822,36 @@ ul#dropdown-side .main-category {
   }
   .banner #offers-banner h1 {
     font-size: 25px;
+  }
+  .our-customers div.overflow div img {
+    width: 30%;
+  }
+  .primary {
+    animation: primary 20s linear infinite;
+    left: 0%;
+  }
+
+  .secondary {
+    animation: secondary 20s linear infinite;
+    left: 100%;
+  }
+
+  @keyframes primary {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -232%;
+    }
+  }
+
+  @keyframes secondary {
+    from {
+      left: 232%;
+    }
+    to {
+      left: 0%;
+    }
   }
 }
 
@@ -820,6 +933,15 @@ ul#dropdown-side .main-category {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .our-customers div.overflow div {
+    width: 100%;
+  }
+  .categories div.overflow div {
+    width: 100%;
+  }
+  .categories .category-name {
+    font-size: 18px;
   }
   .banner {
     padding: 50px 80px;
@@ -934,6 +1056,36 @@ ul#dropdown-side .main-category {
     font-size: 40px;
     width: 50%;
   }
+  .our-customers div.overflow div img {
+    width: 25%;
+  }
+  .primary {
+    animation: primary 20s linear infinite;
+    left: 0%;
+  }
+
+  .secondary {
+    animation: secondary 20s linear infinite;
+    left: 100%;
+  }
+
+  @keyframes primary {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -210%;
+    }
+  }
+
+  @keyframes secondary {
+    from {
+      left: 210%;
+    }
+    to {
+      left: 0%;
+    }
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -991,6 +1143,36 @@ ul#dropdown-side .main-category {
   }
   .ms-rate .star {
     font-size: 22px;
+  }
+  .our-customers div.overflow div img {
+    width: 15%;
+  }
+  .primary {
+    animation: primary 20s linear infinite;
+    left: 0%;
+  }
+
+  .secondary {
+    animation: secondary 20s linear infinite;
+    left: 100%;
+  }
+
+  @keyframes primary {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -130%;
+    }
+  }
+
+  @keyframes secondary {
+    from {
+      left: 130%;
+    }
+    to {
+      left: 0%;
+    }
   }
 }
 
@@ -1093,5 +1275,33 @@ ul#dropdown-side .main-category {
   }
   .ms-rate .star {
     font-size: 25px;
+  }
+  .our-customers div.overflow div img {
+    width: 9%;
+  }
+  .primary {
+    animation: primary 20s linear infinite;
+  }
+
+  .secondary {
+    animation: secondary 20s linear infinite;
+  }
+
+  @keyframes primary {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -100%;
+    }
+  }
+
+  @keyframes secondary {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0%;
+    }
   }
 }

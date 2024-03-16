@@ -1,6 +1,6 @@
 {% load static %} {% load i18n %}
 
-<nav class="navbar navbar-expand-lg sidenav" style="padding-top: 0">
+<nav class="navbar navbar-expand-lg sidenav fixed-top" style="padding-top: 0">
   {% get_current_language as LANGUAGE_CODE %}
   {% get_language_info for LANGUAGE_CODE as lang %} 
   {% get_available_languages as LANGUAGES %} 
