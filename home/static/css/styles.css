@@ -8,7 +8,7 @@ body {
   background-color: #f9f9f9;
 }
 
-.dropup .dropdown-toggle::after{
+.dropup .dropdown-toggle::after {
   display: none;
 }
 
@@ -31,6 +31,17 @@ body {
 .offcanvas-footer div {
   width: 20%;
   height: 100%;
+}
+
+.offcanvas-footer #lang-dropdown {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.offcanvas-footer #lang-dropdown li a {
+  font-size: 30px;
 }
 
 .offcanvas-footer div img {
@@ -224,8 +235,7 @@ body {
 ul#main-side {
   margin-top: 50px;
   padding-right: 30px;
-  height: 45%;
-  justify-content: space-between;
+  height: 60%;
 }
 
 ul#main li#home,
@@ -244,18 +254,47 @@ ul#main-side li {
   color: #464646;
   cursor: pointer;
 }
+
+ul#main-side li {
+  margin-bottom: 55px;
+}
+
 ul#main li:hover,
 ul#main-side:hover {
   color: #008384;
 }
 
-ul#dropdown,
-ul#dropdown-side {
+ul#main-side .dropdown-menu.show {
+  display: flex;
+}
+
+ul#dropdown {
   background-color: #fbfbfb;
   border-radius: 15px;
   padding: 16px 25px;
   width: 350px;
   height: 230px;
+}
+ul#dropdown-side {
+  background-color: #fbfbfb;
+  border-radius: 15px;
+  padding: 16px 25px;
+  width: 350px;
+  height: 340px;
+  text-align: start;
+  flex-direction: column;
+  justify-content: space-around;
+}
+ul#dropdown-side li {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 0;
+}
+
+ul#dropdown-side .main-category {
+  font-weight: 700;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 
 .menu div div#items .dropdown-menu.show {
@@ -665,6 +704,11 @@ ul#dropdown-side {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .container {
+    max-width: 90%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
   .search div#login {
     display: none;
   }
@@ -677,6 +721,24 @@ ul#dropdown-side {
   ul#main-side li#home-side,
   ul#main-side li {
     font-size: 35px;
+  }
+  ul#dropdown-side li {
+    font-size: 30px;
+  }
+  .banner {
+    padding: 0;
+    margin-bottom: 50px;
+    height: 330px;
+  }
+  .categories div {
+    margin-top: 10px;
+  }
+  .banner #offers-banner button {
+    width: 40%;
+    height: 65px;
+  }
+  .banner #offers-banner h1 {
+    font-size: 25px;
   }
 }
 
@@ -754,6 +816,18 @@ ul#dropdown-side {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .banner {
+    padding: 50px 80px;
+    height: auto;
+  }
+  .categories div {
+    margin-top: 50px;
+  }
   .header {
     height: 176px;
   }
@@ -852,10 +926,21 @@ ul#dropdown-side {
   .most-sell div div.ms-container button {
     font-size: 14px;
   }
+  .banner #offers-banner button {
+    width: 26%;
+    height: 65px;
+  }
+  .banner #offers-banner h1 {
+    font-size: 40px;
+    width: 50%;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
   .search div#login {
     width: 32%;
     justify-content: space-between;
@@ -911,6 +996,9 @@ ul#dropdown-side {
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
   .search div#login {
     width: 27%;
     justify-content: space-between;
