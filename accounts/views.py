@@ -6,5 +6,5 @@ from django.views import View
 class RegisterView(View):
     def get(self, request):
         # products = Product.objects.filter(available=True)
-        return render(request, 'accounts/register.html', )
+        return render(request, 'accounts/base.html', )
 

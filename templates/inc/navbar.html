@@ -109,7 +109,7 @@
           </ul>
         </div>
         <div class="offcanvas-footer">
-          <div><img src="{% static 'images/Vector.svg' %}" /></div>
+          <div><a href="{% url 'accounts:register' %}"><img src="{% static 'images/Vector.svg' %}" /></a></div>
           <div>
             <img src="{% static 'images/fav.svg' %}" alt="favourit" />
           </div>
@@ -173,8 +173,10 @@
           <img src="{% static 'images/cart.svg' %}" alt="cart" />
         </div>
         <button>
-          {% trans "ورود/ثبت نام" %}
-          <img src="{% static 'images/Vector.svg' %}" />
+          <a href="{% url 'accounts:register' %}">
+            {% trans "ورود/ثبت نام" %}
+            <img src="{% static 'images/Vector.svg' %}" />
+          </a>
         </button>
         <p>{% trans "درخواست خرید عمده" %}</p>
       </div>
