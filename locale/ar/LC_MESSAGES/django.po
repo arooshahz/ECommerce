@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 14:04+0330\n"
+"POT-Creation-Date: 2024-03-21 14:02+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,68 +16,68 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 #: templates/inc/navbar.html:55 templates/inc/navbar.html:188
 msgid "صفحه اصلی"
-msgstr "Main Page"
+msgstr "الصفحة الرئيسية"
 
 #: templates/inc/navbar.html:65 templates/inc/navbar.html:198
 msgid "دسته بندی کالاها"
-msgstr "Categories"
+msgstr "تصنيف البضائع"
 
 #: templates/inc/navbar.html:86 templates/inc/navbar.html:219
 msgid "البسه"
-msgstr "Clothes"
+msgstr "ملابس"
 
 #: templates/inc/navbar.html:88 templates/inc/navbar.html:221
 msgid "گان جراحی"
-msgstr "Gun surgery"
+msgstr "جراحة السلاح"
 
 #: templates/inc/navbar.html:89 templates/inc/navbar.html:222
 msgid "لباس بیمارستانی بیمار"
-msgstr "Hospital clothes of the patient"
+msgstr "ملابس المستشفى للمريض"
 
 #: templates/inc/navbar.html:97 templates/inc/navbar.html:232
 msgid "کلاه"
-msgstr "hat"
+msgstr "قبعة"
 
 #: templates/inc/navbar.html:99 templates/inc/navbar.html:234
 msgid "کلاه جراح"
-msgstr "Surger hat"
+msgstr "قبعة الجراح"
 
 #: templates/inc/navbar.html:100 templates/inc/navbar.html:235
 msgid "کلاه آکاردئونی"
-msgstr "accordion hat"
+msgstr "قبعة الأكورديون"
 
 #: templates/inc/navbar.html:101 templates/inc/navbar.html:236
 msgid "کلاه بیمار"
-msgstr "Sick Hat"
+msgstr "قبعة مريضة"
 
 #: templates/inc/navbar.html:106 templates/inc/navbar.html:241
 msgid "همه محصولات"
-msgstr "Products"
+msgstr "جميع المنتجات"
 
 #: templates/inc/navbar.html:107 templates/inc/navbar.html:242
 msgid "درباره ما"
-msgstr "About Us"
+msgstr "معلومات عنا"
 
 #: templates/inc/navbar.html:108 templates/inc/navbar.html:243
 msgid "تخفیفات ویژه"
-msgstr "Special Offers"
+msgstr "خصومات خاصة"
 
 #: templates/inc/navbar.html:165
 msgid "جستجوی محصولات"
-msgstr "Search Products"
+msgstr "البحث عن المنتجات"
 
 #: templates/inc/navbar.html:177
 msgid "ورود/ثبت نام"
-msgstr "Login/Sign Up"
+msgstr "تسجيل الدخول/اشتراک"
 
 #: templates/inc/navbar.html:181
 msgid "درخواست خرید عمده"
-msgstr "bulk purchase request"
+msgstr "طلب الشراء بالجملة"
 
 #: templates/inc/navbar.html:297
 msgid "محصولات مورد علاقه"
-msgstr "Favourite Products"
+msgstr "المنتجات المفضلة"

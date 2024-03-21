@@ -6,7 +6,7 @@
   {% get_available_languages as LANGUAGES %} 
   {% get_language_info_list for LANGUAGES as languages %}
   {% load set_var %}
-  {% if LANGUAGE_CODE == 'en' %} 
+  {% if LANGUAGE_CODE == 'en' or LANGUAGE_CODE == 'ka' %} 
     {% set offcanvas = "offcanvas-end" %} 
   {% else %} 
     {% set offcanvas = "offcanvas-start" %} 
@@ -157,7 +157,7 @@
       <div id="logo">
         <label
           for="search"
-          class="{% if LANGUAGE_CODE == 'en' %}right19{% endif %}"
+          class="{% if LANGUAGE_CODE == 'en' or LANGUAGE_CODE == 'ka' %}right19{% endif %}"
         >
           <input
             type="text"
