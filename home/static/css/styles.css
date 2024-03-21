@@ -1001,7 +1001,7 @@ li {
   }
 
   .our-customers div.overflow div {
-    width: 100%;
+    width: 86%;
   }
   .categories div.overflow div {
     width: 150%;
@@ -1181,6 +1181,9 @@ li {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .categories div.overflow {
+    overflow-x: hidden;
+  }
   .container {
     max-width: 960px;
     margin-left: auto;
@@ -1198,7 +1201,7 @@ li {
     width: 17%;
   }
   .our-customers div.overflow div {
-    width: 100%;
+    width: 95%;
   }
   .categories div.overflow div {
     width: 100%;
@@ -1566,6 +1569,9 @@ li {
 }
 
 @media (min-width: 1600px) {
+  .our-customers div.overflow div {
+    width: 100%;
+  }
   .search div#login {
     width: 24%;
   }
