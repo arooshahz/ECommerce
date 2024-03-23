@@ -182,8 +182,9 @@ a {
   color: #000000;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: center;
   width: 95%;
+  gap: 10px;
 }
 
 .search div#login button:hover {
@@ -369,6 +370,15 @@ ul#dropdown-side .main-category {
   align-items: center;
   left: -7px;
   top: 3px;
+}
+.menu div#favourit #language span#lang-name {
+  position: static;
+  color: inherit;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  font-size: inherit;
+  border-radius: 0;
 }
 
 .menu div#favourit #lang-container {
@@ -847,12 +857,14 @@ ul#dropdown-side .main-category {
   width: 8%;
   margin-bottom: 30px;
   margin-right: 40px;
+  margin-left: 40px;
 }
 
 .footer .footer-main div {
   display: flex;
   gap: 80px;
   padding-right: 80px;
+  padding-left: 80px;
 }
 
 .footer .footer-main div ul {
@@ -874,6 +886,7 @@ ul#dropdown-side .main-category {
   justify-content: flex-end;
   gap: 25px;
   padding-left: 100px;
+  padding-right: 100px;
 }
 
 .footer .footer-main div#support img {
@@ -1081,9 +1094,11 @@ li {
   .footer .footer-main img {
     width: 18%;
     margin-right: 60px;
+    margin-left: 60px;
   }
   .footer .footer-main div#support {
     padding-left: 50px;
+    padding-right: 50px;
   }
   .footer .footer-main div#support p {
     font-size: 20px;
@@ -1238,8 +1253,8 @@ li {
   }
   .search,
   .menu {
-    padding-left: 60px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 20px;
     align-items: center;
   }
   .menu {
@@ -1249,9 +1264,13 @@ li {
   .menu div div#items {
     display: block;
   }
-  .search div#logo,
+  .search div#logo {
+    width: 55%;
+    align-items: center;
+  }
+
   .menu div#hamber {
-    width: 60%;
+    width: 80%;
     align-items: center;
   }
   .search div#logo label {
@@ -1259,16 +1278,21 @@ li {
   }
   .search div#login {
     display: flex;
-    width: 36%;
-    justify-content: space-between;
+    width: 45%;
+    justify-content: space-around;
   }
   .search div#login button {
     width: 45%;
   }
+  .menu div#favourit p {
+    display: none;
+  }
+  .menu div#favourit #language span#lang-name {
+    display: none;
+  }
   .menu div#favourit {
     display: flex;
-    width: 35%;
-    justify-content: space-around;
+    width: 20%;
   }
   .most-sell div div.ms-container {
     height: 410px;
@@ -1360,10 +1384,12 @@ li {
   }
   .footer .footer-main div#support {
     padding-left: 80px;
+    padding-right: 80px;
   }
   .footer .footer-main img {
     width: 12%;
     margin-right: 60px;
+    margin-left: 60px;
   }
   .footer .footer-main div#support p {
     font-size: 16px;
@@ -1393,19 +1419,25 @@ li {
     width: 15%;
   }
   .search div#login {
-    width: 32%;
+    width: 40%;
     justify-content: space-between;
   }
   .search div#login button {
     width: 42%;
   }
+  .menu div#favourit p {
+    display: flex;
+  }
   .menu div#favourit {
-    width: 32%;
+    width: 35%;
+  }
+  .menu div#favourit #language span#lang-name {
+    display: flex;
   }
   .search,
   .menu {
-    padding-left: 100px;
-    padding-right: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .menu {
     height: 29%;
@@ -1413,9 +1445,13 @@ li {
     padding-top: 0;
     align-items: center;
   }
-  .search div#logo,
-  .menu div#hamber {
+  .search div#logo {
     width: 53%;
+    align-items: center;
+  }
+
+  .menu div#hamber {
+    width: 60%;
     align-items: center;
   }
   .search div#logo label {
@@ -1481,11 +1517,13 @@ li {
   }
   .footer .footer-main div#support {
     padding-left: 100px;
+    padding-right: 100px;
   }
 
   .footer .footer-main img {
     width: 12%;
     margin-right: 60px;
+    margin-left: 60px;
   }
   .footer .footer-desc h3 {
     font-size: 35px;
@@ -1506,19 +1544,23 @@ li {
     max-width: 1320px;
   }
   .search div#login {
-    width: 27%;
+    width: 35%;
     justify-content: space-between;
   }
   .search div#login button {
-    width: 41%;
+    width: 55%;
   }
   .menu div#favourit {
-    width: 27%;
+    width: 35%;
     justify-content: space-around;
   }
-  .search div#logo,
-  .menu div#hamber {
+  .search div#logo {
     width: 50%;
+    align-items: center;
+  }
+
+  .menu div#hamber {
+    width: 60%;
     align-items: center;
   }
   .search div#logo label {
@@ -1551,6 +1593,7 @@ li {
   .footer .footer-main img {
     width: 12%;
     margin-right: 60px;
+    margin-left: 60px;
   }
   .footer .footer-main div#support p {
     font-size: 16px;
@@ -1573,13 +1616,13 @@ li {
     width: 100%;
   }
   .search div#login {
-    width: 24%;
+    width: 30%;
   }
   .search div#login button {
-    width: 40%;
+    width: 50%;
   }
   .menu div#favourit {
-    width: 22%;
+    width: 30%;
     justify-content: space-around;
   }
   .search div#logo,
@@ -1652,5 +1695,6 @@ li {
   .footer .footer-main img {
     width: 8%;
     margin-right: 60px;
+    margin-left: 60px;
   }
 }
