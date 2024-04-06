@@ -16,7 +16,7 @@ class HomeView(View):
 class ProductsView(View):
     def get(self, request):
         products = Product.objects.filter(available=True)
-        return render(request, 'home/home.html', {'products': products})
+        return render(request, 'home/detail.html', {'products': products})
 
 
 class CategoryView(View):

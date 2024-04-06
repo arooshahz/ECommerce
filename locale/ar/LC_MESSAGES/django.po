@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 18:54+0330\n"
+"POT-Creation-Date: 2024-04-06 20:31+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,35 +55,47 @@ msgstr " "
 msgid "پرفروش ترین‌ها"
 msgstr "الأكثر مبيعا"
 
-#: home/templates/home/home.html:76 home/templates/home/home.html:330
+#: home/templates/home/home.html:76 home/templates/home/home.html:332
 msgid "مشاهده همه"
 msgstr "عرض الكل"
 
-#: home/templates/home/home.html:304
+#: home/templates/home/home.html:115 home/templates/home/home.html:371
+msgid "۱۴٪"
+msgstr ""
+
+#: home/templates/home/home.html:117 home/templates/home/home.html:373
+msgid "۱۵,۷۹۰"
+msgstr ""
+
+#: home/templates/home/home.html:131 home/templates/home/home.html:387
+msgid "افزودن به سبد خرید"
+msgstr "أضف إلى السلة"
+
+#: home/templates/home/home.html:306
 msgid "دسته بندی محصولات"
 msgstr "تصنيف المنتجات"
 
-#: home/templates/home/home.html:329
+#: home/templates/home/home.html:331
 msgid "پیشنهاد گروه سام"
 msgstr "مقترح من مجموعة سام"
 
-#: home/templates/home/home.html:579
+#: home/templates/home/home.html:583
 msgid "امکان تحویل فوری"
 msgstr "إمكانية التسليم الفوري"
 
-#: home/templates/home/home.html:583
+#: home/templates/home/home.html:587
 msgid "ضمانت بازگشت کالا"
 msgstr "ضمان إرجاع المنتج"
 
-#: home/templates/home/home.html:587
+#: home/templates/home/home.html:591
 msgid "پشتیبانی 24 ساعته"
 msgstr "دعم على مدار 24 ساعة"
 
-#: home/templates/home/home.html:591
+#: home/templates/home/home.html:595
 msgid "پرداخت بصورت اینترنتی"
 msgstr "ادفع عبر الإنترنت"
 
-#: home/templates/home/home.html:595
+#: home/templates/home/home.html:599
 msgid "ضمانت اصل بودن کالا"
 msgstr "ضمان أصالة المنتج"
 
@@ -129,7 +141,11 @@ msgid ""
 " گروه سام در زمینه تولیدات البسه یکبار مصرف بیمارستانی اعم از گان جراح، ست "
 "بیمار، انواع پک های جراحی، ست ام ار ای، گان تک بیمار، روتختی، رول ملحفه، "
 "کلاه بیمار و جراح و...با ظرفیت تولید روزانه:"
-msgstr "تشارك Sam Group في إنتاج ملابس المستشفيات التي تستخدم لمرة واحدة، بما في ذلك العباءات الجراحية، وأطقم المرضى، والحزم الجراحية، وأطقم التصوير بالرنين المغناطيسي، وأثواب المرضى الفرديين، وملاءات الأسرة، وملاءات الأسرة، وقبعات المرضى والجراحين، وما إلى ذلك بقدرة إنتاجية يومية:"
+msgstr ""
+"تشارك Sam Group في إنتاج ملابس المستشفيات التي تستخدم لمرة واحدة، بما في ذلك "
+"العباءات الجراحية، وأطقم المرضى، والحزم الجراحية، وأطقم التصوير بالرنين "
+"المغناطيسي، وأثواب المرضى الفرديين، وملاءات الأسرة، وملاءات الأسرة، وقبعات "
+"المرضى والجراحين، وما إلى ذلك بقدرة إنتاجية يومية:"
 
 #: templates/inc/footer.html:35
 msgid "۱۰.۰۰۰ عدد گان جراح"
@@ -167,7 +183,9 @@ msgstr "(جودة النشر كاملة)"
 msgid ""
 "گروه سام سابقه صادرات محصولات خود به کشورهای:گرجستان، عراق، آذربایجان، "
 "ارمنستان، افغانستان و عمان را دارا میباشد."
-msgstr "تتمتع مجموعة سام بتاريخ حافل في تصدير منتجاتها إلى البلدان التالية: جورجيا، العراق، أذربيجان، أرمينيا، أفغانستان وعمان"
+msgstr ""
+"تتمتع مجموعة سام بتاريخ حافل في تصدير منتجاتها إلى البلدان التالية: جورجيا، "
+"العراق، أذربيجان، أرمينيا، أفغانستان وعمان"
 
 #: templates/inc/footer.html:50
 msgid "کلیه حقوق برای گروه سام محفوظ است."

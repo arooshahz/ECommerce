@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 18:54+0330\n"
+"POT-Creation-Date: 2024-04-06 20:31+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,35 +54,47 @@ msgstr " "
 msgid "پرفروش ترین‌ها"
 msgstr "ბესტსელერები"
 
-#: home/templates/home/home.html:76 home/templates/home/home.html:330
+#: home/templates/home/home.html:76 home/templates/home/home.html:332
 msgid "مشاهده همه"
 msgstr "ყველას ნახვა"
 
-#: home/templates/home/home.html:304
+#: home/templates/home/home.html:115 home/templates/home/home.html:371
+msgid "۱۴٪"
+msgstr "14%"
+
+#: home/templates/home/home.html:117 home/templates/home/home.html:373
+msgid "۱۵,۷۹۰"
+msgstr ""
+
+#: home/templates/home/home.html:131 home/templates/home/home.html:387
+msgid "افزودن به سبد خرید"
+msgstr "Კალათაში დამატება"
+
+#: home/templates/home/home.html:306
 msgid "دسته بندی محصولات"
 msgstr "საქონლის კლასიფიკაცია"
 
-#: home/templates/home/home.html:329
+#: home/templates/home/home.html:331
 msgid "پیشنهاد گروه سام"
 msgstr "შემოთავაზებული სემ ჯგუფის მიერ"
 
-#: home/templates/home/home.html:579
+#: home/templates/home/home.html:583
 msgid "امکان تحویل فوری"
 msgstr "მყისიერი მიტანის შესაძლებლობა"
 
-#: home/templates/home/home.html:583
+#: home/templates/home/home.html:587
 msgid "ضمانت بازگشت کالا"
 msgstr "პროდუქტის დაბრუნების გარანტია"
 
-#: home/templates/home/home.html:587
+#: home/templates/home/home.html:591
 msgid "پشتیبانی 24 ساعته"
 msgstr "24 საათიანი მხარდაჭერა"
 
-#: home/templates/home/home.html:591
+#: home/templates/home/home.html:595
 msgid "پرداخت بصورت اینترنتی"
 msgstr "გადაიხადე ონლაინ"
 
-#: home/templates/home/home.html:595
+#: home/templates/home/home.html:599
 msgid "ضمانت اصل بودن کالا"
 msgstr "საქონლის ორიგინალობის გარანტია"
 
@@ -128,7 +140,11 @@ msgid ""
 " گروه سام در زمینه تولیدات البسه یکبار مصرف بیمارستانی اعم از گان جراح، ست "
 "بیمار، انواع پک های جراحی، ست ام ار ای، گان تک بیمار، روتختی، رول ملحفه، "
 "کلاه بیمار و جراح و...با ظرفیت تولید روزانه:"
-msgstr "სამ ჯგუფი ერთჯერადი საავადმყოფოს ტანსაცმლის, მათ შორის ქირურგიული ტანსაცმლის, პაციენტის კომპლექტების, ქირურგიული პაკეტების, MRI კომპლექტების, ერთი პაციენტის ტანსაცმლის, საწოლის თეთრეულის, რულეტის, პაციენტის და ქირურგის ქუდების და ა.შ. წარმოების სფეროში, ყოველდღიური წარმოების ტევადობით:"
+msgstr ""
+"სამ ჯგუფი ერთჯერადი საავადმყოფოს ტანსაცმლის, მათ შორის ქირურგიული "
+"ტანსაცმლის, პაციენტის კომპლექტების, ქირურგიული პაკეტების, MRI კომპლექტების, "
+"ერთი პაციენტის ტანსაცმლის, საწოლის თეთრეულის, რულეტის, პაციენტის და ქირურგის "
+"ქუდების და ა.შ. წარმოების სფეროში, ყოველდღიური წარმოების ტევადობით:"
 
 #: templates/inc/footer.html:35
 msgid "۱۰.۰۰۰ عدد گان جراح"
@@ -152,7 +168,9 @@ msgstr "4000 კომპლექტი MRI და..."
 
 #: templates/inc/footer.html:41
 msgid "امکان تولید به درخواست مشتری در گرماژ و ابعاد مختلف جهت صادرات"
-msgstr "დამკვეთის მოთხოვნით წარმოების შესაძლებლობა სხვადასხვა წონით და განზომილებით ექსპორტზე"
+msgstr ""
+"დამკვეთის მოთხოვნით წარმოების შესაძლებლობა სხვადასხვა წონით და განზომილებით "
+"ექსპორტზე"
 
 #: templates/inc/footer.html:43
 msgid "با گرماژ کاملا استاندارد در کمترین زمان ممکن"
@@ -166,7 +184,9 @@ msgstr "(ექსპორტის ხარისხი)"
 msgid ""
 "گروه سام سابقه صادرات محصولات خود به کشورهای:گرجستان، عراق، آذربایجان، "
 "ارمنستان، افغانستان و عمان را دارا میباشد."
-msgstr "სამ ჯგუფს აქვს თავისი პროდუქციის ექსპორტის ისტორია შემდეგ ქვეყნებში: საქართველო, ერაყი, აზერბაიჯანი, მას აქვს სომხეთი, ავღანეთი და ომანი."
+msgstr ""
+"სამ ჯგუფს აქვს თავისი პროდუქციის ექსპორტის ისტორია შემდეგ ქვეყნებში: "
+"საქართველო, ერაყი, აზერბაიჯანი, მას აქვს სომხეთი, ავღანეთი და ომანი."
 
 #: templates/inc/footer.html:50
 msgid "کلیه حقوق برای گروه سام محفوظ است."

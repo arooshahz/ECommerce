@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 18:53+0330\n"
+"POT-Creation-Date: 2024-04-06 20:31+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,35 +54,47 @@ msgstr " "
 msgid "پرفروش ترین‌ها"
 msgstr "Best seller"
 
-#: home/templates/home/home.html:76 home/templates/home/home.html:330
+#: home/templates/home/home.html:76 home/templates/home/home.html:332
 msgid "مشاهده همه"
 msgstr "see all"
 
-#: home/templates/home/home.html:304
+#: home/templates/home/home.html:115 home/templates/home/home.html:371
+msgid "۱۴٪"
+msgstr "14%"
+
+#: home/templates/home/home.html:117 home/templates/home/home.html:373
+msgid "۱۵,۷۹۰"
+msgstr ""
+
+#: home/templates/home/home.html:131 home/templates/home/home.html:387
+msgid "افزودن به سبد خرید"
+msgstr "Add to cart"
+
+#: home/templates/home/home.html:306
 msgid "دسته بندی محصولات"
 msgstr "Product Categories"
 
-#: home/templates/home/home.html:329
+#: home/templates/home/home.html:331
 msgid "پیشنهاد گروه سام"
 msgstr "Sam group suggestion"
 
-#: home/templates/home/home.html:579
+#: home/templates/home/home.html:583
 msgid "امکان تحویل فوری"
 msgstr "possibility of immediate delivery"
 
-#: home/templates/home/home.html:583
+#: home/templates/home/home.html:587
 msgid "ضمانت بازگشت کالا"
 msgstr "product return guarantee"
 
-#: home/templates/home/home.html:587
+#: home/templates/home/home.html:591
 msgid "پشتیبانی 24 ساعته"
 msgstr "24 hour support"
 
-#: home/templates/home/home.html:591
+#: home/templates/home/home.html:595
 msgid "پرداخت بصورت اینترنتی"
 msgstr "pay online"
 
-#: home/templates/home/home.html:595
+#: home/templates/home/home.html:599
 msgid "ضمانت اصل بودن کالا"
 msgstr "Guarantee of the originality of the product"
 

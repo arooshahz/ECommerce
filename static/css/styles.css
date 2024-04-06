@@ -251,8 +251,8 @@ ul#main-side {
   height: 60%;
 }
 
-ul#main li#home,
-ul#main-side li#home-side {
+ul#main li#home a,
+ul#main-side li#home-side a {
   color: #008384;
   font-size: 17px;
   font-weight: 400;
@@ -566,7 +566,7 @@ ul#dropdown-side .main-category {
   color: #455568;
   margin-bottom: 30px;
 }
-.most-sell div.titles p {
+.most-sell div.titles p a{
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
@@ -587,6 +587,16 @@ ul#dropdown-side .main-category {
   position: relative;
   transition: 0.5s ease;
 }
+
+.most-sell div div.ms-container a{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ACACAC;
+}
+
 
 .most-sell div div.ms-container div.ms-options {
   box-shadow: 0px 0px 4px 0px #00000040;
@@ -767,67 +777,136 @@ ul#dropdown-side .main-category {
   height: 100%;
 }
 
-.our-customers {
-  margin-top: 95px;
-  margin-bottom: 105px;
+.detail div#product-info{
+    width: 100%;
+    height: 555px;
+    padding-top: 75px;
+    display: flex;
+
 }
 
-.our-customers h1 {
-  color: #455568;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 50px;
-  margin-bottom: 22px;
+.detail div#product-info div#image {
+    height: 100%;
+    width: 45%;
 }
 
-.our-customers div.overflow {
-  position: relative;
-  width: 100vw;
-  height: 17rem;
-  padding: 2rem 0;
-  overflow-x: hidden;
+.detail div#product-info div#image img{
+    width: 100%;
+    height: 100%;
 }
 
-.our-customers div.overflow div {
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  top: 0%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.our-customers div.overflow div img {
-  width: 9%;
+
+.detail div#product-info div#info {
+    width: 55%;
 }
 
-.primary {
-  animation: primary 20s linear infinite;
-  left: 0%;
+
+.detail div#product-info div#info h1{
+    color: #314154;
+    font-weight:600;
+    font-size: 36px;
+    line-height: 56px;
 }
 
-.secondary {
-  animation: secondary 20s linear infinite;
-  left: 100%;
+.detail div#product-info div#info h3 {
+    color: #314154;
+    font-weight:500;
+    font-size: 16px;
+    line-height: 25px;
+}
+.detail div#product-info div#info h3 span{
+    color: #CE7727;
 }
 
-@keyframes primary {
-  from {
-    left: 0%;
-  }
-  to {
-    left: -100%;
-  }
+.detail div#product-info div#info div.info{
+    display:flex;
+    justify-content: space-between;
 }
 
-@keyframes secondary {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0%;
-  }
+
+.detail div#product-info div#info div.info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 50px;
 }
+
+.detail div#product-info div#info div.info ul li{
+    list-style:none;
+    color: #314154ED;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+}
+.detail div#product-info div#info div.info ul li img{
+    margin: 0px 8px;
+}
+
+.detail div#product-info div#info div.info div#card{
+    border: 2px solid #E6E6E6;
+    border-radius: 15px;
+    padding: 25px 40px;
+    width:55%;
+    height: 200px;
+}
+.detail div#product-info div#info div.info div#card div.price{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.detail div#product-info div#info div.info div#card div.price div#avalibility{
+    color: #73926B;
+    background-color: #DEF2D6BD;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    width: 35%;
+}
+
+.detail div#product-info div#info div.info div#card div.price div#avalibility img{
+    width:25%;
+    height:70%;
+}
+
+.detail div#product-info div#info div.info div#card div.price div#price{
+    color: #000000;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 42px;
+}
+
+.detail div#product-info div#info div.info div#card div.add-cart {
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    flex-direction: row-reverse;
+}
+
+.detail div#product-info div#info div.info div#card div.add-cart button#button{
+    width:65%;
+    background-color: #00999A;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.detail div#product-info div#info div.info div#card div.add-cart div#add-more{
+    background-color: #F0F5F9;
+    width: 30%;
+}
+
+.detail div.most-sell div.ms-maincontainer{
+    overflow-x: scroll;
+}
+.detail div.most-sell div.ms-maincontainer div.ms-container{
+    width:300px;
+}
+
 
 .excellences {
   display: flex;
@@ -1034,7 +1113,7 @@ li {
   .menu {
     display: none;
   }
-  ul#main-side li#home-side,
+  ul#main-side li#home-side a,
   ul#main-side li {
     font-size: 35px;
   }
@@ -1249,7 +1328,7 @@ li {
     height: 100%;
     font-size: inherit;
   }
-  ul#main-side li#home-side,
+  ul#main-side li#home-side a,
   ul#main-side li {
     font-size: 17px;
   }
