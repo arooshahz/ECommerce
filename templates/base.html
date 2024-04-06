@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 {% load static %} {% load i18n %} {% get_current_language as LANGUAGE_CODE %} 
 {% load set_var %}
-{% if LANGUAGE_CODE == 'en' %} 
+{% if LANGUAGE_CODE == 'en' or  LANGUAGE_CODE == 'ka' %} 
    {% set dir = "ltr" %} 
-   {% set test = "test" %}
 {% else %} 
    {% set dir = "rtl" %} 
 {% endif %}
 
-<html lang="en" dir={{dir}}>
+<html dir={{dir}}>
   <head>
     <meta charset="UTF-8" />
     <title>Online Shop</title>
@@ -23,9 +22,11 @@
   </head>
   <body style="padding: 0; margin: 0">
     {% include 'inc/navbar.html' %}
-    <div class="container">
+    <div class="container" style="margin-top: 200px;overflow: hidden;">
       {% include 'inc/messages.html' %} {% block content %} {% endblock %}
     </div>
+    <hr style="color: #848484;opacity: 1;" />
+    {% include 'inc/footer.html' %}
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

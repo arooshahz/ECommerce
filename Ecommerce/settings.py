@@ -122,7 +122,9 @@ LOCALE_PATHS = [
 
 LANGUAGES = [
     ('en', 'English'),
-    ('fa', "Farsi")
+    ('fa', "Farsi"),
+    ('ka', "Georgia"),
+    ('ar', "Arabic"),
 ]
 
 # Static files (CSS, JavaScript, Images)

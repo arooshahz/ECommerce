@@ -10,5 +10,8 @@ class UserRegistrationView(View):
     template_name = 'accounts/register.html'
 
     def get(self, request):
+        # products = Product.objects.filter(available=True)
+        return render(request, 'accounts/base.html', )
+
         form = self.form_class
         return render(request, self.template_name, {'form': form})
