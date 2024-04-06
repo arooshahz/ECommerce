@@ -27,6 +27,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='products/%y/%m/%d/')
     description = models.TextField()
     price = models.IntegerField()
+    discount = models.IntegerField(default=0)
     Sales_number = models.IntegerField(default=0)
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
@@ -40,3 +41,7 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse('home:product_detail', args=[self.slug, ])
+
+    def get_asking_price(self):
+        discount = self.price * self.discount / 100
+        return self.price-discount
