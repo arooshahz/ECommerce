@@ -24,6 +24,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='products/%y/%m/%d/')
     description = models.TextField()
     price = models.IntegerField()
+    Sales_number = models.IntegerField(default=0)
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
