@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 14:02+0330\n"
+"POT-Creation-Date: 2024-04-06 18:54+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,161 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: accounts/templates/accounts/register.html:9
+msgid "ورود | ثبت نام"
+msgstr "تسجيل الدخول | اشتراک"
+
+#: accounts/templates/accounts/register.html:11
+msgid "خوش آمدید!"
+msgstr "مرحباً!"
+
+#: accounts/templates/accounts/register.html:12
+msgid "لطفا ایمیل خود را وارد کنید"
+msgstr "رجاءا أدخل بريدك الإلكتروني"
+
+#: accounts/templates/accounts/register.html:29
+msgid "ایمیل نادرست است"
+msgstr "البريد الإلكتروني غير صحيح"
+
+#: accounts/templates/accounts/register.html:33
+msgid "ورود"
+msgstr "تسجيل الدخول"
+
+#: accounts/templates/accounts/register.html:38
+msgid " ورود شما به معنای پذیرش"
+msgstr "دخولك يشكل قبولا"
+
+#: accounts/templates/accounts/register.html:39
+msgid "قوانین حریم خصوصی"
+msgstr " لسياسة الخصوصية"
+
+#: accounts/templates/accounts/register.html:40
+msgid " است"
+msgstr " "
+
+#: home/templates/home/home.html:75
+msgid "پرفروش ترین‌ها"
+msgstr "الأكثر مبيعا"
+
+#: home/templates/home/home.html:76 home/templates/home/home.html:330
+msgid "مشاهده همه"
+msgstr "عرض الكل"
+
+#: home/templates/home/home.html:304
+msgid "دسته بندی محصولات"
+msgstr "تصنيف المنتجات"
+
+#: home/templates/home/home.html:329
+msgid "پیشنهاد گروه سام"
+msgstr "مقترح من مجموعة سام"
+
+#: home/templates/home/home.html:579
+msgid "امکان تحویل فوری"
+msgstr "إمكانية التسليم الفوري"
+
+#: home/templates/home/home.html:583
+msgid "ضمانت بازگشت کالا"
+msgstr "ضمان إرجاع المنتج"
+
+#: home/templates/home/home.html:587
+msgid "پشتیبانی 24 ساعته"
+msgstr "دعم على مدار 24 ساعة"
+
+#: home/templates/home/home.html:591
+msgid "پرداخت بصورت اینترنتی"
+msgstr "ادفع عبر الإنترنت"
+
+#: home/templates/home/home.html:595
+msgid "ضمانت اصل بودن کالا"
+msgstr "ضمان أصالة المنتج"
+
+#: templates/inc/footer.html:8
+msgid "تماس با ما"
+msgstr "اتصل بنا"
+
+#: templates/inc/footer.html:9 templates/inc/navbar.html:107
+#: templates/inc/navbar.html:242
+msgid "درباره ما"
+msgstr "معلومات عنا"
+
+#: templates/inc/footer.html:10
+msgid "مشتریان ما"
+msgstr "عملائنا"
+
+#: templates/inc/footer.html:11
+msgid "شرایط و قوانین"
+msgstr "الشروط والقواعد"
+
+#: templates/inc/footer.html:14
+msgid "سیاست حریم خصوصی"
+msgstr "سياسة الخصوصية"
+
+#: templates/inc/footer.html:15
+msgid "حساب کاربری من"
+msgstr "حساب المستخدم الخاص بي"
+
+#: templates/inc/footer.html:16
+msgid "سبد خرید"
+msgstr "عربة التسوق"
+
+#: templates/inc/footer.html:20
+msgid "هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم"
+msgstr "نحن في خدمتكم 24 ساعة يوميا، سبعة أيام في الأسبوع"
+
+#: templates/inc/footer.html:30
+msgid "گروه سام"
+msgstr "مجموعة سام"
+
+#: templates/inc/footer.html:32
+msgid ""
+" گروه سام در زمینه تولیدات البسه یکبار مصرف بیمارستانی اعم از گان جراح، ست "
+"بیمار، انواع پک های جراحی، ست ام ار ای، گان تک بیمار، روتختی، رول ملحفه، "
+"کلاه بیمار و جراح و...با ظرفیت تولید روزانه:"
+msgstr "تشارك Sam Group في إنتاج ملابس المستشفيات التي تستخدم لمرة واحدة، بما في ذلك العباءات الجراحية، وأطقم المرضى، والحزم الجراحية، وأطقم التصوير بالرنين المغناطيسي، وأثواب المرضى الفرديين، وملاءات الأسرة، وملاءات الأسرة، وقبعات المرضى والجراحين، وما إلى ذلك بقدرة إنتاجية يومية:"
+
+#: templates/inc/footer.html:35
+msgid "۱۰.۰۰۰ عدد گان جراح"
+msgstr "۱۰.۰۰۰ جراحة السلاح"
+
+#: templates/inc/footer.html:36
+msgid "۲.۰۰۰ عدد پک جراحی"
+msgstr "۲۰.۰۰۰ حزمة جراحية"
+
+#: templates/inc/footer.html:37
+msgid "۴.۰۰۰ عدد ست بیمار"
+msgstr "۴.۰۰۰ مجموعة مريضة"
+
+#: templates/inc/footer.html:38
+msgid "۱۲.۰۰۰ عدد گان تک بیمار"
+msgstr "12.۰۰۰ غان تاك مريض"
+
+#: templates/inc/footer.html:39
+msgid "۴.۰۰۰ عدد ست ام ار ای و ..."
+msgstr "۴.۰۰۰ جهاز تصوير بالرنين المغناطيسي و..."
+
+#: templates/inc/footer.html:41
+msgid "امکان تولید به درخواست مشتری در گرماژ و ابعاد مختلف جهت صادرات"
+msgstr "إمكانية الإنتاج بناء على طلب العميل بأوزان وأبعاد مختلفة للتصدير"
+
+#: templates/inc/footer.html:43
+msgid "با گرماژ کاملا استاندارد در کمترین زمان ممکن"
+msgstr "مع القواعد النحوية القياسية تمامًا في أقصر وقت ممكن"
+
+#: templates/inc/footer.html:44
+msgid "(کیفیت کاملأصادراتی)"
+msgstr "(جودة النشر كاملة)"
+
+#: templates/inc/footer.html:46
+msgid ""
+"گروه سام سابقه صادرات محصولات خود به کشورهای:گرجستان، عراق، آذربایجان، "
+"ارمنستان، افغانستان و عمان را دارا میباشد."
+msgstr "تتمتع مجموعة سام بتاريخ حافل في تصدير منتجاتها إلى البلدان التالية: جورجيا، العراق، أذربيجان، أرمينيا، أفغانستان وعمان"
+
+#: templates/inc/footer.html:50
+msgid "کلیه حقوق برای گروه سام محفوظ است."
+msgstr "جميع الحقوق محفوظة لمجموعة سام"
+
 #: templates/inc/navbar.html:55 templates/inc/navbar.html:188
 msgid "صفحه اصلی"
 msgstr "الصفحة الرئيسية"
@@ -57,10 +212,6 @@ msgstr "قبعة مريضة"
 #: templates/inc/navbar.html:106 templates/inc/navbar.html:241
 msgid "همه محصولات"
 msgstr "جميع المنتجات"
-
-#: templates/inc/navbar.html:107 templates/inc/navbar.html:242
-msgid "درباره ما"
-msgstr "معلومات عنا"
 
 #: templates/inc/navbar.html:108 templates/inc/navbar.html:243
 msgid "تخفیفات ویژه"

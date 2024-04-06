@@ -2,10 +2,10 @@
 {% load static %} {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% load set_var %}
-{% if LANGUAGE_CODE == 'fa' %} 
-  {% set dir = "ltr" %}
-{% elif LANGUAGE_CODE == 'ar'  %}
-  {% set dir = "ltr" %}
+{% if LANGUAGE_CODE == 'en' or  LANGUAGE_CODE == 'ka' %} 
+   {% set dir = "ltr" %} 
+{% else %} 
+   {% set dir = "rtl" %} 
 {% endif %}
 
 <html dir="{{dir}}">

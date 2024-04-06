@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 14:01+0330\n"
+"POT-Creation-Date: 2024-04-06 18:54+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,161 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: accounts/templates/accounts/register.html:9
+msgid "ورود | ثبت نام"
+msgstr "შესვლა | დარეგისტრირდით"
+
+#: accounts/templates/accounts/register.html:11
+msgid "خوش آمدید!"
+msgstr "მოგესალმებით!"
+
+#: accounts/templates/accounts/register.html:12
+msgid "لطفا ایمیل خود را وارد کنید"
+msgstr "გთხოვთ შეიყვანოთ თქვენი ელ.ფოსტა"
+
+#: accounts/templates/accounts/register.html:29
+msgid "ایمیل نادرست است"
+msgstr "ელფოსტა არასწორია"
+
+#: accounts/templates/accounts/register.html:33
+msgid "ورود"
+msgstr "შესვლა"
+
+#: accounts/templates/accounts/register.html:38
+msgid " ورود شما به معنای پذیرش"
+msgstr "თქვენი შესვლა ნიშნავს მიღებას"
+
+#: accounts/templates/accounts/register.html:39
+msgid "قوانین حریم خصوصی"
+msgstr "კონფიდენციალურობის კანონები"
+
+#: accounts/templates/accounts/register.html:40
+msgid " است"
+msgstr " "
+
+#: home/templates/home/home.html:75
+msgid "پرفروش ترین‌ها"
+msgstr "ბესტსელერები"
+
+#: home/templates/home/home.html:76 home/templates/home/home.html:330
+msgid "مشاهده همه"
+msgstr "ყველას ნახვა"
+
+#: home/templates/home/home.html:304
+msgid "دسته بندی محصولات"
+msgstr "საქონლის კლასიფიკაცია"
+
+#: home/templates/home/home.html:329
+msgid "پیشنهاد گروه سام"
+msgstr "შემოთავაზებული სემ ჯგუფის მიერ"
+
+#: home/templates/home/home.html:579
+msgid "امکان تحویل فوری"
+msgstr "მყისიერი მიტანის შესაძლებლობა"
+
+#: home/templates/home/home.html:583
+msgid "ضمانت بازگشت کالا"
+msgstr "პროდუქტის დაბრუნების გარანტია"
+
+#: home/templates/home/home.html:587
+msgid "پشتیبانی 24 ساعته"
+msgstr "24 საათიანი მხარდაჭერა"
+
+#: home/templates/home/home.html:591
+msgid "پرداخت بصورت اینترنتی"
+msgstr "გადაიხადე ონლაინ"
+
+#: home/templates/home/home.html:595
+msgid "ضمانت اصل بودن کالا"
+msgstr "საქონლის ორიგინალობის გარანტია"
+
+#: templates/inc/footer.html:8
+msgid "تماس با ما"
+msgstr "დაგვიკავშირდით"
+
+#: templates/inc/footer.html:9 templates/inc/navbar.html:107
+#: templates/inc/navbar.html:242
+msgid "درباره ما"
+msgstr "ჩვენს შესახებ"
+
+#: templates/inc/footer.html:10
+msgid "مشتریان ما"
+msgstr "ჩვენი მომხმარებლები"
+
+#: templates/inc/footer.html:11
+msgid "شرایط و قوانین"
+msgstr "პირობები და წესები"
+
+#: templates/inc/footer.html:14
+msgid "سیاست حریم خصوصی"
+msgstr "ონფიდენციალურობის პოლიტიკა"
+
+#: templates/inc/footer.html:15
+msgid "حساب کاربری من"
+msgstr "ჩემი მომხმარებლის ანგარიში"
+
+#: templates/inc/footer.html:16
+msgid "سبد خرید"
+msgstr "კალათა"
+
+#: templates/inc/footer.html:20
+msgid "هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم"
+msgstr "ჩვენ თქვენს სამსახურში ვართ 24 საათის განმავლობაში, კვირაში შვიდი დღე"
+
+#: templates/inc/footer.html:30
+msgid "گروه سام"
+msgstr "სემ ჯგუფი"
+
+#: templates/inc/footer.html:32
+msgid ""
+" گروه سام در زمینه تولیدات البسه یکبار مصرف بیمارستانی اعم از گان جراح، ست "
+"بیمار، انواع پک های جراحی، ست ام ار ای، گان تک بیمار، روتختی، رول ملحفه، "
+"کلاه بیمار و جراح و...با ظرفیت تولید روزانه:"
+msgstr "სამ ჯგუფი ერთჯერადი საავადმყოფოს ტანსაცმლის, მათ შორის ქირურგიული ტანსაცმლის, პაციენტის კომპლექტების, ქირურგიული პაკეტების, MRI კომპლექტების, ერთი პაციენტის ტანსაცმლის, საწოლის თეთრეულის, რულეტის, პაციენტის და ქირურგის ქუდების და ა.შ. წარმოების სფეროში, ყოველდღიური წარმოების ტევადობით:"
+
+#: templates/inc/footer.html:35
+msgid "۱۰.۰۰۰ عدد گان جراح"
+msgstr "10000 ქირურგიული ერთეული"
+
+#: templates/inc/footer.html:36
+msgid "۲.۰۰۰ عدد پک جراحی"
+msgstr "2000 ქირურგიული პაკეტი"
+
+#: templates/inc/footer.html:37
+msgid "۴.۰۰۰ عدد ست بیمار"
+msgstr "40000 ავადმყოფური ტანსაცმელი"
+
+#: templates/inc/footer.html:38
+msgid "۱۲.۰۰۰ عدد گان تک بیمار"
+msgstr "12000 პაციენტის მოწყობილობა"
+
+#: templates/inc/footer.html:39
+msgid "۴.۰۰۰ عدد ست ام ار ای و ..."
+msgstr "4000 კომპლექტი MRI და..."
+
+#: templates/inc/footer.html:41
+msgid "امکان تولید به درخواست مشتری در گرماژ و ابعاد مختلف جهت صادرات"
+msgstr "დამკვეთის მოთხოვნით წარმოების შესაძლებლობა სხვადასხვა წონით და განზომილებით ექსპორტზე"
+
+#: templates/inc/footer.html:43
+msgid "با گرماژ کاملا استاندارد در کمترین زمان ممکن"
+msgstr "სრულიად სტანდარტული გრამატიკა უმოკლეს დროში"
+
+#: templates/inc/footer.html:44
+msgid "(کیفیت کاملأصادراتی)"
+msgstr "(ექსპორტის ხარისხი)"
+
+#: templates/inc/footer.html:46
+msgid ""
+"گروه سام سابقه صادرات محصولات خود به کشورهای:گرجستان، عراق، آذربایجان، "
+"ارمنستان، افغانستان و عمان را دارا میباشد."
+msgstr "სამ ჯგუფს აქვს თავისი პროდუქციის ექსპორტის ისტორია შემდეგ ქვეყნებში: საქართველო, ერაყი, აზერბაიჯანი, მას აქვს სომხეთი, ავღანეთი და ომანი."
+
+#: templates/inc/footer.html:50
+msgid "کلیه حقوق برای گروه سام محفوظ است."
+msgstr "ყველა უფლება დაცულია სემ ჯგუფისთვის."
+
 #: templates/inc/navbar.html:55 templates/inc/navbar.html:188
 msgid "صفحه اصلی"
 msgstr "თავარი გვერდი"
@@ -31,43 +186,39 @@ msgstr "ტანსაცმელი"
 
 #: templates/inc/navbar.html:88 templates/inc/navbar.html:221
 msgid "گان جراحی"
-msgstr ""
+msgstr "Ქირურგიული ინსტრუმენტები"
 
 #: templates/inc/navbar.html:89 templates/inc/navbar.html:222
 msgid "لباس بیمارستانی بیمار"
-msgstr ""
+msgstr "პაციენტის საავადმყოფოს ტანსაცმელი"
 
 #: templates/inc/navbar.html:97 templates/inc/navbar.html:232
 msgid "کلاه"
-msgstr ""
+msgstr "ქუდი"
 
 #: templates/inc/navbar.html:99 templates/inc/navbar.html:234
 msgid "کلاه جراح"
-msgstr ""
+msgstr "ქირურგის ქუდი"
 
 #: templates/inc/navbar.html:100 templates/inc/navbar.html:235
 msgid "کلاه آکاردئونی"
-msgstr ""
+msgstr "აკორდეონის ქუდი"
 
 #: templates/inc/navbar.html:101 templates/inc/navbar.html:236
 msgid "کلاه بیمار"
-msgstr ""
+msgstr "ავადმყოფი ქუდი"
 
 #: templates/inc/navbar.html:106 templates/inc/navbar.html:241
 msgid "همه محصولات"
-msgstr ""
-
-#: templates/inc/navbar.html:107 templates/inc/navbar.html:242
-msgid "درباره ما"
-msgstr ""
+msgstr "ყველა პროდუქტი"
 
 #: templates/inc/navbar.html:108 templates/inc/navbar.html:243
 msgid "تخفیفات ویژه"
-msgstr ""
+msgstr "სპეციალური შეთავაზებები"
 
 #: templates/inc/navbar.html:165
 msgid "جستجوی محصولات"
-msgstr ""
+msgstr "პროდუქტების ძებნა"
 
 #: templates/inc/navbar.html:177
 msgid "ورود/ثبت نام"
@@ -75,8 +226,8 @@ msgstr "შესვლა/დარეგისტრირდით"
 
 #: templates/inc/navbar.html:181
 msgid "درخواست خرید عمده"
-msgstr ""
+msgstr "ნაყარი შესყიდვის მოთხოვნა"
 
 #: templates/inc/navbar.html:297
 msgid "محصولات مورد علاقه"
-msgstr ""
+msgstr "საყვარელი პროდუქტები"

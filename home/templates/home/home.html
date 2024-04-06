@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %} {% block extra_headers %}
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% block extra_headers %}
 <link rel="stylesheet" href="{% static 'home/css/style.css' %}" />
 {% endblock %} {% block content %}
 <div class="banner">
@@ -72,8 +72,8 @@
 
 <div class="most-sell">
   <div class="titles">
-    <h2>پرفروش ترین‌ها</h2>
-    <p>مشاهده همه</p>
+    <h2>{% trans "پرفروش ترین‌ها" %}</h2>
+    <p>{% trans "مشاهده همه" %}</p>
   </div>
   <div class="ms-maincontainer">
     <div class="ms-container">
@@ -301,7 +301,7 @@
 </div>
 
 <div class="categories">
-  <h1>دسته بندی محصولات</h1>
+  <h1>{% trans "دسته بندی محصولات" %}</h1>
   <div class="overflow">
     <div>
       <div id="c-one">
@@ -326,8 +326,8 @@
 
 <div class="most-sell">
   <div class="titles">
-    <h2>پیشنهاد گروه سام</h2>
-    <p>مشاهده همه</p>
+    <h2>{% trans "پیشنهاد گروه سام" %}</h2>
+    <p>{% trans "مشاهده همه" %}</p>
   </div>
   <div class="ms-maincontainer">
     <div class="ms-container">
@@ -576,23 +576,23 @@
 <div class="excellences">
   <div>
     <img src="{% static 'images/shipping.svg' %}" alt="" />
-    <p>امکان تحویل فوری</p>
+    <p>{% trans "امکان تحویل فوری" %}</p>
   </div>
   <div>
     <img src="{% static 'images/delivery.svg' %}" alt="" />
-    <p>ضمانت بازگشت کالا</p>
+    <p>{% trans "ضمانت بازگشت کالا" %}</p>
   </div>
   <div>
     <img src="{% static 'images/support.svg' %}" alt="" />
-    <p>پشتیبانی 24 ساعته</p>
+    <p>{% trans "پشتیبانی 24 ساعته" %}</p>
   </div>
   <div>
     <img src="{% static 'images/pay.svg' %}" alt="" />
-    <p>پرداخت بصورت اینترنتی</p>
+    <p>{% trans "پرداخت بصورت اینترنتی" %}</p>
   </div>
   <div>
     <img src="{% static 'images/zemanat.svg' %}" alt="" />
-    <p>ضمانت اصل بودن کالا</p>
+    <p>{% trans "ضمانت اصل بودن کالا" %}</p>
   </div>
 </div>
 
