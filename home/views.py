@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import View
-from .models import Product
+from .models import Product, Category
 
 
 class HomeView(View):
@@ -16,6 +16,14 @@ class ProductsView(View):
     def get(self, request):
         products = Product.objects.filter(available=True)
         return render(request, 'home/home.html', {'products': products})
+
+
+class CategoryView(View):
+    def get(self, request, slug):
+        products = Product.objects.filter(available=True)
+        category = get_object_or_404(Category, slug=slug)
+        category_product = products.filter(category=category)
+        return render(request, 'home/test.html', {'products': category_product})
 
 
 class ProductDetailView(View):
