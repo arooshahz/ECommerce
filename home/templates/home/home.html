@@ -133,165 +133,6 @@
             </a>
         </div>
         {% endfor %}
-        <div class="ms-container">
-            <div class="ms-options">
-                <div>
-                    <img
-                            width="18"
-                            height="18"
-                            src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                            alt="search--v1"
-                    />
-                </div>
-                <div>
-                    <img
-                            width="18"
-                            height="18"
-                            src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                            alt="paper-bag--v2"
-                    />
-                </div>
-                <div>
-                    <img
-                            width="18"
-                            height="18"
-                            src="https://img.icons8.com/ios/18/like--v1.png"
-                            alt="like--v1"
-                    />
-                </div>
-            </div>
-            <div class="ms-shadow">
-                <img src="{% static 'images/ms2.png' %}" alt=""/>
-            </div>
-            <p>گان جراحی یکبار مصرف 38 گرم </p>
-            <div class="ms-price">
-                <div class="ms-payable">
-                    <div class="ms-discount">
-                        <div>
-                            <span>۱۴٪</span>
-                        </div>
-                        <s>۱۵,۷۹۰</s>
-                    </div>
-                    <div class="ms-totalprice">
-                        <p>۱۳,۴۸۰ تومان</p>
-                    </div>
-                </div>
-                <div class="ms-rate">
-                    <span onclick="gfg(1)" class="star">★ </span>
-                    <span onclick="gfg(2)" class="star">★ </span>
-                    <span onclick="gfg(3)" class="star">★ </span>
-                    <span onclick="gfg(4)" class="star">★ </span>
-                    <span onclick="gfg(5)" class="star">★ </span>
-                </div>
-            </div>
-            <button>افزودن به سبد خرید</button>
-        </div>
-        <!-- <div class="ms-container">
-          <div class="ms-options">
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                alt="search--v1"
-              />
-            </div>
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                alt="paper-bag--v2"
-              />
-            </div>
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/ios/18/like--v1.png"
-                alt="like--v1"
-              />
-            </div>
-          </div>
-          <div class="ms-shadow">
-            <img src="{% static 'images/ms3.png' %}" alt="" />
-          </div>
-          <p>گان جراحی یکبار مصرف 38 گرم </p>
-          <div class="ms-price">
-            <div class="ms-payable">
-              <div class="ms-discount">
-                <div>
-                  <span>۱۴٪</span>
-                </div>
-                <s>۱۵,۷۹۰</s>
-              </div>
-              <div class="ms-totalprice">
-                <p>۱۳,۴۸۰ تومان</p>
-              </div>
-            </div>
-            <div class="ms-rate">
-              <span onclick="gfg(1)" class="star">★ </span>
-              <span onclick="gfg(2)" class="star">★ </span>
-              <span onclick="gfg(3)" class="star">★ </span>
-              <span onclick="gfg(4)" class="star">★ </span>
-              <span onclick="gfg(5)" class="star">★ </span>
-            </div>
-          </div>
-          <button>افزودن به سبد خرید</button>
-        </div>
-        <div class="ms-container">
-          <div class="ms-options">
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                alt="search--v1"
-              />
-            </div>
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                alt="paper-bag--v2"
-              />
-            </div>
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/ios/18/like--v1.png"
-                alt="like--v1"
-              />
-            </div>
-          </div>
-          <div class="ms-shadow">
-            <img src="{% static 'images/ms4.png' %}" alt="" />
-          </div>
-          <p>گان جراحی یکبار مصرف 38 گرم </p>
-          <div class="ms-price">
-            <div class="ms-payable">
-              <div class="ms-discount">
-                <div>
-                  <span>۱۴٪</span>
-                </div>
-                <s>۱۵,۷۹۰</s>
-              </div>
-              <div class="ms-totalprice">
-                <p>۱۳,۴۸۰ تومان</p>
-              </div>
-            </div>
-            <div class="ms-rate">
-              <span onclick="gfg(1)" class="star five">★ </span>
-              <span onclick="gfg(2)" class="star five">★ </span>
-              <span onclick="gfg(3)" class="star five">★ </span>
-              <span onclick="gfg(4)" class="star five">★ </span>
-              <span onclick="gfg(5)" class="star five">★ </span>
-            </div>
-          </div>
-          <button>افزودن به سبد خرید</button>
-        </div> -->
     </div>
 </div>
 
@@ -308,22 +149,28 @@
     <h1>{% trans "دسته بندی محصولات" %}</h1>
     <div class="overflow">
         <div>
+
             <div id="c-one">
-                <a href=""> <img src="{% static 'images/c-one.png' %}" alt=""/>
-                    <h2 class="category-name">لباس بیمارستانی</h2></a>
+                <a href="{{ categories.0.get_absolute_url }}" style="height:100%;"> <img
+                        src="{% static 'images/c-2.png' %}" alt=""/>
+                    <h2 class="category-name">{{ categories.0.name }}</h2></a>
             </div>
             <div id="c-two">
-                <img src="{% static 'images/c-two.png' %}" alt=""/>
-                <h2 class="category-name">روپوش پزشکی</h2>
-            </div>
-            <div id="c-four">
-                <img src="{% static 'images/cat4.png' %}" alt=""/>
-                <h2 class="category-name">تجهیزات جراحی</h2>
+                <a href="{{ categories.1.get_absolute_url }}" style="height:100%;"> <img
+                        src="{% static 'images/c-1.png' %}" alt=""/>
+                    <h2 class="category-name">{{ categories.1.name }}</h2></a>
             </div>
             <div id="c-three">
-                <img src="{% static 'images/c-three.png' %}" alt=""/>
-                <h2 class="category-name">انواع کلاه</h2>
+                <a href="{{ categories.2.get_absolute_url }}" style="height:100%;"> <img
+                        src="{% static 'images/c-3.png' %}" alt=""/>
+                    <h2 class="category-name">{{ categories.2.name }}</h2></a>
             </div>
+            <div id="c-four">
+                <a href="{{ categories.3.get_absolute_url }}" style="height:100%;"> <img
+                        src="{% static 'images/c-4.png' %}" alt=""/>
+                    <h2 class="category-name">{{ categories.3.name }}</h2></a>
+            </div>
+
         </div>
     </div>
 </div>
@@ -393,170 +240,6 @@
 
         </div>
         {% endfor %}
-        <div class="ms-container">
-
-            <div class="ms-options">
-                <div>
-                    <img
-                            width="18"
-                            height="18"
-                            src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                            alt="search--v1"
-                    />
-                </div>
-                <div>
-                    <img
-                            width="18"
-                            height="18"
-                            src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                            alt="paper-bag--v2"
-                    />
-                </div>
-                <div>
-                    <img
-                            width="18"
-                            height="18"
-                            src="https://img.icons8.com/ios/18/like--v1.png"
-                            alt="like--v1"
-                    />
-                </div>
-            </div>
-            <a href="{% url 'home:products' %}">
-
-                <div class="ms-shadow">
-                    <img src="{% static 'images/ms2.png' %}" alt=""/>
-                </div>
-                <p>گان جراحی یکبار مصرف 38 گرم </p>
-                <div class="ms-price">
-                    <div class="ms-payable">
-                        <div class="ms-discount">
-                            <div>
-                                <span>۱۴٪</span>
-                            </div>
-                            <s>۱۵,۷۹۰</s>
-                        </div>
-                        <div class="ms-totalprice">
-                            <p>۱۳,۴۸۰ تومان</p>
-                        </div>
-                    </div>
-                    <div class="ms-rate">
-                        <span onclick="gfg(1)" class="star">★ </span>
-                        <span onclick="gfg(2)" class="star">★ </span>
-                        <span onclick="gfg(3)" class="star">★ </span>
-                        <span onclick="gfg(4)" class="star">★ </span>
-                        <span onclick="gfg(5)" class="star">★ </span>
-                    </div>
-                </div>
-                <button>افزودن به سبد خرید</button>
-            </a>
-
-        </div>
-        <!-- <div class="ms-container">
-          <div class="ms-options">
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                alt="search--v1"
-              />
-            </div>
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                alt="paper-bag--v2"
-              />
-            </div>
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/ios/18/like--v1.png"
-                alt="like--v1"
-              />
-            </div>
-          </div>
-          <div class="ms-shadow">
-            <img src="{% static 'images/p2.jpeg' %}" alt="" />
-          </div>
-          <p>گان جراحی یکبار مصرف 38 گرم </p>
-          <div class="ms-price">
-            <div class="ms-payable">
-              <div class="ms-discount">
-                <div>
-                  <span>۱۴٪</span>
-                </div>
-                <s>۱۵,۷۹۰</s>
-              </div>
-              <div class="ms-totalprice">
-                <p>۱۳,۴۸۰ تومان</p>
-              </div>
-            </div>
-            <div class="ms-rate">
-              <span onclick="gfg(1)" class="star">★ </span>
-              <span onclick="gfg(2)" class="star">★ </span>
-              <span onclick="gfg(3)" class="star">★ </span>
-              <span onclick="gfg(4)" class="star">★ </span>
-              <span onclick="gfg(5)" class="star">★ </span>
-            </div>
-          </div>
-          <button>افزودن به سبد خرید</button>
-        </div>
-        <div class="ms-container">
-          <div class="ms-options">
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                alt="search--v1"
-              />
-            </div>
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                alt="paper-bag--v2"
-              />
-            </div>
-            <div>
-              <img
-                width="18"
-                height="18"
-                src="https://img.icons8.com/ios/18/like--v1.png"
-                alt="like--v1"
-              />
-            </div>
-          </div>
-          <div class="ms-shadow">
-            <img src="{% static 'images/ms4.png' %}" alt="" />
-          </div>
-          <p>گان جراحی یکبار مصرف 38 گرم </p>
-          <div class="ms-price">
-            <div class="ms-payable">
-              <div class="ms-discount">
-                <div>
-                  <span>۱۴٪</span>
-                </div>
-                <s>۱۵,۷۹۰</s>
-              </div>
-              <div class="ms-totalprice">
-                <p>۱۳,۴۸۰ تومان</p>
-              </div>
-            </div>
-            <div class="ms-rate">
-              <span onclick="gfg(1)" class="star five">★ </span>
-              <span onclick="gfg(2)" class="star five">★ </span>
-              <span onclick="gfg(3)" class="star five">★ </span>
-              <span onclick="gfg(4)" class="star five">★ </span>
-              <span onclick="gfg(5)" class="star five">★ </span>
-            </div>
-          </div>
-          <button>افزودن به سبد خرید</button>
-        </div> -->
     </div>
 </div>
 

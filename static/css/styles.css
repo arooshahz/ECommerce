@@ -494,6 +494,8 @@ ul#dropdown-side .main-category {
   font-weight: 700;
   line-height: 28px;
   color: #ffffff;
+  width: 100%;
+  text-align: center;
 }
 
 .categories h1 {
