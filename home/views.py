@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 from .models import Product, Category
+from django.utils.translation import gettext as _
 
 
 class HomeView(View):
@@ -30,4 +31,7 @@ class CategoryView(View):
 class ProductDetailView(View):
     def get(self, request, slug):
         product = get_object_or_404(Product, slug=slug)
+        # product.name = _(product.name)
+        # product.price = _(product.price)
+        # product.discount = _(product.discount)
         return render(request, 'home/detail.html', {'product': product})

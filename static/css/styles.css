@@ -862,12 +862,13 @@ ul#dropdown-side .main-category {
     display: flex;
     justify-content: space-around;
     border-radius: 5px;
-    width: 35%;
+    gap: 20px;
+    height: 40px;
 }
 
 .detail div#product-info div#info div.info div#card div.price div#avalibility img{
-    width:25%;
-    height:70%;
+    width:20px;
+    height:20px;
 }
 
 .detail div#product-info div#info div.info div#card div.price div#price{
@@ -893,12 +894,48 @@ ul#dropdown-side .main-category {
     font-size: 14px;
     font-weight: 600;
     line-height: 21px;
+
 }
+
+.detail div#product-info div#info div.info div#card div.add-cart button#button:hover{
+    background-color: #29D5D6;
+
+}
+
 
 .detail div#product-info div#info div.info div#card div.add-cart div#add-more{
     background-color: #F0F5F9;
     width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
+.detail div#product-info div#info div.info div#card div.add-cart div#add-more h2{
+    margin: 0;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 400;
+    line-height:31px;
+    background-color: #F0F5F9;
+
+}
+
+.detail div#product-info div#info div.info div#card div.add-cart div#add-more button{
+    background-color: #F0F5F9;
+    border: none;
+    color: #333333;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+
+}
+
+.detail div#product-info div#info div.info div#card div.add-cart div#add-more button:hover{
+    color: #ffffff;
+    background-color: #006A6A;
+
+}
+
 
 .detail div.most-sell div.ms-maincontainer{
     overflow-x: scroll;
@@ -907,6 +944,37 @@ ul#dropdown-side .main-category {
     width:300px;
 }
 
+.detail div#product-desc .nav-tabs .nav-link{
+    color: #3C3C3C;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 37px;
+}
+
+.detail div#product-desc .nav-tabs .nav-link.active{
+    color: #00999A;
+    text-decoration: underline;
+}
+.detail div#product-desc .tab-content>.active h2{
+    color: #008384D9;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 27px;
+}
+.detail div#product-desc .tab-content>.active p,.detail div#product-desc .tab-content>.active ul li{
+    color: #314154A1;
+    font-size: 18px;
+    font-weight:400;
+    line-height: 28px;
+}
+
+.detail div#product-desc .tab-content>.active ul {
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 .excellences {
   display: flex;

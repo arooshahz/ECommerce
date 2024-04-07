@@ -5,9 +5,9 @@
 {% block content %}
 <div class="detail">
     <div id="product-info">
-        <div id="image"><img src="{% static 'images/ms2.png' %}" alt="title"></div>
+        <div id="image"><img src="media/{{ product.image }}" alt="title"></div>
         <div id="info">
-            <h1>گان جراحی یکبار مصرف 38گرم</h1>
+            <h1>{{ product.name }}</h1>
             <div class="ms-rate" style="float: none;">
                 <span onclick="gfg(1)" class="star">★ </span>
                 <span onclick="gfg(2)" class="star">★ </span>
@@ -16,7 +16,7 @@
                 <span onclick="gfg(5)" class="star">★ </span>
             </div>
             <hr>
-            <h3>برند :<span> گروه سام</span></h3>
+            <h3>{% trans "برند :" %}<span>{% trans " گروه سام" %}</span></h3>
             <div class="info">
                 <ul>
                     <li><img src="{% static 'images/left-arrow.png' %}" alt=""> ضد حساسیت و آلرژی</li>
@@ -28,13 +28,18 @@
                 </ul>
                 <div id="card">
                     <div class="price">
-                        <div id="avalibility"><img src="{% static 'images/tick.png' %}" alt=""> موجود</div>
-                        <div id="price">۲۶,۹۶۰ تومان</div>
+                        <div id="avalibility"><img src="{% static 'images/tick.png' %}" alt=""> {% trans "موجود" %}
+                        </div>
+                        <div id="price">{{ product.get_asking_price }} {% trans "تومان" %}</div>
                     </div>
                     <hr>
                     <div class="add-cart">
-                        <button id="button">افزودن به سبد خرید</button>
-                        <div id="add-more"></div>
+                        <button id="button">{% trans "افزودن به سبد خرید" %}</button>
+                        <div id="add-more">
+                            <button onclick="increment()">+</button>
+                            <h2 id="counting">{% trans "۰" %}</h2>
+                            <button onclick="decrement()" style="border-radius:5px 0 0 5px;">-</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,10 +47,41 @@
     </div>
     <hr>
     <div id="product-desc">
-        <div class="tabs">
-            <p>توضیحات</p>
-            <p>مشخصات</p>
-            <p>نظرات</p>
+        <ul class="nav nav-tabs justify-content-center" role="tablist" style="gap:100px;">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="simple-tab-0" data-bs-toggle="tab" href="#simple-tabpanel-0" role="tab"
+                   aria-controls="simple-tabpanel-0" aria-selected="true">{% trans "توضیحات" %}</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="simple-tab-1" data-bs-toggle="tab" href="#simple-tabpanel-1" role="tab"
+                   aria-controls="simple-tabpanel-1" aria-selected="false">{% trans "مشخصات" %}</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="simple-tab-2" data-bs-toggle="tab" href="#simple-tabpanel-2" role="tab"
+                   aria-controls="simple-tabpanel-2" aria-selected="false">{% trans "نظرات" %}</a>
+            </li>
+        </ul>
+        <div class="tab-content pt-5" id="tab-content">
+            <div class="tab-pane active" id="simple-tabpanel-0" role="tabpanel" aria-labelledby="simple-tab-0">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <br>
+                <br>
+                <br>
+                <h2>بهترین گان جراحی 38 گرم چه ویژگی‌هایی دارد؟</h2>
+                <ul>
+                    <li><img src="{% static 'images/left-arrow.png' %}" alt=""> راحت و سبک است.</li>
+                    <li><img src="{% static 'images/left-arrow.png' %}" alt=""> در حین استفاده شکافته نمی‌شود.</li>
+                    <li><img src="{% static 'images/left-arrow.png' %}" alt=""> دوخت و نخ آن محکم و با کیفیت است.</li>
+                    <li><img src="{% static 'images/left-arrow.png' %}" alt=""> برای راحتی جراح، ضخامت پارچه مناسب باشد.
+                    </li>
+                    <li><img src="{% static 'images/left-arrow.png' %}" alt=""> ضد آب ژاول است.</li>
+                </ul>
+            </div>
+            <div class="tab-pane" id="simple-tabpanel-1" role="tabpanel" aria-labelledby="simple-tab-1">Tab 2 selected
+            </div>
+            <div class="tab-pane" id="simple-tabpanel-2" role="tabpanel" aria-labelledby="simple-tab-2">Tab 3 selected
+            </div>
         </div>
     </div>
     <hr>
@@ -58,7 +94,7 @@
         </div>
         <div class="ms-maincontainer">
             <div style="width:400%;display:flex;justify-content:space-between;gap:50px;">
-                {% for sProduct in suggested %}
+                {% for rProduct in related %}
                 <div class="ms-container">
                     <div class="ms-options">
                         <div>
@@ -96,18 +132,18 @@
                             <div class="ms-payable">
                                 <div class="ms-discount">
                                     <div>
-                                        <span>{% trans "۱۴٪" %}</span>
+                                        <span>{{ rProduct.discount }}%</span>
                                     </div>
-                                    <s>{% trans "۱۵,۷۹۰" %}</s>
+                                    <s>{{ rProduct.price }}</s>
                                 </div>
                                 <div class="ms-totalprice">
-                                    <p>{{ sProduct.price }}</p>
+                                    <p>{{ sProduct.get_asking_price }} {% trans "تومان" %}</p>
                                 </div>
                             </div>
                             <div class="ms-rate">
-                                <span onclick="gfg(1)" class="star">★ </span>
-                                <span onclick="gfg(2)" class="star">★ </span>
-                                <span onclick="gfg(3)" class="star">★ </span>
+                                <span onclick="gfg(1)" class="star three">★ </span>
+                                <span onclick="gfg(2)" class="star three">★ </span>
+                                <span onclick="gfg(3)" class="star three">★ </span>
                                 <span onclick="gfg(4)" class="star">★ </span>
                                 <span onclick="gfg(5)" class="star">★ </span>
                             </div>
