@@ -11,7 +11,8 @@ class HomeView(View):
         best_seller = products.order_by('-Sales_number')[:4]
         suggested = products[:4]
         return render(request, 'home/home.html',
-                      {'products': products, 'best_seller': best_seller, 'suggested': suggested,'categories':categories })
+                      {'products': products, 'best_seller': best_seller, 'suggested': suggested,
+                       'categories': categories})
 
 
 class ProductsView(View):

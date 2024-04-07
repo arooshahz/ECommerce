@@ -20,12 +20,21 @@ class Category(models.Model):
         return reverse('home:category', args=[self.slug, ])
 
 
+class Feature(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     category = models.ManyToManyField(Category, related_name='products')
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     image = models.ImageField(upload_to='products/%y/%m/%d/')
     description = models.TextField()
+    features = models.ManyToManyField(Feature)
+    related_products = models.ManyToManyField('self', blank=True)
     price = models.IntegerField()
     discount = models.IntegerField(default=0)
     Sales_number = models.IntegerField(default=0)
@@ -44,4 +53,4 @@ class Product(models.Model):
 
     def get_asking_price(self):
         discount = self.price * self.discount / 100
-        return self.price-discount
+        return self.price - discount
