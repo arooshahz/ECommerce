@@ -849,7 +849,7 @@ ul#dropdown-side .main-category {
     border-radius: 15px;
     padding: 25px 40px;
     width:55%;
-    height: 200px;
+    height: 220px;
 }
 .detail div#product-info div#info div.info div#card div.price{
     display: flex;
@@ -1326,7 +1326,7 @@ li {
   }
   .most-sell div div p {
     font-size: 19px;
-    width: 60%;
+    width: 85%;
   }
   .most-sell div.ms-price div div.ms-discount div span {
     font-size: 17px;
@@ -1460,7 +1460,7 @@ li {
     font-size: 18px;
   }
   .most-sell div div p {
-    width: 65%;
+    width: 75%;
     font-size: 14px;
   }
   .most-sell div.ms-price div div.ms-totalprice p {
@@ -1622,7 +1622,7 @@ li {
     font-size: 22px;
   }
   .most-sell div div p {
-    width: 55%;
+    width: 70%;
   }
   .most-sell div.ms-price div div.ms-totalprice p {
     font-size: 15px;
@@ -1730,10 +1730,7 @@ li {
   }
 
   .most-sell div div p {
-    width: 50%;
-  }
-  .most-sell div div p {
-    width: 55%;
+    width: 70%;
   }
   .most-sell div.ms-price div div.ms-totalprice p {
     font-size: 14px;
@@ -1807,7 +1804,7 @@ li {
     font-size: 25px;
   }
   .most-sell div div p {
-    width: 45%;
+    width: 80%;
   }
   .most-sell div.ms-price div div.ms-totalprice p {
     font-size: 17px;

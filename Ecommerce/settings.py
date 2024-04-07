@@ -31,12 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'modeltranslation',
+    'django.contrib.admin',
     'home.apps.HomeConfig',
     'accounts.apps.AccountsConfig'
 ]
@@ -114,6 +117,8 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 LOCALE_PATHS = [
@@ -126,6 +131,10 @@ LANGUAGES = [
     ('ka', "Georgia"),
     ('ar', "Arabic"),
 ]
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'fa'
+
+MODELTRANSLATION_LANGUAGES = ('fa', 'en', 'ar', 'ka')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 18:56+0330\n"
+"POT-Creation-Date: 2024-04-07 18:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,43 +54,49 @@ msgstr " "
 msgid "برند :"
 msgstr "Brand: "
 
-#: home/templates/home/detail.html:19
-#, fuzzy
-#| msgid "گروه سام"
-msgid " گروه سام"
+#: home/templates/home/detail.html:19 templates/inc/footer.html:30
+msgid "گروه سام"
 msgstr "Sam group"
 
-#: home/templates/home/detail.html:31
+#: home/templates/home/detail.html:29
 msgid "موجود"
 msgstr "available"
 
-#: home/templates/home/detail.html:33 home/templates/home/detail.html:140
-#: home/templates/home/home.html:121 home/templates/home/home.html:380
+#: home/templates/home/detail.html:31 home/templates/home/detail.html:135
+#: home/templates/home/home.html:121 home/templates/home/home.html:227
 msgid "تومان"
 msgstr "Toman"
 
-#: home/templates/home/detail.html:37 home/templates/home/detail.html:151
-#: home/templates/home/home.html:132 home/templates/home/home.html:391
+#: home/templates/home/detail.html:35 home/templates/home/detail.html:146
+#: home/templates/home/home.html:132 home/templates/home/home.html:238
 msgid "افزودن به سبد خرید"
 msgstr "Add to cart"
 
-#: home/templates/home/detail.html:40
+#: home/templates/home/detail.html:38
 msgid "۰"
 msgstr "0"
 
-#: home/templates/home/detail.html:53
+#: home/templates/home/detail.html:51
 msgid "توضیحات"
 msgstr "Description"
 
-#: home/templates/home/detail.html:57
+#: home/templates/home/detail.html:55
 msgid "مشخصات"
 msgstr "Specifications"
 
-#: home/templates/home/detail.html:61
+#: home/templates/home/detail.html:59
 msgid "نظرات"
 msgstr "Comments"
 
-#: home/templates/home/detail.html:93
+#: home/templates/home/detail.html:69
+msgid "بهترین"
+msgstr "The best"
+
+#: home/templates/home/detail.html:69
+msgid "چه ویژگی‌هایی دارد؟"
+msgstr "features: "
+
+#: home/templates/home/detail.html:88
 msgid "محصولات مرتبط"
 msgstr "Related Products"
 
@@ -98,35 +104,35 @@ msgstr "Related Products"
 msgid "پرفروش ترین‌ها"
 msgstr "Best seller"
 
-#: home/templates/home/home.html:76 home/templates/home/home.html:334
+#: home/templates/home/home.html:76 home/templates/home/home.html:181
 msgid "مشاهده همه"
 msgstr "see all"
 
-#: home/templates/home/home.html:308
+#: home/templates/home/home.html:149
 msgid "دسته بندی محصولات"
 msgstr "Product Categories"
 
-#: home/templates/home/home.html:333
+#: home/templates/home/home.html:180
 msgid "پیشنهاد گروه سام"
 msgstr "Sam group suggestion"
 
-#: home/templates/home/home.html:594
+#: home/templates/home/home.html:277
 msgid "امکان تحویل فوری"
 msgstr "possibility of immediate delivery"
 
-#: home/templates/home/home.html:598
+#: home/templates/home/home.html:281
 msgid "ضمانت بازگشت کالا"
 msgstr "product return guarantee"
 
-#: home/templates/home/home.html:602
+#: home/templates/home/home.html:285
 msgid "پشتیبانی 24 ساعته"
 msgstr "24 hour support"
 
-#: home/templates/home/home.html:606
+#: home/templates/home/home.html:289
 msgid "پرداخت بصورت اینترنتی"
 msgstr "pay online"
 
-#: home/templates/home/home.html:610
+#: home/templates/home/home.html:293
 msgid "ضمانت اصل بودن کالا"
 msgstr "Guarantee of the originality of the product"
 
@@ -162,10 +168,6 @@ msgstr "Cart"
 #: templates/inc/footer.html:20
 msgid "هفت روز هفته ، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم"
 msgstr "We are at your service 24/7."
-
-#: templates/inc/footer.html:30
-msgid "گروه سام"
-msgstr "Sam group"
 
 #: templates/inc/footer.html:32
 msgid ""
@@ -1486,6 +1488,15 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#: venv/lib/python3.10/site-packages/modeltranslation/widgets.py:24
+msgid "None"
+msgstr ""
+
+#, fuzzy
+#~| msgid "گروه سام"
+#~ msgid " گروه سام"
+#~ msgstr "Sam group"
 
 #~ msgid "۱۴٪"
 #~ msgstr "14%"
