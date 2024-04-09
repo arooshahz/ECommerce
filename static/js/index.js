@@ -25,7 +25,10 @@ function remove() {
 let data = 0;
 
 //printing default value of data that is 0 in h2 tag
-document.getElementById("counting").innerText = data;
+var counter = document.getElementById("counting");
+if (counter){
+counter.innerText = data;
+}
 
 //creation of increment function
 function increment() {
@@ -39,6 +42,17 @@ function decrement() {
         data=0;
     }
     document.getElementById("counting").innerText = data;
+}
+
+
+var slider = document.getElementById("price-slider");
+var output = document.getElementById("filtered-price");
+output.innerHTML = slider.value;
+console.log(slider.value)
+
+// Update the current slider value (each time you drag the slider han
+const priceSlider = () => {
+  output.innerHTML = slider.value;
 }
 
 // function changeLang(language) {
