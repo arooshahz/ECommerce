@@ -4,7 +4,9 @@
 
 <div>
     <div class="titleProducts">
-        <h2 style="font-size:24px;font-weight:700;line-height:34px;color:#00A1A2;" ><a href="javascript:history.go(-1)"><img src="{% static 'images/arrow-back.png' %}" alt="back"></a> تایتل</h2>
+        <h2 style="font-size:24px;font-weight:700;line-height:34px;color:#00A1A2;"><a
+                href="javascript:history.go(-1)"><img src="{% static 'images/arrow-back.png' %}" alt="back"></a> تایتل
+        </h2>
     </div>
     <div class="productsMain">
         <div class="side">
@@ -40,7 +42,7 @@
             </div>
             <div class="all-products">
                 <div class="ms-maincontainer">
-                    {% for product in products %}
+                    {% for product in products.object_list %}
                     <div class="ms-container">
                         <div class="ms-options">
                             <div>
@@ -99,691 +101,156 @@
 
                     </div>
                     {% endfor %}
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
-                    <div class="ms-container">
-                        <div class="ms-options">
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/glyph-neue/18/search--v1.png"
-                                        alt="search--v1"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/pastel-glyph/18/paper-bag--v2.png"
-                                        alt="paper-bag--v2"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                        width="18"
-                                        height="18"
-                                        src="https://img.icons8.com/ios/18/like--v1.png"
-                                        alt="like--v1"
-                                />
-                            </div>
-                        </div>
-                        <a href="/">
-
-                            <div class="ms-shadow">
-                                <img src="/media/product.image" alt=""/>
-                            </div>
-                            <p>{{ product.name }}</p>
-                            <div class="ms-price">
-                                <div class="ms-payable">
-                                    <div class="ms-discount">
-                                        <div>
-                                            <span>product.discount%</span>
-                                        </div>
-                                        <s>product.price </s>
-                                    </div>
-                                    <div class="ms-totalprice">
-                                        <p> product.get_asking_price {% trans "تومان" %}</p>
-                                    </div>
-                                </div>
-                                <div class="ms-rate">
-                                    <span onclick="gfg(1)" class="star">★ </span>
-                                    <span onclick="gfg(2)" class="star">★ </span>
-                                    <span onclick="gfg(3)" class="star">★ </span>
-                                    <span onclick="gfg(4)" class="star">★ </span>
-                                    <span onclick="gfg(5)" class="star">★ </span>
-                                </div>
-                            </div>
-                            <button>{% trans "افزودن به سبد خرید" %}</button>
-                        </a>
-
-                    </div>
                 </div>
+            </div>
+            <div style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 3px;">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination" style="gap:25px">
+                        {% if products.has_previous %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link"
+                                    href="{% url 'home:products' page_number=prev_num %}"
+                            >Previous</a
+                            >
+                        </li>
+                        {% endif %}
+                        {% if current_page == 1 %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link active"
+                                    href="{% url 'home:products' page_number=1 %}"
+                            >1</a
+                            >
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link"
+                                    href="{% url 'home:products' page_number=1 %}"
+                            >1</a
+                            >
+                        </li>
+                        {% endif %}
+                        {% if current_page == 2 %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link active"
+                                    href="{% url 'home:products' page_number=2 %}"
+                            >2</a
+                            >
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link"
+                                    href="{% url 'home:products' page_number=2 %}"
+                            >2</a
+                            >
+                        </li>
+                        {% endif %}
+                        {% if current_page == 3 %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link active"
+                                    href="{% url 'home:products' page_number=3 %}"
+                            >3</a
+                            >
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link"
+                                    href="{% url 'home:products' page_number=3 %}"
+                            >3</a
+                            >
+                        </li>
+                        {% endif %}
+                        {% if current_page == 4 %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link active"
+                                    href="{% url 'home:products' page_number=4 %}"
+                            >4</a
+                            >
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link"
+                                    href="{% url 'home:products' page_number=4 %}"
+                            >4</a
+                            >
+                        </li>
+                        {% endif %}
+                        {% if current_page == 5 %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link active"
+                                    href="{% url 'home:products' page_number=5 %}"
+                            >5</a
+                            >
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link"
+                                    href="{% url 'home:products' page_number=5 %}"
+                            >5</a
+                            >
+                        </li>
+                        {% endif %}
+                        {% if current_page == 6 %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link active"
+                                    href="{% url 'home:products' page_number=6 %}"
+                            >6</a
+                            >
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link"
+                                    href="{% url 'home:products' page_number=6 %}"
+                            >6</a
+                            >
+                        </li>
+                        {% endif %}
+                        {% if last_page > 6 %}
+                        <li>...</li>
+                        <li class="page-item">
+                            {% if current_page == last_page %}
+                            <a
+                                    class="page-link active"
+                                    href="{% url 'home:products' page_number=last_page %}"
+                            >{{ products.paginator.num_pages }}</a
+                            >
+                            {% else %}
+                            <a
+                                    class="page-link"
+                                    href="{% url 'home:products' page_number=last_page %}"
+                            >{{ products.paginator.num_pages }}</a
+                            >
+                            {% endif %}
+                        </li>
+                        {% endif %}
+
+                        {% if products.has_next %}
+                        <li class="page-item">
+                            <a
+                                    class="page-link"
+                                    href="{% url 'home:products' page_number=next_num %}"
+                            >Next</a
+                            >
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>

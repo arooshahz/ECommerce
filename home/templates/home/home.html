@@ -73,7 +73,7 @@
 <div class="most-sell">
     <div class="titles">
         <h2>{% trans "پرفروش ترین‌ها" %}</h2>
-        <p><a href="{% url 'home:products' %}">{% trans "مشاهده همه" %}</a></p>
+        <p><a href="{% url 'home:products' page_number=1 %}">{% trans "مشاهده همه" %}</a></p>
     </div>
     <div class="ms-maincontainer">
         {% for bsProduct in best_seller %}
@@ -178,7 +178,7 @@
 <div class="most-sell">
     <div class="titles">
         <h2>{% trans "پیشنهاد گروه سام" %}</h2>
-        <p><a href="{% url 'home:products' %}">{% trans "مشاهده همه" %}</a></p>
+        <p><a href="{% url 'home:products' page_number=1 %}">{% trans "مشاهده همه" %}</a></p>
     </div>
     <div class="ms-maincontainer">
         {% for sProduct in suggested %}

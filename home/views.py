@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 from .models import Product, Category
+from django.core.paginator import Paginator
 
 
 class HomeView(View):
@@ -15,9 +16,20 @@ class HomeView(View):
 
 
 class ProductsView(View):
-    def get(self, request):
-        products = Product.objects.filter(available=True)
-        return render(request, 'home/products.html', {'products': products})
+    def get(self, request, page_number=1):
+        products_list = Product.objects.filter(available=True)
+        products = Paginator(products_list, 9)
+        prev_num = int(page_number) - 1
+        next_num = int(page_number) + 1
+        last_page = products.page(1).paginator.num_pages
+
+        return render(request, 'home/products.html',
+                      {'products': products.page(page_number), 'page_number': page_number,
+                       'prev_num': prev_num,
+                       'next_num': next_num,
+                       'last_page': last_page,
+                       'current_page': products.page(page_number).number})
+
 
 class CategoryView(View):
     def get(self, request, slug):
