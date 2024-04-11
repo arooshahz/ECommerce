@@ -418,6 +418,35 @@ ul#dropdown-side .main-category {
   color: #008384;
 }
 
+.language {
+    background-color: #A5C3C3;
+    height: 43px;
+    text-align: end;
+}
+
+.language ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    gap: 89px;
+    padding: 0 100px;
+    height: 43px;
+    align-items: center;
+}
+
+
+.language ul li a {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height:25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+
+
 .banner {
   padding: 50px 80px;
 }
