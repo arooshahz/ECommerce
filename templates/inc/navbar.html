@@ -114,43 +114,43 @@
                         <img src="{% static 'images/fav.svg' %}" alt="favourit"/>
                     </div>
 
-                    <!--                    <div class="btn-group dropup" id="lang-container">-->
-                    <!--                        <form-->
-                    <!--                                style="width: 100%;"-->
-                    <!--                                name="language"-->
-                    <!--                                id="lang"-->
-                    <!--                                action="{% url 'set_language' %}"-->
-                    <!--                                method="post"-->
-                    <!--                        >-->
-                    <!--                            {% csrf_token %}-->
-                    <!--                            <input name="next" type="hidden" value="{{ redirect_to }}"/>-->
-                    <!--                            <input name="language" type="hidden"/>-->
-                    <!--                            <div-->
-                    <!--                                    class="dropdown-toggle"-->
-                    <!--                                    type="button"-->
-                    <!--                                    id="language"-->
-                    <!--                                    data-bs-toggle="dropdown"-->
-                    <!--                                    data-bs-auto-close="true"-->
-                    <!--                                    aria-expanded="false"-->
-                    <!--                                    style="width: 100%; height: 100%"-->
-                    <!--                            >-->
-                    <!--                                <img src="{% static 'images/lang.svg' %}" alt=""/>-->
-                    <!--                            </div>-->
-                    <!--                            <ul class="dropdown-menu" id="lang-dropdown" aria-labelledby="defaultDropdown">-->
-                    <!--                                {% for language in languages %}-->
-                    <!--                                <li>-->
-                    <!--                                    <a-->
-                    <!--                                            class="dropdown-item"-->
-                    <!--                                            href="#"-->
-                    <!--                                            onclick=" document.getElementById('lang').children[2].value ='{{language.code}}';-->
-                    <!--                      document.getElementById('lang').submit();"-->
-                    <!--                                    >{{ language.name_local }}</a-->
-                    <!--                                    >-->
-                    <!--                                </li>-->
-                    <!--                                {% endfor %}-->
-                    <!--                            </ul>-->
-                    <!--                        </form>-->
-                    <!--                    </div>-->
+                    <div class="btn-group dropup" id="lang-container">
+                        <form
+                                style="width: 100%;"
+                                name="language"
+                                id="lang"
+                                action="{% url 'set_language' %}"
+                                method="post"
+                        >
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}"/>
+                            <input name="language" type="hidden"/>
+                            <div
+                                    class="dropdown-toggle"
+                                    type="button"
+                                    id="language"
+                                    data-bs-toggle="dropdown"
+                                    data-bs-auto-close="true"
+                                    aria-expanded="false"
+                                    style="width: 100%; height: 100%"
+                            >
+                                <img src="{% static 'images/lang.svg' %}" alt=""/>
+                            </div>
+                            <ul class="dropdown-menu" id="lang-dropdown" aria-labelledby="defaultDropdown">
+                                {% for language in languages %}
+                                <li>
+                                    <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            onclick=" document.getElementById('lang').children[2].value ='{{language.code}}';
+                                          document.getElementById('lang').submit();"
+                                    >{{ language.name_local }}</a
+                                    >
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </form>
+                    </div>
                     <div><img src="{% static 'images/cart.svg' %}" alt="cart"/></div>
                 </div>
             </div>
@@ -246,49 +246,6 @@
             </div>
 
             <div id="favourit">
-                <div class="btn-group" id="lang-container">
-                    <form
-                            name="language"
-                            id="lang"
-                            action="{% url 'set_language' %}"
-                            method="post"
-                    >
-                        {% csrf_token %}
-                        <input name="next" type="hidden" value="{{ redirect_to }}"/>
-                        <input name="language" type="hidden"/>
-                        <button
-                                class="dropdown-toggle"
-                                type="button"
-                                id="language"
-                                data-bs-toggle="dropdown"
-                                data-bs-auto-close="true"
-                                aria-expanded="false"
-                        >
-                            <img
-                                    width="15"
-                                    height="15"
-                                    src="https://img.icons8.com/ios-filled/15/expand-arrow--v1.png"
-                                    alt="expand-arrow--v1"
-                            />
-                            <span id="lang-name">{{lang.name_local}}</span>
-                            <img src="{% static 'images/lang.svg' %}" alt=""/>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                            {% for language in languages %}
-                            <li>
-                                <a
-                                        class="dropdown-item"
-                                        href="#"
-                                        onclick=" document.getElementById('lang').children[2].value ='{{language.code}}';
-                  document.getElementById('lang').submit();"
-                                >{{ language.name_local }}</a
-                                >
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </form>
-                </div>
-
                 <div>
                     <span>۰</span>
                     <img src="{% static 'images/fav.svg' %}" alt="favourit"/>
@@ -310,17 +267,6 @@
                     {% csrf_token %}
                     <input name="next" type="hidden" value="{{ redirect_to }}"/>
                     <input name="language" type="hidden"/>
-                    <!--                            <div-->
-                    <!--                                    class="dropdown-toggle"-->
-                    <!--                                    type="button"-->
-                    <!--                                    id="language"-->
-                    <!--                                    data-bs-toggle="dropdown"-->
-                    <!--                                    data-bs-auto-close="true"-->
-                    <!--                                    aria-expanded="false"-->
-                    <!--                                    style="width: 100%; height: 100%"-->
-                    <!--                            >-->
-                    <!--                                <img src="{% static 'images/lang.svg' %}" alt=""/>-->
-                    <!--                            </div>-->
                     <ul id="lang-dropdown" aria-labelledby="defaultDropdown">
                         {% for language in languages %}
                         <li>

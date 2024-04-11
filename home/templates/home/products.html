@@ -27,13 +27,25 @@
             </div>
             <div class="card">
                 <h2>{% trans "فیلتر بر اساس قیمت :" %}</h2>
-                <div style="margin:8px 0;position:relative;"><input type="range" class="price-filter" min="0"
-                                                                    max="113480000" step="100000"
-                                                                    value="113480000"
-                                                                    id="price-slider" oninput="priceSlider()">
-                    <div class="filter-handle"></div>
+                <div class="range_container">
+                    <div class="sliders_control" style="direction:initial;">
+                        <input id="fromSlider" type="range" min="0" max="113480000" value="0"/>
+                        <input id="toSlider" type="range" min="0" max="113480000" value="113480000"/>
+                    </div>
+                    <div class="form_control">
+                        <p id="price">قیمت:</p>
+                        <div class="form_control_container">
+                            <p id="fromInput">0</p>
+                            <p>{% trans "تومان" %}</p>
+                        </div>
+                        <p style="margin:0;">-</p>
+                        <div class="form_control_container">
+                            <p id="toInput">113480000</p>
+                            <p>{% trans "تومان" %}</p>
+                        </div>
+                    </div>
                 </div>
-                <p>قیمت: <span id="filtered-price">۱۱۳,۴۸۰,۰۰۰</span> تومان</p>
+                <button>{% trans "فیلتر" %}</button>
             </div>
         </div>
         <div class="main">
@@ -137,6 +149,7 @@
                             >
                         </li>
                         {% endif %}
+                        {% if products.number > 1 %}
                         {% if current_page == 2 %}
                         <li class="page-item">
                             <a
@@ -154,6 +167,8 @@
                             >
                         </li>
                         {% endif %}
+                        {% endif %}
+                        {% if products.number > 2 %}
                         {% if current_page == 3 %}
                         <li class="page-item">
                             <a
@@ -171,6 +186,8 @@
                             >
                         </li>
                         {% endif %}
+                        {% endif %}
+                        {% if products.number > 3 %}
                         {% if current_page == 4 %}
                         <li class="page-item">
                             <a
@@ -188,6 +205,8 @@
                             >
                         </li>
                         {% endif %}
+                        {% endif %}
+                        {% if products.number > 4 %}
                         {% if current_page == 5 %}
                         <li class="page-item">
                             <a
@@ -205,6 +224,8 @@
                             >
                         </li>
                         {% endif %}
+                        {% endif %}
+                        {% if products.number > 5 %}
                         {% if current_page == 6 %}
                         <li class="page-item">
                             <a
@@ -221,6 +242,7 @@
                             >6</a
                             >
                         </li>
+                        {% endif %}
                         {% endif %}
                         {% if last_page > 6 %}
                         <li>...</li>
