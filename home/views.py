@@ -47,6 +47,12 @@ class CategoryView(View):
                        'last_page': last_page, 'current_page': products_list.page(page_number).number})
 
 
+class ProductBasedOnPrice(View):
+    def get(self, request, min_price, max_price):
+        products = Product.objects.filter(price__gt=min_price, price__lt=max_price)
+        return render(request, 'home/test.html', {'products': products})
+
+
 class ProductDetailView(View):
     def get(self, request, slug):
         product = get_object_or_404(Product, slug=slug)
