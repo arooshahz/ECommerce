@@ -32,11 +32,19 @@ class ProductsView(View):
 
 
 class CategoryView(View):
-    def get(self, request, slug):
+    def get(self, request, slug, page_number=1):
         products = Product.objects.filter(available=True)
         category = get_object_or_404(Category, slug=slug)
         category_product = products.filter(category=category)
-        return render(request, 'home/test.html', {'products': category_product})
+        products_list = Paginator(category_product, 9)
+        prev_num = int(page_number) - 1
+        next_num = int(page_number) + 1
+        last_page = products_list.page(1).paginator.num_pages
+        return render(request, 'home/category.html',
+                      {'products': products_list, 'category': category, 'page_number': page_number,
+                       'prev_num': prev_num,
+                       'next_num': next_num,
+                       'last_page': last_page, 'current_page': products_list.page(page_number).number})
 
 
 class ProductDetailView(View):

@@ -1,12 +1,12 @@
-{% extends 'base.html' %} {% load static %} {% load i18n %} {% block extra_headers %}
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% load call_method %} {% block extra_headers %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 {% endblock %} {% block content %}
 
 <div>
     <div class="titleProducts">
         <h2 style="font-size:24px;font-weight:700;line-height:34px;color:#00A1A2;"><a
-                href="javascript:history.go(-1)"><img src="{% static 'images/arrow-back.png' %}" alt="back"></a> همه
-            محصولات
+                href="javascript:history.go(-1)"><img src="{% static 'images/arrow-back.png' %}" alt="back"></a>
+            {{ category.name }}
         </h2>
     </div>
     <div class="productsMain">
@@ -115,7 +115,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link"
-                                    href="{% url 'home:products' page_number=prev_num %}"
+                                    href="{% get_url category prev_num %}"
                             >Previous</a
                             >
                         </li>
@@ -124,7 +124,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link active"
-                                    href="{% url 'home:products' page_number=1 %}"
+                                    href="{% get_url category 1 %}"
                             >1</a
                             >
                         </li>
@@ -132,7 +132,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link"
-                                    href="{% url 'home:products' page_number=1 %}"
+                                    href="{% get_url category 1 %}"
                             >1</a
                             >
                         </li>
@@ -141,7 +141,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link active"
-                                    href="{% url 'home:products' page_number=2 %}"
+                                    href="{% get_url category 2 %}"
                             >2</a
                             >
                         </li>
@@ -149,7 +149,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link"
-                                    href="{% url 'home:products' page_number=2 %}"
+                                    href="{% get_url category 2 %}"
                             >2</a
                             >
                         </li>
@@ -158,7 +158,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link active"
-                                    href="{% url 'home:products' page_number=3 %}"
+                                    href="{% get_url category 3 %}"
                             >3</a
                             >
                         </li>
@@ -166,7 +166,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link"
-                                    href="{% url 'home:products' page_number=3 %}"
+                                    href="{% get_url category 3 %}"
                             >3</a
                             >
                         </li>
@@ -175,7 +175,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link active"
-                                    href="{% url 'home:products' page_number=4 %}"
+                                    href="{% get_url category 4 %}"
                             >4</a
                             >
                         </li>
@@ -183,7 +183,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link"
-                                    href="{% url 'home:products' page_number=4 %}"
+                                    href="{% get_url category 4 %}"
                             >4</a
                             >
                         </li>
@@ -192,7 +192,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link active"
-                                    href="{% url 'home:products' page_number=5 %}"
+                                    href="{% get_url category 5 %}"
                             >5</a
                             >
                         </li>
@@ -200,7 +200,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link"
-                                    href="{% url 'home:products' page_number=5 %}"
+                                    href="{% get_url category 5 %}"
                             >5</a
                             >
                         </li>
@@ -209,7 +209,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link active"
-                                    href="{% url 'home:products' page_number=6 %}"
+                                    href="{% get_url category 6 %}"
                             >6</a
                             >
                         </li>
@@ -217,7 +217,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link"
-                                    href="{% url 'home:products' page_number=6 %}"
+                                    href="{% get_url category 6 %}"
                             >6</a
                             >
                         </li>
@@ -228,13 +228,13 @@
                             {% if current_page == last_page %}
                             <a
                                     class="page-link active"
-                                    href="{% url 'home:products' page_number=last_page %}"
+                                    href="{% get_url category last_page %}"
                             >{{ products.paginator.num_pages }}</a
                             >
                             {% else %}
                             <a
                                     class="page-link"
-                                    href="{% url 'home:products' page_number=last_page %}"
+                                    href="{% get_url category last_page %}"
                             >{{ products.paginator.num_pages }}</a
                             >
                             {% endif %}
@@ -245,7 +245,7 @@
                         <li class="page-item">
                             <a
                                     class="page-link"
-                                    href="{% url 'home:products' page_number=next_num %}"
+                                    href="{% get_url category next_page %}"
                             >Next</a
                             >
                         </li>

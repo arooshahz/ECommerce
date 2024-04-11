@@ -156,9 +156,13 @@
                     <h2 class="category-name">{{ categories.0.name }}</h2></a>
             </div>
             <div id="c-two">
-                <a href="{{ categories.1.get_absolute_url }}" style="height:100%;"> <img
-                        src="{% static 'images/c-1.png' %}" alt=""/>
-                    <h2 class="category-name">{{ categories.1.name }}</h2></a>
+                <a href="{{ categories.1.get_absolute_url }}" style="height:100%;">
+                    <img src="{% static 'images/c-1.png' %}" alt=""/>
+                    <h2 class="category-name">{{ categories.1.name }}</h2>
+                </a>
+                <!--                <a href="{{ categories.1.get_absolute_url  }}" style="height:100%;"> <img-->
+                <!--                        src="{% static 'images/c-1.png' %}" alt=""/>-->
+                <!--                    <h2 class="category-name">{{ categories.1.name }}</h2></a>-->
             </div>
             <div id="c-three">
                 <a href="{{ categories.2.get_absolute_url }}" style="height:100%;"> <img
@@ -270,8 +274,6 @@
     </div>
   </div>
 </div> -->
-
-
 
 
 {% endblock %}

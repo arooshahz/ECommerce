@@ -16,8 +16,8 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_url(self):
-        return reverse('home:category', args=[self.slug, ])
+    def get_absolute_url(self, page_number=1):
+        return reverse('home:category', args=[self.slug, page_number])
 
 
 class Feature(models.Model):
@@ -49,7 +49,7 @@ class Product(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('home:product_detail', args=[self.slug, ])
+        return reverse('home:product_detail', args=[self.slug])
 
     def get_asking_price(self):
         discount = self.price * self.discount / 100

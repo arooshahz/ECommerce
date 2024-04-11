@@ -103,7 +103,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li>{% trans "همه محصولات" %}</li>
+                        <li><a href="{% url 'home:products' page_number=1 %}">{% trans "همه محصولات" %}</a></li>
                         <li>{% trans "درباره ما" %}</li>
                         <li>{% trans "تخفیفات ویژه" %}</li>
                     </ul>
@@ -238,7 +238,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li>{% trans "همه محصولات" %}</li>
+                        <li><a href="{% url 'home:products' page_number=1 %}">{% trans "همه محصولات" %}</a></li>
                         <li>{% trans "درباره ما" %}</li>
                         <li>{% trans "تخفیفات ویژه" %}</li>
                     </ul>

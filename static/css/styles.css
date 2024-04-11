@@ -259,8 +259,8 @@ ul#main-side li#home-side a {
   line-height: 26px;
   cursor: pointer;
 }
-ul#main li,
-ul#main-side li {
+ul#main li a,
+ul#main-side li a {
   font-size: 17px;
   line-height: 26px;
   font-weight: 400;
