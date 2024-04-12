@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 18:27+0000\n"
+"POT-Creation-Date: 2024-04-12 12:19+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,6 +51,51 @@ msgstr " لسياسة الخصوصية"
 msgid " است"
 msgstr " "
 
+#: home/templates/home/category.html:15 home/templates/home/products.html:15
+msgid "دسته بندی زیر مجموعه"
+msgstr "تصنيف فرعي"
+
+#: home/templates/home/category.html:17 home/templates/home/products.html:17
+#: templates/inc/navbar.html:88 templates/inc/navbar.html:221
+msgid "گان جراحی"
+msgstr "جراحة السلاح"
+
+#: home/templates/home/category.html:29 home/templates/home/products.html:29
+msgid "فیلتر بر اساس قیمت :"
+msgstr "التصفية حسب السعر: "
+
+#: home/templates/home/category.html:36 home/templates/home/products.html:36
+msgid "قیمت:"
+msgstr "سعر: "
+
+#: home/templates/home/category.html:39 home/templates/home/category.html:44
+#: home/templates/home/category.html:102 home/templates/home/detail.html:31
+#: home/templates/home/detail.html:135 home/templates/home/home.html:121
+#: home/templates/home/home.html:228 home/templates/home/products.html:39
+#: home/templates/home/products.html:44 home/templates/home/products.html:101
+msgid "تومان"
+msgstr "تومان"
+
+#: home/templates/home/category.html:48 home/templates/home/products.html:48
+msgid "فیلتر"
+msgstr "الفلتره"
+
+#: home/templates/home/category.html:54 home/templates/home/products.html:53
+msgid "محصولات / "
+msgstr "المنتجات /"
+
+#: home/templates/home/category.html:54 home/templates/home/products.html:9
+#: home/templates/home/products.html:53 templates/inc/navbar.html:106
+#: templates/inc/navbar.html:241
+msgid "همه محصولات"
+msgstr "جميع المنتجات"
+
+#: home/templates/home/category.html:113 home/templates/home/detail.html:35
+#: home/templates/home/detail.html:146 home/templates/home/home.html:132
+#: home/templates/home/home.html:239 home/templates/home/products.html:112
+msgid "افزودن به سبد خرید"
+msgstr "أضف إلى السلة"
+
 #: home/templates/home/detail.html:19
 msgid "برند :"
 msgstr "ماركة :"
@@ -62,16 +107,6 @@ msgstr "مجموعة سام"
 #: home/templates/home/detail.html:29
 msgid "موجود"
 msgstr "موجود"
-
-#: home/templates/home/detail.html:31 home/templates/home/detail.html:135
-#: home/templates/home/home.html:121 home/templates/home/home.html:227
-msgid "تومان"
-msgstr "تومان"
-
-#: home/templates/home/detail.html:35 home/templates/home/detail.html:146
-#: home/templates/home/home.html:132 home/templates/home/home.html:238
-msgid "افزودن به سبد خرید"
-msgstr "أضف إلى السلة"
 
 #: home/templates/home/detail.html:38
 msgid "۰"
@@ -105,7 +140,7 @@ msgstr "منتجات ذات صله"
 msgid "پرفروش ترین‌ها"
 msgstr "الأكثر مبيعا"
 
-#: home/templates/home/home.html:76 home/templates/home/home.html:181
+#: home/templates/home/home.html:76 home/templates/home/home.html:182
 msgid "مشاهده همه"
 msgstr "عرض الكل"
 
@@ -113,27 +148,27 @@ msgstr "عرض الكل"
 msgid "دسته بندی محصولات"
 msgstr "تصنيف المنتجات"
 
-#: home/templates/home/home.html:180
+#: home/templates/home/home.html:181
 msgid "پیشنهاد گروه سام"
 msgstr "مقترح من مجموعة سام"
 
-#: home/templates/home/home.html:277
+#: templates/base.html:31
 msgid "امکان تحویل فوری"
 msgstr "إمكانية التسليم الفوري"
 
-#: home/templates/home/home.html:281
+#: templates/base.html:35
 msgid "ضمانت بازگشت کالا"
 msgstr "ضمان إرجاع المنتج"
 
-#: home/templates/home/home.html:285
+#: templates/base.html:39
 msgid "پشتیبانی 24 ساعته"
 msgstr "دعم على مدار 24 ساعة"
 
-#: home/templates/home/home.html:289
+#: templates/base.html:43
 msgid "پرداخت بصورت اینترنتی"
 msgstr "ادفع عبر الإنترنت"
 
-#: home/templates/home/home.html:293
+#: templates/base.html:47
 msgid "ضمانت اصل بودن کالا"
 msgstr "ضمان أصالة المنتج"
 
@@ -237,10 +272,6 @@ msgstr "تصنيف البضائع"
 msgid "البسه"
 msgstr "ملابس"
 
-#: templates/inc/navbar.html:88 templates/inc/navbar.html:221
-msgid "گان جراحی"
-msgstr "جراحة السلاح"
-
 #: templates/inc/navbar.html:89 templates/inc/navbar.html:222
 msgid "لباس بیمارستانی بیمار"
 msgstr "ملابس المستشفى للمريض"
@@ -261,10 +292,6 @@ msgstr "قبعة الأكورديون"
 msgid "کلاه بیمار"
 msgstr "قبعة مريضة"
 
-#: templates/inc/navbar.html:106 templates/inc/navbar.html:241
-msgid "همه محصولات"
-msgstr "جميع المنتجات"
-
 #: templates/inc/navbar.html:108 templates/inc/navbar.html:243
 msgid "تخفیفات ویژه"
 msgstr "خصومات خاصة"
@@ -281,7 +308,7 @@ msgstr "تسجيل الدخول/اشتراک"
 msgid "درخواست خرید عمده"
 msgstr "طلب الشراء بالجملة"
 
-#: templates/inc/navbar.html:297
+#: templates/inc/navbar.html:254
 msgid "محصولات مورد علاقه"
 msgstr "المنتجات المفضلة"
 
@@ -1551,3 +1578,18 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/modeltranslation/widgets.py:24
 msgid "None"
 msgstr ""
+
+#, fuzzy
+#~| msgid "تومان"
+#~ msgid " تومان"
+#~ msgstr "تومان"
+
+#, fuzzy
+#~| msgid "تومان"
+#~ msgid "تومان "
+#~ msgstr "تومان"
+
+#, fuzzy
+#~| msgid "همه محصولات"
+#~ msgid "محصولات /"
+#~ msgstr "جميع المنتجات"

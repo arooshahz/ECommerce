@@ -110,18 +110,41 @@ function getParsed(currentFrom, currentTo) {
   return [from, to];
 }
 
+//function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+//    const rangeDistance = to.max-to.min;
+//    const fromPosition = from.value - to.min;
+//    const toPosition = to.value - to.min;
+//    controlSlider.style.background = `linear-gradient(
+//      to right,
+//      ${sliderColor} 0%,
+//      ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+//      ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+//      ${rangeColor} ${(toPosition)/(rangeDistance)*100}%,
+//      ${sliderColor} ${(toPosition)/(rangeDistance)*100}%,
+//      ${sliderColor} 100%)`;
+//}
+
 function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
-    const rangeDistance = to.max-to.min;
+    const rangeDistance = to.max - to.min;
     const fromPosition = from.value - to.min;
     const toPosition = to.value - to.min;
-    controlSlider.style.background = `linear-gradient(
-      to right,
-      ${sliderColor} 0%,
-      ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
-      ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
-      ${rangeColor} ${(toPosition)/(rangeDistance)*100}%,
-      ${sliderColor} ${(toPosition)/(rangeDistance)*100}%,
-      ${sliderColor} 100%)`;
+
+    // Calculate the percentage positions of the slider handles
+    const fromPercentage = (fromPosition / rangeDistance) * 100;
+    const toPercentage = (toPosition / rangeDistance) * 100;
+
+    // Set gradient direction based on page direction
+    const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+    let direction = 'to right';
+    if (isRTL) {
+        direction = 'to left';
+    }
+
+    // Set gradient stops based on direction
+    let gradientStops = `${sliderColor} 0%, ${sliderColor} ${fromPercentage}%, ${rangeColor} ${fromPercentage}%, ${rangeColor} ${toPercentage}%, ${sliderColor} ${toPercentage}%, ${sliderColor} 100%`;
+
+    // Apply gradient background to controlSlider
+    controlSlider.style.background = `linear-gradient(${direction}, ${gradientStops})`;
 }
 
 function setToggleAccessible(currentTarget) {
@@ -137,7 +160,10 @@ const fromSlider = document.querySelector('#fromSlider');
 const toSlider = document.querySelector('#toSlider');
 const fromInput = document.querySelector('#fromInput');
 const toInput = document.querySelector('#toInput');
+
+
 fillSlider(fromSlider, toSlider, '#C6C6C6', '#008384', toSlider);
+
 setToggleAccessible(toSlider);
 
 fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);

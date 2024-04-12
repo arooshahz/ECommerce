@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 18:27+0000\n"
+"POT-Creation-Date: 2024-04-12 12:19+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,6 +50,51 @@ msgstr "კონფიდენციალურობის კანონ�
 msgid " است"
 msgstr " "
 
+#: home/templates/home/category.html:15 home/templates/home/products.html:15
+msgid "دسته بندی زیر مجموعه"
+msgstr "ქვეკატეგორია"
+
+#: home/templates/home/category.html:17 home/templates/home/products.html:17
+#: templates/inc/navbar.html:88 templates/inc/navbar.html:221
+msgid "گان جراحی"
+msgstr "Ქირურგიული ინსტრუმენტები"
+
+#: home/templates/home/category.html:29 home/templates/home/products.html:29
+msgid "فیلتر بر اساس قیمت :"
+msgstr "გაფილტრეთ ფასის მიხედვით: "
+
+#: home/templates/home/category.html:36 home/templates/home/products.html:36
+msgid "قیمت:"
+msgstr "ფასი: "
+
+#: home/templates/home/category.html:39 home/templates/home/category.html:44
+#: home/templates/home/category.html:102 home/templates/home/detail.html:31
+#: home/templates/home/detail.html:135 home/templates/home/home.html:121
+#: home/templates/home/home.html:228 home/templates/home/products.html:39
+#: home/templates/home/products.html:44 home/templates/home/products.html:101
+msgid "تومان"
+msgstr "თდამან"
+
+#: home/templates/home/category.html:48 home/templates/home/products.html:48
+msgid "فیلتر"
+msgstr "ფილტრი"
+
+#: home/templates/home/category.html:54 home/templates/home/products.html:53
+msgid "محصولات / "
+msgstr "პროდუქტები /"
+
+#: home/templates/home/category.html:54 home/templates/home/products.html:9
+#: home/templates/home/products.html:53 templates/inc/navbar.html:106
+#: templates/inc/navbar.html:241
+msgid "همه محصولات"
+msgstr "ყველა პროდუქტი"
+
+#: home/templates/home/category.html:113 home/templates/home/detail.html:35
+#: home/templates/home/detail.html:146 home/templates/home/home.html:132
+#: home/templates/home/home.html:239 home/templates/home/products.html:112
+msgid "افزودن به سبد خرید"
+msgstr "Კალათაში დამატება"
+
 #: home/templates/home/detail.html:19
 msgid "برند :"
 msgstr "ბრენდი:"
@@ -61,16 +106,6 @@ msgstr "სემ ჯგუფი"
 #: home/templates/home/detail.html:29
 msgid "موجود"
 msgstr "ხელმისაწვდომი"
-
-#: home/templates/home/detail.html:31 home/templates/home/detail.html:135
-#: home/templates/home/home.html:121 home/templates/home/home.html:227
-msgid "تومان"
-msgstr "თდამან"
-
-#: home/templates/home/detail.html:35 home/templates/home/detail.html:146
-#: home/templates/home/home.html:132 home/templates/home/home.html:238
-msgid "افزودن به سبد خرید"
-msgstr "Კალათაში დამატება"
 
 #: home/templates/home/detail.html:38
 msgid "۰"
@@ -104,7 +139,7 @@ msgstr "Მსგავსი პროდუქტები"
 msgid "پرفروش ترین‌ها"
 msgstr "ბესტსელერები"
 
-#: home/templates/home/home.html:76 home/templates/home/home.html:181
+#: home/templates/home/home.html:76 home/templates/home/home.html:182
 msgid "مشاهده همه"
 msgstr "ყველას ნახვა"
 
@@ -112,27 +147,27 @@ msgstr "ყველას ნახვა"
 msgid "دسته بندی محصولات"
 msgstr "საქონლის კლასიფიკაცია"
 
-#: home/templates/home/home.html:180
+#: home/templates/home/home.html:181
 msgid "پیشنهاد گروه سام"
 msgstr "შემოთავაზებული სემ ჯგუფის მიერ"
 
-#: home/templates/home/home.html:277
+#: templates/base.html:31
 msgid "امکان تحویل فوری"
 msgstr "მყისიერი მიტანის შესაძლებლობა"
 
-#: home/templates/home/home.html:281
+#: templates/base.html:35
 msgid "ضمانت بازگشت کالا"
 msgstr "პროდუქტის დაბრუნების გარანტია"
 
-#: home/templates/home/home.html:285
+#: templates/base.html:39
 msgid "پشتیبانی 24 ساعته"
 msgstr "24 საათიანი მხარდაჭერა"
 
-#: home/templates/home/home.html:289
+#: templates/base.html:43
 msgid "پرداخت بصورت اینترنتی"
 msgstr "გადაიხადე ონლაინ"
 
-#: home/templates/home/home.html:293
+#: templates/base.html:47
 msgid "ضمانت اصل بودن کالا"
 msgstr "საქონლის ორიგინალობის გარანტია"
 
@@ -238,10 +273,6 @@ msgstr "საქონლის კლასიფიკაცია"
 msgid "البسه"
 msgstr "ტანსაცმელი"
 
-#: templates/inc/navbar.html:88 templates/inc/navbar.html:221
-msgid "گان جراحی"
-msgstr "Ქირურგიული ინსტრუმენტები"
-
 #: templates/inc/navbar.html:89 templates/inc/navbar.html:222
 msgid "لباس بیمارستانی بیمار"
 msgstr "პაციენტის საავადმყოფოს ტანსაცმელი"
@@ -262,10 +293,6 @@ msgstr "აკორდეონის ქუდი"
 msgid "کلاه بیمار"
 msgstr "ავადმყოფი ქუდი"
 
-#: templates/inc/navbar.html:106 templates/inc/navbar.html:241
-msgid "همه محصولات"
-msgstr "ყველა პროდუქტი"
-
 #: templates/inc/navbar.html:108 templates/inc/navbar.html:243
 msgid "تخفیفات ویژه"
 msgstr "სპეციალური შეთავაზებები"
@@ -282,7 +309,7 @@ msgstr "შესვლა/დარეგისტრირდით"
 msgid "درخواست خرید عمده"
 msgstr "ნაყარი შესყიდვის მოთხოვნა"
 
-#: templates/inc/navbar.html:297
+#: templates/inc/navbar.html:254
 msgid "محصولات مورد علاقه"
 msgstr "საყვარელი პროდუქტები"
 
@@ -1492,6 +1519,21 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/modeltranslation/widgets.py:24
 msgid "None"
 msgstr ""
+
+#, fuzzy
+#~| msgid "تومان"
+#~ msgid " تومان"
+#~ msgstr "თდამან"
+
+#, fuzzy
+#~| msgid "تومان"
+#~ msgid "تومان "
+#~ msgstr "თდამან"
+
+#, fuzzy
+#~| msgid "همه محصولات"
+#~ msgid "محصولات /"
+#~ msgstr "ყველა პროდუქტი"
 
 #~ msgid "۱۴٪"
 #~ msgstr "14%"

@@ -4,7 +4,7 @@
 
 <div>
     <div class="titleProducts">
-        <h2 style="font-size:24px;font-weight:700;line-height:34px;color:#00A1A2;"><a
+        <h2 style="font-size:24px;font-weight:700;line-height:34px;color:#00A1A2;direction:rtl;"><a
                 href="javascript:history.go(-1)"><img src="{% static 'images/arrow-back.png' %}" alt="back"></a>
             {{ category.name }}
         </h2>
@@ -28,12 +28,12 @@
             <div class="card">
                 <h2>{% trans "فیلتر بر اساس قیمت :" %}</h2>
                 <div class="range_container">
-                    <div class="sliders_control" style="direction:initial;">
+                    <div class="sliders_control">
                         <input id="fromSlider" type="range" min="0" max="113480000" value="0"/>
                         <input id="toSlider" type="range" min="0" max="113480000" value="113480000"/>
                     </div>
                     <div class="form_control">
-                        <p id="price">قیمت:</p>
+                        <p id="price">{% trans "قیمت:" %}</p>
                         <div class="form_control_container">
                             <p id="fromInput">0</p>
                             <p>{% trans "تومان" %}</p>
@@ -51,7 +51,7 @@
         </div>
         <div class="main">
             <div class="header">
-                <h2>محصولات / <p>همه محصولات </p></h2>
+                <h2>{% trans "محصولات / " %}<p>{% trans "همه محصولات" %} </p></h2>
 
             </div>
             <div class="all-products">

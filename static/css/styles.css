@@ -1083,6 +1083,7 @@ ul#dropdown-side .main-category {
   color: #635a5a;
   align-items: center;
   gap: 4px;
+  flex-wrap: wrap;
 }
 
 .form_control_container {
@@ -1153,6 +1154,10 @@ input[type="range"] {
 #fromSlider {
   height: 0;
   z-index: 1;
+}
+
+.titleProducts{
+    margin-top: 32px;
 }
 
 .productsMain .side .card button {
