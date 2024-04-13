@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %} {% load i18n %} {% load humanize %} {% block extra_headers %}
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% load price_filter %} {% block extra_headers %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 {% endblock %} {% block content %}
 <div class="banner">
@@ -115,10 +115,10 @@
                             <div>
                                 <span>{{ bsProduct.discount }}%</span>
                             </div>
-                            <s>{{ bsProduct.price|floatformat:"-2g" }}</s>
+                            <s>{{ bsProduct.price|currency }}</s>
                         </div>
                         <div class="ms-totalprice">
-                            <p>{{ bsProduct.get_asking_price|floatformat:"-2g" }} {% trans "تومان" %}</p>
+                            <p>{{ bsProduct.get_asking_price|currency }}</p>
                         </div>
                     </div>
                     <div class="ms-rate">
@@ -222,10 +222,10 @@
                             <div>
                                 <span>{{ sProduct.discount }}%</span>
                             </div>
-                            <s>{{ sProduct.price }}</s>
+                            <s>{{ sProduct.price|currency }}</s>
                         </div>
                         <div class="ms-totalprice">
-                            <p>{{ sProduct.get_asking_price }} {% trans "تومان" %}</p>
+                            <p>{{ sProduct.get_asking_price|currency }}</p>
                         </div>
                     </div>
                     <div class="ms-rate">
@@ -243,34 +243,6 @@
         {% endfor %}
     </div>
 </div>
-
-<!-- <div class="our-customers">
-  <h1>مشتریان ما</h1>
-  <div class="overflow">
-    <div class="primary">
-      <img src="{% static 'images/customer1c.png' %}" alt="" />
-      <img src="{% static 'images/customer2c.png' %}" alt="" />
-      <img src="{% static 'images/customer3c.png' %}" alt="" />
-      <img src="{% static 'images/customer4c.png' %}" alt="" />
-      <img src="{% static 'images/customer5c.png' %}" alt="" />
-      <img src="{% static 'images/customer6c.png' %}" alt="" />
-      <img src="{% static 'images/customer7c.png' %}" alt="" />
-      <img src="{% static 'images/customer8c.png' %}" alt="" />
-      <img src="{% static 'images/customer9c.png' %}" alt="" />
-    </div>
-    <div class="secondary">
-      <img src="{% static 'images/customer1c.png' %}" alt="" />
-      <img src="{% static 'images/customer2c.png' %}" alt="" />
-      <img src="{% static 'images/customer3c.png' %}" alt="" />
-      <img src="{% static 'images/customer4c.png' %}" alt="" />
-      <img src="{% static 'images/customer5c.png' %}" alt="" />
-      <img src="{% static 'images/customer6c.png' %}" alt="" />
-      <img src="{% static 'images/customer7c.png' %}" alt="" />
-      <img src="{% static 'images/customer8c.png' %}" alt="" />
-      <img src="{% static 'images/customer9c.png' %}" alt="" />
-    </div>
-  </div>
-</div> -->
 
 
 {% endblock %}

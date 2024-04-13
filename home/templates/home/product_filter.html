@@ -60,6 +60,9 @@
             </div>
             <div class="all-products">
                 <div class="ms-maincontainer">
+                    {% if number_of_products == 0 %}
+                    <p>{% trans "محصولی یافت نشد!" %}</p>
+                    {% endif %}
                     {% for product in products.object_list %}
                     <div class="ms-container">
                         <div class="ms-options">

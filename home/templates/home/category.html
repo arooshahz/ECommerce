@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %} {% load i18n %} {% load call_method %} {% block extra_headers %}
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% load call_method %} {% load price_filter %} {% block extra_headers %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 {% endblock %} {% block content %}
 
@@ -29,19 +29,19 @@
                 <h2>{% trans "فیلتر بر اساس قیمت :" %}</h2>
                 <div class="range_container">
                     <div class="sliders_control">
-                        <input id="fromSlider" type="range" min="0" max="113480000" value="0"/>
-                        <input id="toSlider" type="range" min="0" max="113480000" value="113480000"/>
+                        <input id="fromSlider" type="range" min="0" max="1000" value="0"/>
+                        <input id="toSlider" type="range" min="0" max="1000" value="1000"/>
                     </div>
                     <div class="form_control">
                         <p id="price">{% trans "قیمت:" %}</p>
                         <div class="form_control_container">
                             <p id="fromInput">0</p>
-                            <p>{% trans "تومان" %}</p>
+                            <p>$</p>
                         </div>
                         <p style="margin:0;">-</p>
                         <div class="form_control_container">
-                            <p id="toInput">113480000</p>
-                            <p>{% trans "تومان" %}</p>
+                            <p id="toInput">1000</p>
+                            <p>$</p>
                         </div>
                     </div>
                 </div>
@@ -96,10 +96,10 @@
                                         <div>
                                             <span>{{ product.discount }}%</span>
                                         </div>
-                                        <s>{{ product.price }}</s>
+                                        <s>{{ product.price|currency }}</s>
                                     </div>
                                     <div class="ms-totalprice">
-                                        <p>{{ product.get_asking_price }} {% trans "تومان" %}</p>
+                                        <p>{{ product.get_asking_price|currency }}</p>
                                     </div>
                                 </div>
                                 <div class="ms-rate">

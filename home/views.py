@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
 from django.views import View
 from .models import Product, Category
 from django.core.paginator import Paginator
@@ -31,6 +32,13 @@ class ProductsView(View):
                        'last_page': last_page,
                        'current_page': products.page(page_number).number})
 
+    def post(self, request, page_number):
+        min_price = request.POST.get('min-price')
+        max_price = request.POST.get('max-price')
+
+        return redirect(
+            reverse('home:product_price', kwargs={'min_price': min_price, 'max_price': max_price, 'page_number': 1}))
+
 
 class CategoryView(View):
     def get(self, request, slug, page_number=1):
@@ -49,9 +57,19 @@ class CategoryView(View):
 
 
 class ProductBasedOnPrice(View):
-    def get(self, request, min_price, max_price):
-        products = Product.objects.filter(price__gt=min_price, price__lt=max_price)
-        return render(request, 'home/test.html', {'products': products})
+    def get(self, request, min_price, max_price, page_number=1):
+        products_list = Product.objects.filter(price__gt=min_price, price__lt=max_price)
+        products = Paginator(products_list, 9)
+        prev_num = int(page_number) - 1
+        next_num = int(page_number) + 1
+        last_page = products.page(1).paginator.num_pages
+        number_of_products = len(list(products.object_list))
+        return render(request, 'home/product_filter.html', {'products': products, 'page_number': page_number,
+                                                            'prev_num': prev_num,
+                                                            'next_num': next_num,
+                                                            'last_page': last_page,
+                                                            'current_page': products.page(page_number).number,
+                                                            'number_of_products': number_of_products})
 
 
 class ProductDetailView(View):
