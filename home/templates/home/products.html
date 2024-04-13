@@ -27,26 +27,29 @@
             </div>
             <div class="card">
                 <h2>{% trans "فیلتر بر اساس قیمت :" %}</h2>
-                <div class="range_container">
-                    <div class="sliders_control" style="">
-                        <input id="fromSlider" type="range" min="0" max="113480000" value="0"/>
-                        <input id="toSlider" type="range" min="0" max="113480000" value="113480000"/>
-                    </div>
-                    <div class="form_control">
-                        <p id="price">{% trans "قیمت:" %}</p>
+                <form action="" method="post">
+                    <div class="range_container">
+                        <div class="sliders_control" style="">
+                            <input id="fromSlider" name="min-price" type="range" min="0" max="113480000" value="0"/>
+                            <input id="toSlider" name="max-price" type="range" min="0" max="113480000"
+                                   value="113480000"/>
+                        </div>
+                        <div class="form_control">
+                            <p id="price">{% trans "قیمت:" %}</p>
 
-                        <div class="form_control_container">
-                            <p id="fromInput">0</p>
-                            <p>{% trans "تومان" %}</p>
-                        </div>
-                        <p style="margin:0;">-</p>
-                        <div class="form_control_container">
-                            <p id="toInput">113480000</p>
-                            <p>{% trans "تومان" %}</p>
+                            <div class="form_control_container">
+                                <p id="fromInput">0</p>
+                                <p>{% trans "تومان" %}</p>
+                            </div>
+                            <p style="margin:0;">-</p>
+                            <div class="form_control_container">
+                                <p id="toInput">113480000</p>
+                                <p>{% trans "تومان" %}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <button>{% trans "فیلتر" %}</button>
+                    <button type="submit">{% trans "فیلتر" %}</button>
+                </form>
             </div>
         </div>
         <div class="main">

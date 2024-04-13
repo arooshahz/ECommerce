@@ -1,3 +1,3 @@
 NAME = 'SamGroup'
-USER = 'root'
-PASSWORD = '1qaz3EDC'
+USER = 'alino'
+PASSWORD = 'nidravraf@2003A'

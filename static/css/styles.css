@@ -1160,7 +1160,7 @@ input[type="range"] {
     margin-top: 32px;
 }
 
-.productsMain .side .card button {
+.productsMain .side .card button{
     background-color: #00ACA7;
     border-radius: 5px;
     color: #ffffff;
@@ -1170,6 +1170,9 @@ input[type="range"] {
     border: none;
     height: 39px;
     width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .productsMain .main {

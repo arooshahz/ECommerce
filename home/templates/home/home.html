@@ -115,10 +115,10 @@
                             <div>
                                 <span>{{ bsProduct.discount }}%</span>
                             </div>
-                            <s>{{ bsProduct.price|floatformat:"2g" }}</s>
+                            <s>{{ bsProduct.price|floatformat:"-2g" }}</s>
                         </div>
                         <div class="ms-totalprice">
-                            <p>{{ bsProduct.get_asking_price|floatformat:"2g" }} {% trans "تومان" %}</p>
+                            <p>{{ bsProduct.get_asking_price|floatformat:"-2g" }} {% trans "تومان" %}</p>
                         </div>
                     </div>
                     <div class="ms-rate">
