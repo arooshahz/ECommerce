@@ -5,15 +5,17 @@
     <title>Title</title>
 </head>
 <body>
+  <form action="" method="get">
+        {{ form.as_p }}
+        <input type="submit" value="Search">
+    </form><br/><br/>
 
-{% for category in categories %}
+  <div class="card">
+        {% for post in products %}
 
-    {{ category.name }}
+             <a href="{{ post.get_absolute_url }}" class="card-body">{{ post.name|truncatewords:8 }}</a>
+        {% endfor %}
+    </div>
 
-    {% for subcategory in  category.scategory.all %}
-       {{ subcategory.name }}
-    {% endfor %}
-
-{% endfor %}
 </body>
 </html>

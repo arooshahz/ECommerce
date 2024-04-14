@@ -1,3 +1,4 @@
+from django.db.models.query_utils import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.views import View
@@ -6,12 +7,18 @@ from django.core.paginator import Paginator
 
 
 class HomeView(View):
+
     def get(self, request):
         categories = Category.objects.filter(is_sub=False)
         products = Product.objects.filter(available=True)
+        if request.GET.get('search'):
+            search_query = request.GET.get('search')
+            products = products.filter(
+                Q(description__icontains=search_query) |
+                Q(name__icontains=search_query)
+            )
         best_seller = products.order_by('-Sales_number')[:4]
         suggested = products[:4]
-
         return render(request, 'home/home.html',
                       {'products': products, 'best_seller': best_seller, 'suggested': suggested,
                        'categories': categories})

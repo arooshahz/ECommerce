@@ -155,16 +155,19 @@
                 </div>
             </div>
             <div id="logo">
-                <label
-                        for="search"
-                        class="{% if LANGUAGE_CODE == 'en' or LANGUAGE_CODE == 'ka' %}right19{% endif %}"
-                >
-                    <input
-                            type="text"
-                            name="search"
-                            placeholder="{% trans 'جستجوی محصولات' %}"
-                    />
-                </label>
+                <form action="{% url 'home:home'  %}" method="get">
+                    <label
+                            for="search"
+                            class="{% if LANGUAGE_CODE == 'en' or LANGUAGE_CODE == 'ka' %}right19{% endif %}"
+                    >
+                        <input
+                                type="text"
+                                name="search"
+                                placeholder="{% trans 'جستجوی محصولات' %}"
+                        />
+                    </label>
+                    <button type="submit">search</button>
+                </form>
                 <img src="{% static 'images/Group.png' %}" alt="logo"/>
             </div>
             <div id="login">
