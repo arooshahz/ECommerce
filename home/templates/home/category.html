@@ -15,7 +15,7 @@
                 <h2>{% trans "دسته بندی زیر مجموعه" %}</h2>
                 <ul>
                     {% for subcategory in category.scategory.all %}
-                    <li>{{ subcategory.name }}</li>
+                    <li><a href="{{ subcategory.get_absolute_url }}">{{ subcategory.name }}</a></li>
                     {% endfor %}
                 </ul>
             </div>

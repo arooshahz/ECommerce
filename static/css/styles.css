@@ -1084,7 +1084,7 @@ ul#dropdown-side .main-category {
     margin-top: 20px;
 }
 
-.productsMain .side .card ul li{
+.productsMain .side .card ul li a{
     color: #00000094;
     font-size: 15px;
     font-weight:400;
@@ -1219,6 +1219,7 @@ input[type="range"] {
     align-items:center;
     margin: 112px 65px 30px 65px;
     height: auto;
+    background-color:transparent;
 
 }
 
@@ -1914,7 +1915,7 @@ li {
     width: 45%;
   }
   .search div#login button {
-    width: 30%;
+    width: 40%;
   }
   .menu div#favourit p {
     display: none;
@@ -2059,7 +2060,7 @@ li {
     width: 40%;
   }
   .search div#login button {
-    width: 32%;
+    width: 35%;
   }
   .menu div#favourit p {
     display: flex;

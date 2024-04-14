@@ -125,7 +125,7 @@ class FavouriteProducts(View):
         prev_num = int(page_number) - 1
         next_num = int(page_number) + 1
         last_page = products.page(1).paginator.num_pages
-        return render(request, 'home/daredabe_favourite.html',
+        return render(request, 'home/favourites.html',
                       {'products': products, 'categories': categories, 'page_number': page_number,
                        'prev_num': prev_num,
                        'next_num': next_num,
