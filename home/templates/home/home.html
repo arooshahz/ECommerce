@@ -50,8 +50,8 @@
                 <div id="offers-banner">
                     <h1>جدیدترین تخفیفات در اینجا</h1>
                     <button>
-                        مشاهده محصولات
-                        <img src="{% static 'images/arrowUL.png' %}" alt=""/>
+                        <a href="{% url 'home:products' page_number=1 %}"> مشاهده محصولات
+                            <img src="{% static 'images/arrowUL.png' %}" alt=""/></a>
                     </button>
                 </div>
             </div>
