@@ -96,3 +96,10 @@ class DiscountedProducts(View):
     def get(self, request):
         discounted_products = Product.objects.filter(discount__gt=20)
         return render(request, 'home/daredabe_discount.html', {'products': discounted_products})
+
+
+class FavouriteProducts(View):
+    def get(self, request):
+        products = Product.objects.filter(available=True)
+        favourite_products = products.order_by('-price')[:6]
+        return render(request, 'home/daredabe_favourite.html', {'products': favourite_products})
