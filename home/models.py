@@ -7,6 +7,7 @@ class Category(models.Model):
     is_sub = models.BooleanField(default=False)
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
+    image = models.ImageField(upload_to='category/%y/%m/%d/', blank=True)
 
     class Meta:
         ordering = ('name',)
