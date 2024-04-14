@@ -8,6 +8,7 @@
     {% load set_var %}
     {% if LANGUAGE_CODE == 'en' or LANGUAGE_CODE == 'ka' %}
     {% set offcanvas = "offcanvas-end" %}
+    {% set searchClass = "left:unset;right:14px;" %}
     {% else %}
     {% set offcanvas = "offcanvas-start" %}
     {% endif %}
@@ -99,7 +100,8 @@
                         </li>
                         <li><a href="{% url 'home:products' page_number=1 %}">{% trans "همه محصولات" %}</a></li>
                         <li>{% trans "درباره ما" %}</li>
-                        <li><a href="{% url 'home:discount_products' page_number=1 %}">{% trans "تخفیفات ویژه" %}</a></li>
+                        <li><a href="{% url 'home:discount_products' page_number=1 %}">{% trans "تخفیفات ویژه" %}</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="offcanvas-footer">
@@ -161,7 +163,7 @@
                                 placeholder="{% trans 'جستجوی محصولات' %}"
                         />
                     </label>
-                    <button type="submit"><img src="https://img.icons8.com/ios-filled/24/search--v1.png" alt="">
+                    <button type="submit" style="{{ searchClass }}"><img src="https://img.icons8.com/ios-filled/24/search--v1.png" alt="">
                     </button>
                 </form>
                 <img src="{% static 'images/Group.png' %}" alt="logo"/>
@@ -228,19 +230,23 @@
                         </li>
                         <li><a href="{% url 'home:products' page_number=1 %}">{% trans "همه محصولات" %}</a></li>
                         <li>{% trans "درباره ما" %}</li>
-                        <li><a href="{% url 'home:discount_products' page_number=1 %}">{% trans "تخفیفات ویژه" %}</a></li>
+                        <li><a href="{% url 'home:discount_products' page_number=1 %}">{% trans "تخفیفات ویژه" %}</a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <div id="favourit">
-                <div>
-                    <span>۰</span>
-                    <img src="{% static 'images/fav.svg' %}" alt="favourit"/>
-                </div>
-                <div>
-                    <p>{% trans "محصولات مورد علاقه" %}</p>
-                </div>
+                <a href="{% url 'home:favourite_products' page_number=1 %}">
+                    <div>
+                        <span>۰</span>
+                        <img src="{% static 'images/fav.svg' %}" alt="favourit"/>
+                    </div>
+                    <div>
+                        <p>{% trans "محصولات مورد علاقه" %}</p>
+                    </div>
+                </a>
+
             </div>
         </div>
         <div class="language">

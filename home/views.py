@@ -39,8 +39,6 @@ class ProductsView(View):
         next_num = int(page_number) + 1
         last_page = products.page(1).paginator.num_pages
 
-
-
         return render(request, 'home/products.html',
                       {'products': products.page(page_number), 'categories': categories, 'page_number': page_number,
                        'prev_num': prev_num,
@@ -101,13 +99,35 @@ class ProductDetailView(View):
 
 
 class DiscountedProducts(View):
-    def get(self, request):
+    def get(self, request, page_number):
+        categories = Category.objects.filter(is_sub=False)
+
         discounted_products = Product.objects.filter(discount__gt=20)
-        return render(request, 'home/daredabe_discount.html', {'products': discounted_products})
+        products = Paginator(discounted_products, 9)
+        prev_num = int(page_number) - 1
+        next_num = int(page_number) + 1
+        last_page = products.page(1).paginator.num_pages
+        return render(request, 'home/special_offers.html',
+                      {'products': products, 'categories': categories, 'page_number': page_number,
+                       'prev_num': prev_num,
+                       'next_num': next_num,
+                       'last_page': last_page,
+                       'current_page': products.page(page_number).number})
 
 
 class FavouriteProducts(View):
-    def get(self, request):
+    def get(self, request, page_number=1):
+        categories = Category.objects.filter(is_sub=False)
+
         products = Product.objects.filter(available=True)
         favourite_products = products.order_by('-price')[:6]
-        return render(request, 'home/daredabe_favourite.html', {'products': favourite_products})
+        products = Paginator(favourite_products, 6)
+        prev_num = int(page_number) - 1
+        next_num = int(page_number) + 1
+        last_page = products.page(1).paginator.num_pages
+        return render(request, 'home/daredabe_favourite.html',
+                      {'products': products, 'categories': categories, 'page_number': page_number,
+                       'prev_num': prev_num,
+                       'next_num': next_num,
+                       'last_page': last_page,
+                       'current_page': products.page(page_number).number})

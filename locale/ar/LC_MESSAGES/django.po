@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-12 12:19+0330\n"
+"POT-Creation-Date: 2024-04-14 20:13+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,50 +51,60 @@ msgstr " لسياسة الخصوصية"
 msgid " است"
 msgstr " "
 
-#: home/templates/home/category.html:15 home/templates/home/products.html:15
+#: home/templates/home/category.html:15
+#: home/templates/home/daredabe_favourite.html:15
+#: home/templates/home/product_filter.html:15
+#: home/templates/home/products.html:15
+#: home/templates/home/special_offers.html:15
 msgid "دسته بندی زیر مجموعه"
 msgstr "تصنيف فرعي"
 
-#: home/templates/home/category.html:17 home/templates/home/products.html:17
-#: templates/inc/navbar.html:88 templates/inc/navbar.html:221
-msgid "گان جراحی"
-msgstr "جراحة السلاح"
-
-#: home/templates/home/category.html:29 home/templates/home/products.html:29
+#: home/templates/home/category.html:23
+#: home/templates/home/daredabe_favourite.html:26
+#: home/templates/home/product_filter.html:26
+#: home/templates/home/products.html:26
+#: home/templates/home/special_offers.html:26
 msgid "فیلتر بر اساس قیمت :"
 msgstr "التصفية حسب السعر: "
 
-#: home/templates/home/category.html:36 home/templates/home/products.html:36
+#: home/templates/home/category.html:30
+#: home/templates/home/daredabe_favourite.html:36
+#: home/templates/home/product_filter.html:36
+#: home/templates/home/products.html:36
+#: home/templates/home/special_offers.html:36
 msgid "قیمت:"
 msgstr "سعر: "
 
-#: home/templates/home/category.html:39 home/templates/home/category.html:44
-#: home/templates/home/category.html:102 home/templates/home/detail.html:31
-#: home/templates/home/detail.html:135 home/templates/home/home.html:121
-#: home/templates/home/home.html:228 home/templates/home/products.html:39
-#: home/templates/home/products.html:44 home/templates/home/products.html:101
-msgid "تومان"
-msgstr "تومان"
-
-#: home/templates/home/category.html:48 home/templates/home/products.html:48
+#: home/templates/home/category.html:42
+#: home/templates/home/daredabe_favourite.html:49
+#: home/templates/home/product_filter.html:49
+#: home/templates/home/products.html:49
+#: home/templates/home/special_offers.html:49
 msgid "فیلتر"
 msgstr "الفلتره"
 
-#: home/templates/home/category.html:54 home/templates/home/products.html:53
+#: home/templates/home/category.html:48
+#: home/templates/home/daredabe_favourite.html:55
+#: home/templates/home/product_filter.html:55
+#: home/templates/home/products.html:55
+#: home/templates/home/special_offers.html:55
 msgid "محصولات / "
 msgstr "المنتجات /"
 
-#: home/templates/home/category.html:54 home/templates/home/products.html:9
-#: home/templates/home/products.html:53 templates/inc/navbar.html:106
-#: templates/inc/navbar.html:241
-msgid "همه محصولات"
-msgstr "جميع المنتجات"
-
-#: home/templates/home/category.html:113 home/templates/home/detail.html:35
-#: home/templates/home/detail.html:146 home/templates/home/home.html:132
-#: home/templates/home/home.html:239 home/templates/home/products.html:112
+#: home/templates/home/category.html:107
+#: home/templates/home/daredabe_favourite.html:114
+#: home/templates/home/detail.html:35 home/templates/home/detail.html:146
+#: home/templates/home/home.html:139 home/templates/home/home.html:246
+#: home/templates/home/product_filter.html:117
+#: home/templates/home/products.html:114
+#: home/templates/home/special_offers.html:114
 msgid "افزودن به سبد خرید"
 msgstr "أضف إلى السلة"
+
+#: home/templates/home/daredabe_favourite.html:9
+#: home/templates/home/daredabe_favourite.html:55 templates/inc/navbar.html:245
+msgid "محصولات مورد علاقه"
+msgstr "المنتجات المفضلة"
 
 #: home/templates/home/detail.html:19
 msgid "برند :"
@@ -136,21 +146,40 @@ msgstr "سمات: "
 msgid "محصولات مرتبط"
 msgstr "منتجات ذات صله"
 
-#: home/templates/home/home.html:75
+#: home/templates/home/home.html:82
 msgid "پرفروش ترین‌ها"
 msgstr "الأكثر مبيعا"
 
-#: home/templates/home/home.html:76 home/templates/home/home.html:182
+#: home/templates/home/home.html:83 home/templates/home/home.html:189
 msgid "مشاهده همه"
 msgstr "عرض الكل"
 
-#: home/templates/home/home.html:149
+#: home/templates/home/home.html:156
 msgid "دسته بندی محصولات"
 msgstr "تصنيف المنتجات"
 
-#: home/templates/home/home.html:181
+#: home/templates/home/home.html:188
 msgid "پیشنهاد گروه سام"
 msgstr "مقترح من مجموعة سام"
+
+#: home/templates/home/product_filter.html:9
+#: home/templates/home/product_filter.html:55
+#: home/templates/home/products.html:9 home/templates/home/products.html:55
+#: templates/inc/navbar.html:100 templates/inc/navbar.html:230
+msgid "همه محصولات"
+msgstr "جميع المنتجات"
+
+#: home/templates/home/product_filter.html:61
+#, fuzzy
+#| msgid "محصولات مرتبط"
+msgid "محصولی یافت نشد!"
+msgstr "منتجات ذات صله"
+
+#: home/templates/home/special_offers.html:9
+#: home/templates/home/special_offers.html:55 templates/inc/navbar.html:102
+#: templates/inc/navbar.html:232
+msgid "تخفیفات ویژه"
+msgstr "خصومات خاصة"
 
 #: templates/base.html:31
 msgid "امکان تحویل فوری"
@@ -176,8 +205,8 @@ msgstr "ضمان أصالة المنتج"
 msgid "تماس با ما"
 msgstr "اتصل بنا"
 
-#: templates/inc/footer.html:9 templates/inc/navbar.html:107
-#: templates/inc/navbar.html:242
+#: templates/inc/footer.html:9 templates/inc/navbar.html:101
+#: templates/inc/navbar.html:231
 msgid "درباره ما"
 msgstr "معلومات عنا"
 
@@ -268,49 +297,13 @@ msgstr "الصفحة الرئيسية"
 msgid "دسته بندی کالاها"
 msgstr "تصنيف البضائع"
 
-#: templates/inc/navbar.html:86 templates/inc/navbar.html:219
-msgid "البسه"
-msgstr "ملابس"
-
-#: templates/inc/navbar.html:89 templates/inc/navbar.html:222
-msgid "لباس بیمارستانی بیمار"
-msgstr "ملابس المستشفى للمريض"
-
-#: templates/inc/navbar.html:97 templates/inc/navbar.html:232
-msgid "کلاه"
-msgstr "قبعة"
-
-#: templates/inc/navbar.html:99 templates/inc/navbar.html:234
-msgid "کلاه جراح"
-msgstr "قبعة الجراح"
-
-#: templates/inc/navbar.html:100 templates/inc/navbar.html:235
-msgid "کلاه آکاردئونی"
-msgstr "قبعة الأكورديون"
-
-#: templates/inc/navbar.html:101 templates/inc/navbar.html:236
-msgid "کلاه بیمار"
-msgstr "قبعة مريضة"
-
-#: templates/inc/navbar.html:108 templates/inc/navbar.html:243
-msgid "تخفیفات ویژه"
-msgstr "خصومات خاصة"
-
-#: templates/inc/navbar.html:165
+#: templates/inc/navbar.html:162
 msgid "جستجوی محصولات"
 msgstr "البحث عن المنتجات"
 
 #: templates/inc/navbar.html:177
 msgid "ورود/ثبت نام"
-msgstr "تسجيل الدخول/اشتراک"
-
-#: templates/inc/navbar.html:181
-msgid "درخواست خرید عمده"
-msgstr "طلب الشراء بالجملة"
-
-#: templates/inc/navbar.html:254
-msgid "محصولات مورد علاقه"
-msgstr "المنتجات المفضلة"
+msgstr "تسجيل الدخول"
 
 #: venv/lib/python3.10/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
@@ -1578,6 +1571,33 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/modeltranslation/widgets.py:24
 msgid "None"
 msgstr ""
+
+#~ msgid "گان جراحی"
+#~ msgstr "جراحة السلاح"
+
+#~ msgid "تومان"
+#~ msgstr "تومان"
+
+#~ msgid "البسه"
+#~ msgstr "ملابس"
+
+#~ msgid "لباس بیمارستانی بیمار"
+#~ msgstr "ملابس المستشفى للمريض"
+
+#~ msgid "کلاه"
+#~ msgstr "قبعة"
+
+#~ msgid "کلاه جراح"
+#~ msgstr "قبعة الجراح"
+
+#~ msgid "کلاه آکاردئونی"
+#~ msgstr "قبعة الأكورديون"
+
+#~ msgid "کلاه بیمار"
+#~ msgstr "قبعة مريضة"
+
+#~ msgid "درخواست خرید عمده"
+#~ msgstr "طلب الشراء بالجملة"
 
 #, fuzzy
 #~| msgid "تومان"
