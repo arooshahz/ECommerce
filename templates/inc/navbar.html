@@ -99,7 +99,7 @@
                         </li>
                         <li><a href="{% url 'home:products' page_number=1 %}">{% trans "همه محصولات" %}</a></li>
                         <li>{% trans "درباره ما" %}</li>
-                        <li>{% trans "تخفیفات ویژه" %}</li>
+                        <li><a href="{% url 'home:discount_products' page_number=1 %}">{% trans "تخفیفات ویژه" %}</a></li>
                     </ul>
                 </div>
                 <div class="offcanvas-footer">
@@ -228,7 +228,7 @@
                         </li>
                         <li><a href="{% url 'home:products' page_number=1 %}">{% trans "همه محصولات" %}</a></li>
                         <li>{% trans "درباره ما" %}</li>
-                        <li>{% trans "تخفیفات ویژه" %}</li>
+                        <li><a href="{% url 'home:discount_products' page_number=1 %}">{% trans "تخفیفات ویژه" %}</a></li>
                     </ul>
                 </div>
             </div>
