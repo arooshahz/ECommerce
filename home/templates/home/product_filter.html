@@ -14,15 +14,12 @@
             <div class="card">
                 <h2>{% trans "دسته بندی زیر مجموعه" %}</h2>
                 <ul>
-                    <li>{% trans "گان جراحی" %}</li>
-                    <li>لباس بیمارستانی بیمار</li>
-                    <li>البسه</li>
-                    <li>کلاه جراحی</li>
-                    <li>روپوش</li>
-                    <li>گان جراحی</li>
-                    <li>لباس بیمارستانی بیمار</li>
-                    <li>البسه</li>
-                    <li>کلاه جراحی</li>
+                    {% for category in categories %}
+                    <li>{{ category.name }}</li>
+                    {% for subcategory in category.scategory.all %}
+                    <li>{{ subcategory.name }}</li>
+                    {% endfor %}
+                    {% endfor %}
                 </ul>
             </div>
             <div class="card">

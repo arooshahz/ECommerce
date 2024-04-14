@@ -290,9 +290,16 @@ ul#dropdown {
   background-color: #fbfbfb;
   border-radius: 15px;
   padding: 16px 25px;
-  width: 350px;
-  height: 230px;
+  width: 750px;
+  height: 350px;
+  gap: 5px;
+  flex-wrap: wrap;
 }
+
+ul#dropdown div {
+    height: 40%;
+}
+
 ul#dropdown-side {
   background-color: #fbfbfb;
   border-radius: 15px;
@@ -321,7 +328,7 @@ ul#dropdown-side .main-category {
   flex-direction: column;
 }
 
-.menu div div#items ul#dropdown li.main-category {
+.menu div div#items ul#dropdown li.main-category a  {
   font-size: 17px;
   font-weight: 600;
   line-height: 26px;
@@ -332,7 +339,7 @@ ul#dropdown-side .main-category {
   cursor: pointer;
 }
 
-.menu div div#items ul#dropdown li {
+.menu div div#items ul#dropdown li a {
   padding-right: 20px;
   color: #5b5b5b;
   font-size: 13px;
@@ -340,6 +347,7 @@ ul#dropdown-side .main-category {
   font-weight: 400;
   cursor: pointer;
   display: flex;
+  margin-top: 5px;
 }
 
 .menu div div#items .dropdown-toggle::after {
@@ -628,11 +636,12 @@ ul#dropdown-side .main-category {
 
 .most-sell div div.ms-container a{
     height:100%;
-    width:100%;
+    width:95%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: #ACACAC;
+    align-self: center;
 }
 
 
@@ -806,7 +815,7 @@ ul#dropdown-side .main-category {
 }
 
 .sub-banner div {
-  width: 48%;
+  width: 50%;
   border-radius: 15px;
 }
 
@@ -826,11 +835,14 @@ ul#dropdown-side .main-category {
 .detail div#product-info div#image {
     height: 100%;
     width: 45%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .detail div#product-info div#image img{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
 }
 
 
@@ -867,6 +879,7 @@ ul#dropdown-side .main-category {
     flex-direction: column;
     gap: 22px;
     margin-top: 50px;
+    width: 45%;
 }
 
 .detail div#product-info div#info div.info ul li{
@@ -885,7 +898,7 @@ ul#dropdown-side .main-category {
     border-radius: 15px;
     padding: 25px 40px;
     width:55%;
-    height: 220px;
+    height: 160px;
 }
 .detail div#product-info div#info div.info div#card div.price{
     display: flex;
@@ -930,7 +943,7 @@ ul#dropdown-side .main-category {
     border-radius: 5px;
     color: #FFFFFF;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 21px;
 
 }
@@ -1002,7 +1015,7 @@ ul#dropdown-side .main-category {
 }
 .detail div#product-desc .tab-content>.active p,.detail div#product-desc .tab-content>.active ul li{
     color: #314154A1;
-    font-size: 18px;
+    font-size: 16px;
     font-weight:400;
     line-height: 28px;
 }
@@ -1021,7 +1034,7 @@ ul#dropdown-side .main-category {
 
 .productsMain .side {
     width: 28%;
-    margin-top: 160px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     gap: 42px;
@@ -1182,11 +1195,10 @@ input[type="range"] {
 }
 
 .productsMain .main .header {
-    margin-top: 180px;
     display:flex;
     justify-content: space-between;
     align-items:center;
-    margin: 180px 65px 30px 65px;
+    margin: 112px 65px 30px 65px;
     height: auto;
 
 }
@@ -1420,7 +1432,7 @@ input[type="range"] {
 
 .excellences {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   margin-top: 70px;
 }
@@ -1433,7 +1445,7 @@ input[type="range"] {
 }
 
 .excellences div img {
-  width: 30%;
+  width: 22%;
   height: 50%;
 }
 .excellences div p {
@@ -1445,7 +1457,7 @@ input[type="range"] {
 }
 
 .footer .footer-main img {
-  width: 8%;
+  width: 6%;
   margin-bottom: 30px;
   margin-right: 40px;
   margin-left: 40px;
@@ -1462,11 +1474,11 @@ input[type="range"] {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  gap: 5px;
 }
 
 .footer .footer-main div ul li {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 25px;
   color: #4e4e4e;
@@ -1481,8 +1493,8 @@ input[type="range"] {
 }
 
 .footer .footer-main div#support img {
-  width: 100%;
-  margin: 0;
+  width: 80%;
+  margin: 0 0 5px 0;
 }
 
 .footer .footer-main div#support p {
@@ -1503,14 +1515,13 @@ input[type="range"] {
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
-  margin-bottom: 65px;
+  margin-bottom: 35px;
 }
 
 .footer .footer-desc ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .footer .footer-desc p,
@@ -1682,13 +1693,13 @@ li {
   }
 
   .footer .footer-main div ul {
-    gap: 25px;
+    gap: 12px;
   }
   .footer .footer-main div ul li {
-    font-size: 25px;
+    font-size: 23px;
   }
   .footer .footer-main img {
-    width: 18%;
+    width: 14%;
     margin-right: 60px;
     margin-left: 60px;
   }
@@ -1805,7 +1816,7 @@ li {
     gap: 0;
   }
   .sub-banner div {
-    width: 48%;
+    width: 50%;
   }
 
   .excellences div {
@@ -1977,17 +1988,17 @@ li {
     }
   }
   .footer .footer-main div ul {
-    gap: 17px;
+    gap: 5px;
   }
   .footer .footer-main div ul li {
-    font-size: 16px;
+    font-size: 15px;
   }
   .footer .footer-main div#support {
     padding-left: 80px;
     padding-right: 80px;
   }
   .footer .footer-main img {
-    width: 12%;
+    width: 10%;
     margin-right: 60px;
     margin-left: 60px;
   }
@@ -2109,10 +2120,10 @@ li {
     }
   }
   .footer .footer-main div ul {
-    gap: 17px;
+    gap: 5px;
   }
   .footer .footer-main div ul li {
-    font-size: 16px;
+    font-size: 15px;
   }
   .footer .footer-main div#support {
     padding-left: 100px;
@@ -2120,7 +2131,7 @@ li {
   }
 
   .footer .footer-main img {
-    width: 12%;
+    width: 10%;
     margin-right: 60px;
     margin-left: 60px;
   }
@@ -2185,7 +2196,7 @@ li {
     font-size: 22px;
   }
   .footer .footer-main img {
-    width: 12%;
+    width: 10%;
     margin-right: 60px;
     margin-left: 60px;
   }
@@ -2287,7 +2298,7 @@ li {
     }
   }
   .footer .footer-main img {
-    width: 8%;
+    width: 6%;
     margin-right: 60px;
     margin-left: 60px;
   }
