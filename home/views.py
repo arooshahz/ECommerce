@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 
 class HomeView(View):
     def get(self, request):
-        categories = Category.objects.all()
+        categories = Category.objects.filter(is_sub=False)
         products = Product.objects.filter(available=True)
         best_seller = products.order_by('-Sales_number')[:4]
         suggested = products[:4]
@@ -19,6 +19,7 @@ class HomeView(View):
 
 class ProductsView(View):
     def get(self, request, page_number=1):
+        categories = Category.objects.filter(is_sub=False)
         products_list = Product.objects.filter(available=True)
         products = Paginator(products_list, 9)
         prev_num = int(page_number) - 1
@@ -26,7 +27,7 @@ class ProductsView(View):
         last_page = products.page(1).paginator.num_pages
 
         return render(request, 'home/products.html',
-                      {'products': products.page(page_number), 'page_number': page_number,
+                      {'products': products.page(page_number), 'categories': categories, 'page_number': page_number,
                        'prev_num': prev_num,
                        'next_num': next_num,
                        'last_page': last_page,
@@ -42,6 +43,7 @@ class ProductsView(View):
 
 class CategoryView(View):
     def get(self, request, slug, page_number=1):
+        categories = Category.objects.filter(is_sub=False)
         products = Product.objects.filter(available=True)
         category = get_object_or_404(Category, slug=slug)
         category_product = products.filter(category=category)
@@ -50,7 +52,8 @@ class CategoryView(View):
         next_num = int(page_number) + 1
         last_page = products_list.page(1).paginator.num_pages
         return render(request, 'home/category.html',
-                      {'products': products_list, 'category': category, 'page_number': page_number,
+                      {'products': products_list, 'categories': categories, 'category': category,
+                       'page_number': page_number,
                        'prev_num': prev_num,
                        'next_num': next_num,
                        'last_page': last_page, 'current_page': products_list.page(page_number).number})
@@ -58,22 +61,25 @@ class CategoryView(View):
 
 class ProductBasedOnPrice(View):
     def get(self, request, min_price, max_price, page_number=1):
+        categories = Category.objects.filter(is_sub=False)
         products_list = Product.objects.filter(price__gt=min_price, price__lt=max_price)
         products = Paginator(products_list, 9)
         prev_num = int(page_number) - 1
         next_num = int(page_number) + 1
         last_page = products.page(1).paginator.num_pages
         number_of_products = len(list(products.object_list))
-        return render(request, 'home/product_filter.html', {'products': products, 'page_number': page_number,
-                                                            'prev_num': prev_num,
-                                                            'next_num': next_num,
-                                                            'last_page': last_page,
-                                                            'current_page': products.page(page_number).number,
-                                                            'number_of_products': number_of_products})
+        return render(request, 'home/product_filter.html',
+                      {'products': products, 'categories': categories, 'page_number': page_number,
+                       'prev_num': prev_num,
+                       'next_num': next_num,
+                       'last_page': last_page,
+                       'current_page': products.page(page_number).number,
+                       'number_of_products': number_of_products})
 
 
 class ProductDetailView(View):
     def get(self, request, slug):
+        categories = Category.objects.filter(is_sub=False)
         product = get_object_or_404(Product, slug=slug)
         print(product.features.name)
-        return render(request, 'home/detail.html', {'product': product})
+        return render(request, 'home/detail.html', {'product': product, 'categories': categories})
