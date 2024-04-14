@@ -75,30 +75,24 @@
                                         class="dropdown-menu dropdown-menu-end"
                                         aria-labelledby="dropdownMenuButton1"
                                 >
+
+                                    {% for category in categories %}
                                     <li class="main-category">
 
-                                        <img
+                                        <a href="{{ category.get_absolute_url }}"> <img
                                                 width="20"
                                                 height="20"
                                                 src="https://img.icons8.com/material-rounded/20/sort-down.png"
                                                 alt="sort-down"
                                         />
-                                        {% trans "البسه" %}
+                                            {{ category.name }}</a>
                                     </li>
-                                    <li>{% trans "گان جراحی" %}</li>
-                                    <li>{% trans "لباس بیمارستانی بیمار" %}</li>
-                                    <li class="main-category">
-                                        <img
-                                                width="20"
-                                                height="20"
-                                                src="https://img.icons8.com/material-rounded/20/sort-down.png"
-                                                alt="sort-down"
-                                        />
-                                        {% trans "کلاه" %}
-                                    </li>
-                                    <li>{% trans "کلاه جراح" %}</li>
-                                    <li>{% trans "کلاه آکاردئونی" %}</li>
-                                    <li>{% trans "کلاه بیمار" %}</li>
+
+                                    {% for subcategory in category.scategory.all %}
+                                    <li><a href="{{ subcategory.get_absolute_url }}">{{ subcategory.name }}</a></li>
+                                    {% endfor %}
+
+                                    {% endfor %}
 
                                 </ul>
                             </div>
@@ -211,33 +205,22 @@
                                         class="dropdown-menu"
                                         aria-labelledby="dropdownMenuButton1"
                                 >
+                                    {% for category in categories %}
                                     <div>
                                         <li class="main-category">
-                                            <img
+                                            <a href="{{ category.get_absolute_url }}"> <img
                                                     width="20"
                                                     height="20"
                                                     src="https://img.icons8.com/material-rounded/20/sort-down.png"
                                                     alt="sort-down"
                                             />
-                                            {% trans "البسه" %}
+                                                {{ category.name }}</a>
                                         </li>
-                                        <li>{% trans "گان جراحی" %}</li>
-                                        <li>{% trans "لباس بیمارستانی بیمار" %}</li>
+                                        {% for subcategory in category.scategory.all %}
+                                        <li><a href="{{ subcategory.get_absolute_url }}">{{ subcategory.name }}</a></li>
+                                        {% endfor %}
                                     </div>
-                                    <div>
-                                        <li class="main-category">
-                                            <img
-                                                    width="20"
-                                                    height="20"
-                                                    src="https://img.icons8.com/material-rounded/20/sort-down.png"
-                                                    alt="sort-down"
-                                            />
-                                            {% trans "کلاه" %}
-                                        </li>
-                                        <li>{% trans "کلاه جراح" %}</li>
-                                        <li>{% trans "کلاه آکاردئونی" %}</li>
-                                        <li>{% trans "کلاه بیمار" %}</li>
-                                    </div>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </li>
