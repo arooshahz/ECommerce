@@ -158,27 +158,13 @@
     <div class="overflow">
         <div>
 
+            {% for category in categories %}
             <div id="c-one">
                 <a href="{{ categories.0.get_absolute_url }}" style="height:100%;"> <img
-                        src="{% static 'images/c-2.png' %}" alt=""/>
-                    <h2 class="category-name">{{ categories.0.name }}</h2></a>
+                        src="media/{{ category.image }}" alt=""/>
+                    <h2 class="category-name">{{ category.name }}</h2></a>
             </div>
-            <div id="c-two">
-                <a href="{{ categories.1.get_absolute_url }}" style="height:100%;">
-                    <img src="{% static 'images/c-1.png' %}" alt=""/>
-                    <h2 class="category-name">{{ categories.1.name }}</h2>
-                </a>
-            </div>
-            <div id="c-three">
-                <a href="{{ categories.2.get_absolute_url }}" style="height:100%;"> <img
-                        src="{% static 'images/c-3.png' %}" alt=""/>
-                    <h2 class="category-name">{{ categories.2.name }}</h2></a>
-            </div>
-            <div id="c-four">
-                <a href="{{ categories.3.get_absolute_url }}" style="height:100%;"> <img
-                        src="{% static 'images/c-4.png' %}" alt=""/>
-                    <h2 class="category-name">{{ categories.3.name }}</h2></a>
-            </div>
+            {% endfor %}
 
         </div>
     </div>
