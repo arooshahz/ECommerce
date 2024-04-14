@@ -9,6 +9,7 @@
     {% if LANGUAGE_CODE == 'en' or LANGUAGE_CODE == 'ka' %}
     {% set offcanvas = "offcanvas-end" %}
     {% set searchClass = "left:unset;right:14px;" %}
+    {% set classDropdown = "right: unset;" %}
     {% else %}
     {% set offcanvas = "offcanvas-start" %}
     {% endif %}
@@ -208,6 +209,7 @@
                                         id="dropdown"
                                         class="dropdown-menu"
                                         aria-labelledby="dropdownMenuButton1"
+                                        style="{{ classDropdown }}"
                                 >
                                     {% for category in categories %}
                                     <div>
