@@ -90,3 +90,9 @@ class ProductDetailView(View):
         product = get_object_or_404(Product, slug=slug)
         print(product.features.name)
         return render(request, 'home/detail.html', {'product': product, 'categories': categories})
+
+
+class DiscountedProducts(View):
+    def get(self, request):
+        discounted_products = Product.objects.filter(discount__gt=20)
+        return render(request, 'home/daredabe_discount.html', {'products': discounted_products})
