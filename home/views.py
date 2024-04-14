@@ -28,10 +28,18 @@ class ProductsView(View):
     def get(self, request, page_number=1):
         categories = Category.objects.filter(is_sub=False)
         products_list = Product.objects.filter(available=True)
+        if request.GET.get('search'):
+            search_query = request.GET.get('search')
+            products_list = products_list.filter(
+                Q(description__icontains=search_query) |
+                Q(name__icontains=search_query)
+            )
         products = Paginator(products_list, 9)
         prev_num = int(page_number) - 1
         next_num = int(page_number) + 1
         last_page = products.page(1).paginator.num_pages
+
+
 
         return render(request, 'home/products.html',
                       {'products': products.page(page_number), 'categories': categories, 'page_number': page_number,

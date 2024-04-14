@@ -149,7 +149,7 @@
                 </div>
             </div>
             <div id="logo">
-                <form action="{% url 'home:home'  %}" method="post">
+                <form action="{% url 'home:products' page_number=1 %}" method="get">
                     {% csrf_token %}
                     <label
                             for="search"
