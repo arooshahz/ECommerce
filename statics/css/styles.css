@@ -29,107 +29,11 @@ p {
 .offcanvas-header {
   justify-content: flex-end;
 }
-
-#offcanvas1 .offcanvas-header {
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    padding: 1rem 1rem 5px;
-}
-
-#offcanvas1 .offcanvas-header h2{
-    color: #008384;
-    font-size: 27px;
-    font-weight: 500;
-    line-height: 42px;
-}
-
- .offcanvas-footer {
+.offcanvas-footer {
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
 }
-
-#offcanvas1 .offcanvas-footer {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 50px;
-  flex-direction: column;
-}
-
-#offcanvas1 .offcanvas-footer .cart-price{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 7px;
-}
-
-#offcanvas1 .offcanvas-footer .cart-price p{
-    color:#000000;
-    font-size:24px;
-    font-weight:500;
-    line-height: 37px;
-}
-
-#offcanvas1 .offcanvas-footer button{
-    background-color: #00999A;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    padding: 14px 0;
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 28px;
-    margin: 6px 19px;
-}
-
-#offcanvas1 .offcanvas-body {
-    padding: 0;
-}
-
-#offcanvas1 .offcanvas-body .cart-products {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 17%;
-}
-
-#offcanvas1 .offcanvas-body .cart-products p {
-    color: #000000;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 23px;
-}
-
-#offcanvas1 .offcanvas-body .cart-products .cart-control {
-    display:flex;
-    justify-content:
-    space-between;
-    align-items:center;
-    margin-top: 12px;
-}
-
-#offcanvas1 .offcanvas-body .cart-products .cart-control p{
-    color: #333333;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 32px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-around;
-    width: 35%;
-}
-
-#offcanvas1 .offcanvas-body .cart-products .cart-control p span{
-    color: #8E8E8E;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
-}
-
-
 .offcanvas-footer div {
   width: 20%;
   height: 100%;
@@ -249,11 +153,11 @@ p {
   gap: 30px;
 }
 
-.search div#login div.cart-relative {
+.search div#login div {
   position: relative;
 }
 
-.search div#login div.cart-relative span {
+.search div#login div span {
   position: absolute;
   background-color: #00999a;
   border-radius: 50%;
@@ -268,7 +172,7 @@ p {
   top: 3px;
 }
 
-.search div#login button#login-button {
+.search div#login button {
   border-radius: 30px;
   border-width: 1px;
   border-color: #b7b7b7;
@@ -283,7 +187,7 @@ p {
   background-color: transparent;
 }
 
-.search div#login button#login-button a {
+.search div#login button a {
   font-size: 16px;
   font-weight: 300;
   line-height: 25px;
@@ -295,7 +199,7 @@ p {
   gap: 10px;
 }
 
-.search div#login button#login-button:hover {
+.search div#login button:hover {
   background-color: #b7b7b7;
 }
 
@@ -1097,40 +1001,6 @@ ul#dropdown-side .main-category {
 }
 
 .detail div#product-info div#info div.info div#card div.add-cart div#add-more button:hover{
-    color: #ffffff;
-    background-color: #006A6A;
-
-}
-
-
-#add-more1{
-    background-color: #F0F5F9;
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-#add-more1 h2{
-    margin: 0;
-    color: #333333;
-    font-size: 20px;
-    font-weight: 400;
-    line-height:31px;
-    background-color: #F0F5F9;
-
-}
-
-#add-more1 button{
-    background-color: #F0F5F9;
-    border: none;
-    color: #333333;
-    height: 100%;
-    border-radius: 0 5px 5px 0;
-
-}
-
-#add-more1 button:hover{
     color: #ffffff;
     background-color: #006A6A;
 
@@ -2044,7 +1914,7 @@ li {
     display: flex;
     width: 45%;
   }
-  .search div#login button#login-button {
+  .search div#login button {
     width: 40%;
   }
   .menu div#favourit p {
@@ -2189,7 +2059,7 @@ li {
   .search div#login {
     width: 40%;
   }
-  .search div#login button#login-button {
+  .search div#login button {
     width: 35%;
   }
   .menu div#favourit p {
@@ -2318,7 +2188,7 @@ li {
   .search div#login {
     width: 35%;
   }
-  .search div#login button#login-button {
+  .search div#login button {
     width: 40%;
   }
   .menu div#favourit {
@@ -2385,7 +2255,7 @@ li {
   .search div#login {
     width: 30%;
   }
-  .search div#login button#login-button {
+  .search div#login button {
     width: 35%;
   }
   .menu div#favourit {

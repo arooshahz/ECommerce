@@ -1,5 +1,6 @@
 {% load static %} {% load i18n %}
 
+
 <nav class="navbar navbar-expand-lg sidenav fixed-top" style="padding-top: 0">
     {% get_current_language as LANGUAGE_CODE %}
     {% get_language_info for LANGUAGE_CODE as lang %}
@@ -170,11 +171,120 @@
                 <a href="{% url 'home:home' %}"> <img src="{% static 'images/Group.png' %}" alt="logo"/></a>
             </div>
             <div id="login">
+
                 <div>
-                    <span>۲</span>
-                    <img src="{% static 'images/cart.svg' %}" alt="cart"/>
+                    <button
+                            id="cart-canvas"
+                            class="btn float-end"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvas1"
+                            role="button"
+                            style="width: 100%;border: none;"
+                    >
+                        <div class="cart-relative">
+                            <span>۲</span>
+                            <img src="{% static 'images/cart.svg' %}" alt="cart"/>
+                        </div>
+                    </button>
+                    <div
+                            class="offcanvas offcanvas-end w-40"
+                            tabindex="-1"
+                            id="offcanvas1"
+                            data-bs-keyboard="false"
+                            data-bs-backdrop="true"
+                    >
+                        <div class="offcanvas-header">
+                            <button
+                                    type="button"
+                                    class="btn-close text-reset"
+                                    data-bs-dismiss="offcanvas"
+                                    aria-label="Close"
+                            ></button>
+                            <h2>{% trans "سبد خرید" %}</h2>
+                        </div>
+                        <hr style="border-color:#00000021;">
+                        <div class="offcanvas-body px-0">
+                            <div class="cart-products">
+                                <div style="width:18%"><img src="{% static 'images/ms1.jpeg' %}" alt=""
+                                                            style="width:100%;height:100%"></div>
+                                <div style="width:70%;">
+                                    <p>گان جراحی یکبار مصرف
+                                        38 گرم </p>
+                                    <div class="cart-control">
+                                        <div id="add-more1">
+                                            <button onclick="incrementCart()">+</button>
+                                            <h2 id="counting1">1</h2>
+                                            <button onclick="decrementCart()" style="border-radius:5px 0 0 5px;">-
+                                            </button>
+                                        </div>
+                                        <p>13$ <span>1 x</span></p>
+                                    </div>
+                                </div>
+                                <div style="width:9%;width: 9%;
+                                            display: flex;
+                                            align-items: flex-start;
+                                            height: 100%;"><a href="#"><img src="{% static 'images/Recycle-bin.png' %}"
+                                                                            alt=""></a></div>
+                            </div>
+                            <div class="cart-products">
+                                <div style="width:18%"><img src="{% static 'images/ms1.jpeg' %}" alt=""
+                                                            style="width:100%;height:100%"></div>
+                                <div style="width:70%;">
+                                    <p>گان جراحی یکبار مصرف
+                                        38 گرم </p>
+                                    <div class="cart-control">
+                                        <div id="add-more1">
+                                            <button onclick="incrementCart()">+</button>
+                                            <h2 id="counting1">1</h2>
+                                            <button onclick="decrementCart()" style="border-radius:5px 0 0 5px;">-
+                                            </button>
+                                        </div>
+                                        <p>13$ <span>1 x</span></p>
+                                    </div>
+                                </div>
+                                <div style="width:9%;width: 9%;
+                                            display: flex;
+                                            align-items: flex-start;
+                                            height: 100%;"><a href="#"><img src="{% static 'images/Recycle-bin.png' %}"
+                                                                            alt=""></a></div>
+                            </div>
+                            <div class="cart-products">
+                                <div style="width:18%"><img src="{% static 'images/ms1.jpeg' %}" alt=""
+                                                            style="width:100%;height:100%"></div>
+                                <div style="width:70%;">
+                                    <p>گان جراحی یکبار مصرف
+                                        38 گرم </p>
+                                    <div class="cart-control">
+                                        <div id="add-more1">
+                                            <button onclick="incrementCart()">+</button>
+                                            <h2 id="counting1">1</h2>
+                                            <button onclick="decrementCart()" style="border-radius:5px 0 0 5px;">-
+                                            </button>
+                                        </div>
+                                        <p>13$ <span>1 x</span></p>
+                                    </div>
+                                </div>
+                                <div style="width:9%;width: 9%;
+                                            display: flex;
+                                            align-items: flex-start;
+                                            height: 100%;"><a href="#"><img src="{% static 'images/Recycle-bin.png' %}"
+                                                                            alt=""></a></div>
+                            </div>
+                        </div>
+                        <div class="offcanvas-footer">
+                            <hr>
+                            <div class="cart-price">
+                                <p>{% trans "جمع : " %}</p>
+                                <p>13,450</p>
+                            </div>
+                            <hr>
+                            <button>{% trans "سبد خرید" %}</button>
+                            <button>{% trans "تسویه حساب" %}</button>
+                        </div>
+                    </div>
                 </div>
-                <button>
+
+                <button id="login-button">
                     <a href="{% url 'accounts:register' %}">
                         {% trans "ورود/ثبت نام" %}
                         <img src="{% static 'images/Vector.svg' %}"/>
@@ -288,3 +398,24 @@
         </div>
     </div>
 </nav>
+
+<script>
+    var data1=1;
+    var counter1 = document.getElementById("counting1");
+    if (counter1){
+counter1.innerText = data1;
+}
+    function incrementCart() {
+    data1 = data1 + 1;
+   counter1.innerText = data1;
+}
+
+function decrementCart() {
+    data1 = data1 - 1;
+    if (data1<1){
+        data1=1;
+    }
+
+   counter1.innerText = data1;
+}
+</script>
