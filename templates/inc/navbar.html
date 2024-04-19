@@ -212,12 +212,11 @@
                                         38 گرم </p>
                                     <div class="cart-control">
                                         <div id="add-more1">
-                                            <button onclick="incrementCart()">+</button>
-                                            <h2 id="counting1">1</h2>
-                                            <button onclick="decrementCart()" style="border-radius:5px 0 0 5px;">-
-                                            </button>
+                                            <button class="increment">+</button>
+                                            <h2 class="counting">1</h2>
+                                            <button class="decrement" style="border-radius:5px 0 0 5px;">-</button>
                                         </div>
-                                        <p>13$ <span>1 x</span></p>
+                                        <p>13$ <span class="count-product">1 x</span></p>
                                     </div>
                                 </div>
                                 <div style="width:9%;width: 9%;
@@ -234,12 +233,11 @@
                                         38 گرم </p>
                                     <div class="cart-control">
                                         <div id="add-more1">
-                                            <button onclick="incrementCart()">+</button>
-                                            <h2 id="counting1">1</h2>
-                                            <button onclick="decrementCart()" style="border-radius:5px 0 0 5px;">-
-                                            </button>
+                                            <button class="increment">+</button>
+                                            <h2 class="counting">1</h2>
+                                            <button class="decrement" style="border-radius:5px 0 0 5px;">-</button>
                                         </div>
-                                        <p>13$ <span>1 x</span></p>
+                                        <p>13$ <span class="count-product">1 x</span></p>
                                     </div>
                                 </div>
                                 <div style="width:9%;width: 9%;
@@ -256,12 +254,11 @@
                                         38 گرم </p>
                                     <div class="cart-control">
                                         <div id="add-more1">
-                                            <button onclick="incrementCart()">+</button>
-                                            <h2 id="counting1">1</h2>
-                                            <button onclick="decrementCart()" style="border-radius:5px 0 0 5px;">-
-                                            </button>
+                                            <button class="increment">+</button>
+                                            <h2 class="counting">1</h2>
+                                            <button class="decrement" style="border-radius:5px 0 0 5px;">-</button>
                                         </div>
-                                        <p>13$ <span>1 x</span></p>
+                                        <p>13$ <span class="count-product">1 x</span></p>
                                     </div>
                                 </div>
                                 <div style="width:9%;width: 9%;
@@ -400,22 +397,34 @@
 </nav>
 
 <script>
-    var data1=1;
-    var counter1 = document.getElementById("counting1");
-    if (counter1){
-counter1.innerText = data1;
-}
-    function incrementCart() {
-    data1 = data1 + 1;
-   counter1.innerText = data1;
-}
+    document.addEventListener("DOMContentLoaded", function() {
+    const addMoreButtons = document.querySelectorAll(".increment");
+    const removeButtons = document.querySelectorAll(".decrement");
+    const countingElements = document.querySelectorAll(".counting");
+    const countProduct = document.querySelectorAll(".count-product");
 
-function decrementCart() {
-    data1 = data1 - 1;
-    if (data1<1){
-        data1=1;
+    addMoreButtons.forEach((button, index) => {
+        button.addEventListener("click", () => incrementCart(index));
+    });
+
+    removeButtons.forEach((button, index) => {
+        button.addEventListener("click", () => decrementCart(index));
+    });
+
+    function incrementCart(index) {
+        let count = parseInt(countingElements[index].innerText);
+        count++;
+        countingElements[index].innerText = count;
+        countProduct[index].innerText = `${count} x`;
     }
 
-   counter1.innerText = data1;
-}
+    function decrementCart(index) {
+        let count = parseInt(countingElements[index].innerText);
+        if (count > 1) {
+            count--;
+            countingElements[index].innerText = count;
+            countProduct[index].innerText = `${count} x`;
+        }
+    }
+});
 </script>

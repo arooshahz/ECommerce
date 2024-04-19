@@ -41,6 +41,7 @@ p {
     font-size: 27px;
     font-weight: 500;
     line-height: 42px;
+    margin: 0;
 }
 
  .offcanvas-footer {
@@ -84,6 +85,10 @@ p {
     margin: 6px 19px;
 }
 
+#offcanvas1 .offcanvas-footer button:hover{
+    background-color: #29D5D6;
+}
+
 #offcanvas1 .offcanvas-body {
     padding: 0;
 }
@@ -93,6 +98,7 @@ p {
     align-items: center;
     justify-content: space-between;
     height: 17%;
+    margin-bottom: 5px;
 }
 
 #offcanvas1 .offcanvas-body .cart-products p {
