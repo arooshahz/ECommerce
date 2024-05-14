@@ -55,3 +55,37 @@ class Product(models.Model):
     def get_asking_price(self):
         discount = self.price * self.discount / 100
         return self.price - discount
+
+
+class Order(models.Model):
+    name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    company_name = models.CharField(max_length=200, null=True)
+    province = models.CharField(max_length=200, null=True)
+    City = models.CharField(max_length=200, null=True)
+    street = models.CharField(max_length=200, null=True)
+    apartment = models.CharField(max_length=200, null=True)
+    Postalcode = models.CharField(max_length=200, null=True)
+    phone_number = models.CharField(max_length=11, unique=True)
+    email = models.EmailField(max_length=255, unique=True)
+    products = models.ManyToManyField('Product', through='OrderItem')
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'Order {self.pk} - {self.name}'
+
+
+class OrderItem(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f'{self.quantity} of {self.product.name}'
+
+    def get_total_item_price(self):
+        return self.quantity * self.product.get_asking_price
+
+    def get_final_price(self):
+        return self.get_total_item_price()
