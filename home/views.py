@@ -2,7 +2,7 @@ from django.db.models.query_utils import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.views import View
-from .models import Product, Category
+from .models import Product, Category, OrderItem, Order
 from django.core.paginator import Paginator
 
 
@@ -94,7 +94,7 @@ class ProductDetailView(View):
     def get(self, request, slug):
         categories = Category.objects.filter(is_sub=False)
         product = get_object_or_404(Product, slug=slug)
-        print(product.features.name)
+        # print(product.features.name)
         return render(request, 'home/detail.html', {'product': product, 'categories': categories})
 
 
@@ -131,3 +131,48 @@ class FavouriteProducts(View):
                        'next_num': next_num,
                        'last_page': last_page,
                        'current_page': products.page(page_number).number})
+
+
+class AddToOrder(View):
+    def post(self, request, slug):
+        product = get_object_or_404(Product, slug=slug)
+        order_id = request.session.get('order_id')
+
+        if order_id:
+            order = get_object_or_404(Order, id=order_id)
+        else:
+            order = Order.objects.create(
+                name='', last_name='', company_name='', province='',
+                City='', street='', apartment='', Postalcode='',
+                phone_number='', email=''
+            )
+            request.session['order_id'] = order.id
+
+        order_item, created = OrderItem.objects.get_or_create(
+            order=order,
+            product=product,
+            defaults={'quantity': 1}
+        )
+
+        if not created:
+            order_item.quantity += 1
+            order_item.save()
+
+        return redirect('test.html')
+
+
+class ViewOrder(View):
+    def get(self, request):
+        order_id = request.session.get('order_id')
+        if order_id:
+            order = get_object_or_404(Order, id=order_id)
+            order_items = OrderItem.objects.filter(order=order)
+            total = sum(item.get_total_item_price() for item in order_items)
+        else:
+            order_items = []
+            total = 0
+
+        return render(request, 'test.html', {'order_items': order_items, 'total': total})
+
+
+
