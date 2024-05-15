@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %} {% load i18n %} {% load price_filter %} {% block extra_headers %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+{% endblock %}
+{% block content %}
+
+<div class="cart-path">
+    <h1 class="path-disable">سبد خرید</h1>
+    <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 7.0812L3.42807 7.0812L9.0636 1.29919L7.79733 0L0 8L7.79733 16L9.0636 14.7008L3.42807 8.9188L30 8.9188V7.0812Z"
+              fill="#009FA0" fill-opacity="0.28"/>
+    </svg>
+    <h1>تکمیل سفارش</h1>
+    <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 7.0812L3.42807 7.0812L9.0636 1.29919L7.79733 0L0 8L7.79733 16L9.0636 14.7008L3.42807 8.9188L30 8.9188V7.0812Z"
+              fill="#009FA0" fill-opacity="0.28"/>
+    </svg>
+    <h1 class="path-disable">تسویه حساب</h1>
+</div>
+
+<div class="cart-container">
+    <div class="cart-info">
+        <div class="container-fluid px-1 py-5 pb-5 mx-auto">
+            <div class="row d-flex">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center w-100"
+                <form class="form-card" onsubmit="event.preventDefault()">
+                    {% csrf_token %}
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"><label
+                                class="form-control-label ">نام<span
+                                class="text-danger"> *</span></label> <input class="cart-input" type="text" id="fname"
+                                                                             name="fname"
+                                                                             onblur="validate(1)"></div>
+                        <div class="form-group col-sm-6 flex-column d-flex"><label
+                                class="form-control-label ">نام خانوادگی<span
+                                class="text-danger"> *</span></label> <input class="cart-input" type="text" id="lname"
+                                                                             name="lname"
+                                                                             onblur="validate(2)"></div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"><label
+                                class="form-control-label ">نام شرکت(اختیاری)</label> <input class="cart-input"
+                                                                                             type="text"
+                                                                                             id="company"
+                                                                                             name="company"
+                        >
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"><label
+                                class="form-control-label ">کد ملی</label> <input class="cart-input" type="text"
+                                                                                  id="nCode"
+                                                                                  name="nCode"
+                        ></div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"><label
+                                class="form-control-label ">کد اقتصادی(اختیاری)</label> <input class="cart-input"
+                                                                                               type="text"
+                                                                                               id="fCode"
+                                                                                               name="fCode"
+                        >
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"><label
+                                class="form-control-label ">استان</label> <input class="cart-input" type="text"
+                                                                                 id="province"
+                                                                                 name="province"
+                        ></div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"><label
+                                class="form-control-label ">شهر</label> <input class="cart-input" type="text" id="city"
+                                                                               name="city"
+                        ></div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"><label
+                                class="form-control-label ">آدرس خیابان</label> <input class="cart-input" type="text"
+                                                                                       id="street"
+                                                                                       name="street"
+                        ></div>
+                        <div class="form-group col-sm-6 flex-column d-flex"><label
+                                class="form-control-label ">آپارتمان,مجتمع,واحد و...</label> <input class="cart-input"
+                                                                                                    type="text"
+                                                                                                    id="building"
+                                                                                                    name="building"
+                        >
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"><label
+                                class="form-control-label ">کد پستی(بدون فاصله)</label> <input class="cart-input"
+                                                                                               type="text"
+                                                                                               id="post_code"
+                                                                                               name="post_code"
+                        ></div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"><label
+                                class="form-control-label ">شماره موبایل<span
+                                class="text-danger"> *</span></label> <input class="cart-input" type="text" id="mobile"
+                                                                             name="mobile"
+                                                                             onblur="validate(3)"></div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"><label
+                                class="form-control-label ">ایمیل<span
+                                class="text-danger"> *</span></label> <input class="cart-input" type="email" id="email"
+                                                                             name="email"
+                                                                             onblur="validate(4)"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="form-group col-sm-6">
+                            <button type="submit" class="cart-form-button">ثبت سفارش</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="total-cart">
+    <h2>جمع کل سبد خرید </h2>
+    <div>
+        <p id="title">
+            حمل و نقل
+        </p>
+        <p>
+            هزینه حمل‌ و نقل در هنگام پرداخت محاسبه می شود.
+        </p>
+    </div>
+    <a href="{% url 'home:cart_done' %}">تسویه حساب</a>
+</div>
+</div>
+
+{% endblock %}

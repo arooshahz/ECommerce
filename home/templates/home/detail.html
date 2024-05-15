@@ -8,7 +8,7 @@
         <div id="image"><img src="media/{{ product.image }}" alt="title"></div>
         <div id="info">
             <h1>{{ product.name }}</h1>
-            <div class="ms-rate" style="float: none;">
+            <div class="ms-rate" style="float: none;text-align:center;">
                 <span onclick="gfg(1)" class="star">★ </span>
                 <span onclick="gfg(2)" class="star">★ </span>
                 <span onclick="gfg(3)" class="star">★ </span>
@@ -28,7 +28,7 @@
                     <div class="price">
                         <div id="avalibility"><img src="{% static 'images/tick.png' %}" alt=""> {% trans "موجود" %}
                         </div>
-                        <div id="price">{{ product.get_asking_price|currency }}</div>
+                        <!--<div id="price">{{ product.get_asking_price|currency }}</div>-->
                     </div>
                     <hr>
                     <div class="add-cart">

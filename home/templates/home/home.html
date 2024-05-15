@@ -28,34 +28,34 @@
                         alt="..."
                 />
             </div>
-            <div class="carousel-item" data-bs-interval="2000" style="height: 100%">
-                <img
-                        src="{% static 'images/banner2.png' %}"
-                        class="d-block w-100"
-                        alt="..."
-                />
-            </div>
-            <div class="carousel-item" data-bs-interval="2000" style="height: 100%">
-                <img
-                        src="{% static 'images/banner3.png' %}"
-                        class="d-block w-100"
-                        alt="..."
-                />
-                <div id="offers-banner">
-                    <h1>جدیدترین تخفیفات در اینجا</h1>
-                    <button>
-                        <a href="{% url 'home:products' page_number=1 %}"> مشاهده محصولات
-                            <img src="{% static 'images/arrowUL.png' %}" alt=""/></a>
-                    </button>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000" style="height: 100%">
-                <img
-                        src="{% static 'images/banner4.png' %}"
-                        class="d-block w-100"
-                        alt="..."
-                />
-            </div>
+            <!--<div class="carousel-item" data-bs-interval="2000" style="height: 100%">-->
+            <!--    <img-->
+            <!--            src="{% static 'images/banner2.png' %}"-->
+            <!--            class="d-block w-100"-->
+            <!--            alt="..."-->
+            <!--    />-->
+            <!--</div>-->
+            <!--<div class="carousel-item" data-bs-interval="2000" style="height: 100%">-->
+            <!--    <img-->
+            <!--            src="{% static 'images/banner3.png' %}"-->
+            <!--            class="d-block w-100"-->
+            <!--            alt="..."-->
+            <!--    />-->
+            <!--    <div id="offers-banner">-->
+            <!--        <h1>جدیدترین تخفیفات در اینجا</h1>-->
+            <!--        <button>-->
+            <!--            <a href="{% url 'home:products' page_number=1 %}"> مشاهده محصولات-->
+            <!--                <img src="{% static 'images/arrowUL.png' %}" alt=""/></a>-->
+            <!--        </button>-->
+            <!--    </div>-->
+            <!--</div>-->
+            <!--<div class="carousel-item" data-bs-interval="2000" style="height: 100%">-->
+            <!--    <img-->
+            <!--            src="{% static 'images/banner4.png' %}"-->
+            <!--            class="d-block w-100"-->
+            <!--            alt="..."-->
+            <!--    />-->
+            <!--</div>-->
         </div>
         <button
                 class="carousel-control-prev"
@@ -118,17 +118,17 @@
                 </div>
                 <p>{{ bsProduct.name }}</p>
                 <div class="ms-price">
-                    <div class="ms-payable">
-                        <div class="ms-discount">
-                            <div>
-                                <span>{{ bsProduct.discount }}%</span>
-                            </div>
-                            <s>{{ bsProduct.price|currency }}</s>
-                        </div>
-                        <div class="ms-totalprice">
-                            <p>{{ bsProduct.get_asking_price|currency }}</p>
-                        </div>
-                    </div>
+                    <!--<div class="ms-payable">-->
+                    <!--    <div class="ms-discount">-->
+                    <!--        <div>-->
+                    <!--            <span>{{ bsProduct.discount }}%</span>-->
+                    <!--        </div>-->
+                    <!--        <s>{{ bsProduct.price|currency }}</s>-->
+                    <!--    </div>-->
+                    <!--    <div class="ms-totalprice">-->
+                    <!--        <p>{{ bsProduct.get_asking_price|currency }}</p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
                     <div class="ms-rate">
                         <span onclick="gfg(1)" class="star">★ </span>
                         <span onclick="gfg(2)" class="star">★ </span>
@@ -211,17 +211,17 @@
                 </div>
                 <p>{{ sProduct.name }}</p>
                 <div class="ms-price">
-                    <div class="ms-payable">
-                        <div class="ms-discount">
-                            <div>
-                                <span>{{ sProduct.discount }}%</span>
-                            </div>
-                            <s>{{ sProduct.price|currency }}</s>
-                        </div>
-                        <div class="ms-totalprice">
-                            <p>{{ sProduct.get_asking_price|currency }}</p>
-                        </div>
-                    </div>
+                    <!--<div class="ms-payable">-->
+                    <!--    <div class="ms-discount">-->
+                    <!--        <div>-->
+                    <!--            <span>{{ sProduct.discount }}%</span>-->
+                    <!--        </div>-->
+                    <!--        <s>{{ sProduct.price|currency }}</s>-->
+                    <!--    </div>-->
+                    <!--    <div class="ms-totalprice">-->
+                    <!--        <p>{{ sProduct.get_asking_price|currency }}</p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
                     <div class="ms-rate">
                         <span onclick="gfg(1)" class="star">★ </span>
                         <span onclick="gfg(2)" class="star">★ </span>

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %} {% load i18n %} {% load price_filter %} {% block extra_headers %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+{% endblock %}
+{% block content %}
+
+<div class="cart-path">
+    <h1>سبد خرید</h1>
+    <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 7.0812L3.42807 7.0812L9.0636 1.29919L7.79733 0L0 8L7.79733 16L9.0636 14.7008L3.42807 8.9188L30 8.9188V7.0812Z"
+              fill="#009FA0" fill-opacity="0.28"/>
+    </svg>
+    <h1 class="path-disable">تکمیل سفارش</h1>
+    <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 7.0812L3.42807 7.0812L9.0636 1.29919L7.79733 0L0 8L7.79733 16L9.0636 14.7008L3.42807 8.9188L30 8.9188V7.0812Z"
+              fill="#009FA0" fill-opacity="0.28"/>
+    </svg>
+    <h1 class="path-disable">تسویه حساب</h1>
+</div>
+
+<div class="cart-container">
+    <div class="cart-products">
+        <div id="titles">
+            <p>محصول</p>
+            <p>تعداد</p>
+        </div>
+        <!-- products loop over    -->
+        <div class="cart-product">
+            <div>
+                <img src="{% static 'images/ms2.png' %}" alt="">
+                <p>گان جراحی یکبار مصرف 38 گرم</p>
+            </div>
+            <div id="cart-pnums">
+                2
+            </div>
+        </div>
+        <div class="cart-product">
+            <div>
+                <img src="{% static 'images/ms2.png' %}" alt="">
+                <p>گان جراحی یکبار مصرف 38 گرم</p>
+            </div>
+            <div id="cart-pnums">
+                2
+            </div>
+        </div>
+        <div class="cart-product">
+            <div>
+                <img src="{% static 'images/ms2.png' %}" alt="">
+                <p>گان جراحی یکبار مصرف 38 گرم</p>
+            </div>
+            <div id="cart-pnums">
+                2
+            </div>
+        </div>
+    </div>
+    <div class="total-cart">
+        <h2>جمع کل سبد خرید </h2>
+        <div>
+            <p id="title">
+                حمل و نقل
+            </p>
+            <p>
+               هزینه حمل‌ و نقل در هنگام پرداخت محاسبه می شود.
+            </p>
+        </div>
+        <a href="{% url 'home:cart_info' %}">نهایی کردن سفارش</a>
+    </div>
+</div>
+
+{% endblock %}
