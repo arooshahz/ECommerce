@@ -32,7 +32,12 @@
                     </div>
                     <hr>
                     <div class="add-cart">
-                        <button id="button">{% trans "افزودن به سبد خرید" %}</button>
+                        <form action="{% url 'home:add_order' product.slug %}" method="post" style="width:65%">
+                            {% csrf_token %}
+                            <input type="submit" id="button" style="height:100%;width:100%"
+                                   value="{% trans 'افزودن به سبد خرید' %}"/>
+                        </form>
+
                         <div id="add-more">
                             <button onclick="increment()">+</button>
                             <h2 id="counting">{% trans "۰" %}</h2>

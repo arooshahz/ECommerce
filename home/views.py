@@ -158,7 +158,7 @@ class AddToOrder(View):
             order_item.quantity += 1
             order_item.save()
 
-        return redirect('test.html')
+        return redirect('home:product_detail', product.slug)
 
 
 class ViewOrder(View):
@@ -167,12 +167,19 @@ class ViewOrder(View):
         if order_id:
             order = get_object_or_404(Order, id=order_id)
             order_items = OrderItem.objects.filter(order=order)
-            total = sum(item.get_total_item_price() for item in order_items)
+            # total = sum(item.get_total_item_price() for item in order_items)
         else:
             order_items = []
-            total = 0
+            # total = 0
 
-        return render(request, 'test.html', {'order_items': order_items, 'total': total})
+        return render(request, 'home/cart.html', {'order_items': order_items})
 
 
+class CartDoneView(View):
+    def get(self, request):
+        return render(request, 'home/cart_done.html')
 
+
+class CartCompletionView(View):
+    def get(self, request):
+        return render(request, 'home/cart_info.html')

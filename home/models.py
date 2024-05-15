@@ -84,8 +84,8 @@ class OrderItem(models.Model):
     def __str__(self):
         return f'{self.quantity} of {self.product.name}'
 
-    def get_total_item_price(self):
-        return self.quantity * self.product.get_asking_price
-
-    def get_final_price(self):
-        return self.get_total_item_price()
+    # def get_total_item_price(self):
+    #     return self.quantity * self.product.get_asking_price
+    #
+    # def get_final_price(self):
+    #     return self.get_total_item_price()

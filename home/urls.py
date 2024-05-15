@@ -6,7 +6,7 @@ app_name = 'home'
 urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
     path('all_products/<page_number>', views.ProductsView.as_view(), name='products'),
-    path('cart/', views.CartView.as_view(), name='cart'),
+    path('cart/', views.ViewOrder.as_view(), name='cart'),
     path('cart/done', views.CartDoneView.as_view(), name='cart_done'),
     path('cart/completion', views.CartCompletionView.as_view(), name='cart_info'),
     path('discounted_products/<page_number>', views.DiscountedProducts.as_view(), name='discount_products'),
@@ -16,5 +16,4 @@ urlpatterns = [
     path('all_products/<int:min_price>/<int:max_price>/<page_number>', views.ProductBasedOnPrice.as_view(),
          name='product_price'),
     path('add_order/<slug:slug>', views.AddToOrder.as_view(), name='add_order'),
-    path('order_detail/<slug:slug>', views.ViewOrder.as_view(), name='order_detail'),
 ]
