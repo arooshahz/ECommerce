@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, Feature
+from .models import Category, Product, Feature, ProductImage
 
 from modeltranslation.admin import TranslationAdmin
 
@@ -55,3 +55,6 @@ class ProductAdmin(TranslationAdmin):
         css = {
             'screen': ('modeltranslation/css/tabbed_translation_fields.css',),
         }
+
+
+admin.site.register(ProductImage)
