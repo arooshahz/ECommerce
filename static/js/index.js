@@ -22,10 +22,11 @@ function remove() {
   }
 }
 
-let data = 0;
+let data = 1;
 
 //printing default value of data that is 0 in h2 tag
 var counter = document.getElementById("counting");
+var inputQuantity = document.getElementById("quantity");
 if (counter){
 counter.innerText = data;
 }
@@ -34,6 +35,7 @@ counter.innerText = data;
 function increment() {
     data = data + 1;
     document.getElementById("counting").innerText = data;
+    inputQuantity.value = data;
 }
 //creation of decrement function
 function decrement() {
@@ -42,6 +44,8 @@ function decrement() {
         data=0;
     }
     document.getElementById("counting").innerText = data;
+    inputQuantity.value = data;
+
 }
 
 

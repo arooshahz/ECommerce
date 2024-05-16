@@ -155,9 +155,8 @@ class AddToOrder(View):
         order_item, created = OrderItem.objects.get_or_create(
             order=order,
             product=product,
-            defaults={'quantity': 1}
+            defaults={'quantity': request.POST['quantity']}
         )
-
         if not created:
             order_item.quantity += 1
             order_item.save()
@@ -166,7 +165,7 @@ class AddToOrder(View):
 
 
 class ViewOrder(View):
-    def get(self, request):
+    def get(self, request, slug=''):
         order_id = request.session.get('order_id')
         if order_id:
             order = get_object_or_404(Order, id=order_id)
@@ -178,14 +177,14 @@ class ViewOrder(View):
 
         return render(request, 'home/cart.html', {'order_items': order_items})
 
-    def delete(self, request, slug):
+    def post(self, request, slug):
         product = get_object_or_404(Product, slug=slug)
         order_id = request.session.get('order_id')
         if order_id:
             order = get_object_or_404(Order, id=order_id)
             order_item = get_object_or_404(OrderItem, order=order, product=product)
             order_item.delete()  # Delete the order item
-        return redirect('home:cart')
+        return redirect('home:cart', 'all')
 
 
 class CartDoneView(View):

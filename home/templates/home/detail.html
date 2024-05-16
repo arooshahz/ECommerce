@@ -17,15 +17,12 @@
                             aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner" style="height:100%;">
+                    {% for image in images %}
                     <div class="carousel-item active" style="height:100%;" data-bs-interval="10000">
-                        <img src="/media/{{ product.image }}" class="d-block w-100" alt="...">
+                        <img src="/media/{{ image }}" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" style="height:100%;" data-bs-interval="2000">
-                        <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" style="height:100%;">
-                        <img src="..." class="d-block w-100" alt="...">
-                    </div>
+                    {% endfor %}
+
                 </div>
                 <button class="carousel-control-prev" style="right: unset;left: 11px;" type="button"
                         data-bs-target="#carouselExampleDark"
@@ -70,8 +67,10 @@
                             {% csrf_token %}
                             <input type="submit" id="button" style="height:100%;width:100%"
                                    value="{% trans 'افزودن به سبد خرید' %}"/>
-                        </form>
 
+
+                            <input type="hidden" name="quantity" id="quantity" value="{% trans '۰' %}">
+                        </form>
                         <div id="add-more">
                             <button onclick="increment()">+</button>
                             <h2 id="counting">{% trans "۰" %}</h2>

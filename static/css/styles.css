@@ -1573,7 +1573,7 @@ input[type="range"] {
     justify-content: center;
 }
 
-.cart-product .controls button {
+.cart-product .controls input {
     background-color: #e53a3a;
     border: none;
     border-radius: 5px;

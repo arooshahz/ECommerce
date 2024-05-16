@@ -20,11 +20,16 @@
 
 <div class="cart-container">
     <div class="cart-products">
+        {% if order_items.count > 0 %}
         <div id="titles">
             <p>محصول</p>
             <p style="margin: 0 33%;">تعداد</p>
         </div>
+        {% endif %}
         <!-- products loop over    -->
+        {% if order_items.count == 0 %}
+        <p style="text-align: center;">{% trans 'محصولی در سبد خرید وجود ندارد.' %}</p>
+        {% endif %}
         {% for item in order_items %}
         <div class="cart-product">
             <div>
@@ -35,7 +40,11 @@
                 {{ item.quantity }}
             </div>
             <div class="controls">
-                <button>{% trans 'حذف' %}</button>
+                <form action="{% url 'home:cart' item.product.slug %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" id="button" style="height:100%;width:100%"
+                           value="{% trans 'حذف' %}"/>
+                </form>
             </div>
         </div>
         {% endfor %}
