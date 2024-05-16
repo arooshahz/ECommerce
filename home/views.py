@@ -21,9 +21,14 @@ class HomeView(View):
             )
         best_seller = products.order_by('-Sales_number')[:4]
         suggested = products[:4]
+
+        order_id = request.session.get('order_id')
+        order = get_object_or_404(Order, id=order_id)
+        item_count = order.item_count()
+
         return render(request, 'home/home.html',
                       {'products': products, 'best_seller': best_seller, 'suggested': suggested,
-                       'categories': categories})
+                       'categories': categories, 'item-count': item_count})
 
 
 class ProductsView(View):
@@ -41,12 +46,16 @@ class ProductsView(View):
         next_num = int(page_number) + 1
         last_page = products.page(1).paginator.num_pages
 
+        order_id = request.session.get('order_id')
+        order = get_object_or_404(Order, id=order_id)
+        item_count = order.item_count()
+
         return render(request, 'home/products.html',
                       {'products': products.page(page_number), 'categories': categories, 'page_number': page_number,
                        'prev_num': prev_num,
                        'next_num': next_num,
                        'last_page': last_page,
-                       'current_page': products.page(page_number).number})
+                       'current_page': products.page(page_number).number, 'item-count': item_count})
 
     def post(self, request, page_number):
         min_price = request.POST.get('min-price')
@@ -66,12 +75,16 @@ class CategoryView(View):
         prev_num = int(page_number) - 1
         next_num = int(page_number) + 1
         last_page = products_list.page(1).paginator.num_pages
+        order_id = request.session.get('order_id')
+        order = get_object_or_404(Order, id=order_id)
+        item_count = order.item_count()
         return render(request, 'home/category.html',
                       {'products': products_list, 'categories': categories, 'category': category,
                        'page_number': page_number,
                        'prev_num': prev_num,
                        'next_num': next_num,
-                       'last_page': last_page, 'current_page': products_list.page(page_number).number})
+                       'last_page': last_page, 'current_page': products_list.page(page_number).number,
+                       'item-count': item_count})
 
 
 class ProductBasedOnPrice(View):
@@ -83,13 +96,16 @@ class ProductBasedOnPrice(View):
         next_num = int(page_number) + 1
         last_page = products.page(1).paginator.num_pages
         number_of_products = len(list(products.object_list))
+        order_id = request.session.get('order_id')
+        order = get_object_or_404(Order, id=order_id)
+        item_count = order.item_count()
         return render(request, 'home/product_filter.html',
                       {'products': products, 'categories': categories, 'page_number': page_number,
                        'prev_num': prev_num,
                        'next_num': next_num,
                        'last_page': last_page,
                        'current_page': products.page(page_number).number,
-                       'number_of_products': number_of_products})
+                       'number_of_products': number_of_products, 'item-count': item_count})
 
 
 class ProductDetailView(View):
@@ -97,9 +113,11 @@ class ProductDetailView(View):
         categories = Category.objects.filter(is_sub=False)
         product = get_object_or_404(Product, slug=slug)
         images = ProductImage.objects.filter(product=product)
-        # print(product.features.name)
+        order_id = request.session.get('order_id')
+        order = get_object_or_404(Order, id=order_id)
+        item_count = order.item_count()
         return render(request, 'home/detail.html', {'product': product, 'categories': categories,
-                                                    'images': images})
+                                                    'images': images, 'item-count': item_count})
 
 
 class DiscountedProducts(View):
@@ -111,12 +129,15 @@ class DiscountedProducts(View):
         prev_num = int(page_number) - 1
         next_num = int(page_number) + 1
         last_page = products.page(1).paginator.num_pages
+        order_id = request.session.get('order_id')
+        order = get_object_or_404(Order, id=order_id)
+        item_count = order.item_count()
         return render(request, 'home/special_offers.html',
                       {'products': products, 'categories': categories, 'page_number': page_number,
                        'prev_num': prev_num,
                        'next_num': next_num,
                        'last_page': last_page,
-                       'current_page': products.page(page_number).number})
+                       'current_page': products.page(page_number).number, 'item-count': item_count})
 
 
 class FavouriteProducts(View):
@@ -129,12 +150,15 @@ class FavouriteProducts(View):
         prev_num = int(page_number) - 1
         next_num = int(page_number) + 1
         last_page = products.page(1).paginator.num_pages
+        order_id = request.session.get('order_id')
+        order = get_object_or_404(Order, id=order_id)
+        item_count = order.item_count()
         return render(request, 'home/favourites.html',
                       {'products': products, 'categories': categories, 'page_number': page_number,
                        'prev_num': prev_num,
                        'next_num': next_num,
                        'last_page': last_page,
-                       'current_page': products.page(page_number).number})
+                       'current_page': products.page(page_number).number, 'item-count': item_count})
 
 
 class AddToOrder(View):
@@ -184,6 +208,7 @@ class ViewOrder(View):
             order = get_object_or_404(Order, id=order_id)
             order_item = get_object_or_404(OrderItem, order=order, product=product)
             order_item.delete()  # Delete the order item
+            del request.session['order_id']
         return redirect('home:cart', 'all')
 
 
