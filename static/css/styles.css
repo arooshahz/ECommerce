@@ -14,6 +14,7 @@ p {
     margin:0;
 }
 
+
 .dropup .dropdown-toggle::after {
   display: none;
 }
@@ -861,8 +862,8 @@ ul#dropdown-side .main-category {
 }
 
 .detail div#product-info div#image img{
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
 }
 
 
