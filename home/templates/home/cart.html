@@ -2,28 +2,34 @@
 {% load static %} {% load i18n %} {% load price_filter %} {% block extra_headers %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 {% endblock %}
-{% block content %}
 
-<div class="cart-path">
-    <h1>سبد خرید</h1>
+{% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+{% load set_var %}
+{% if LANGUAGE_CODE == 'en' or LANGUAGE_CODE == 'ka' %}
+{% set path_reverse = "row-reverse" %}
+{% endif %}
+
+<div class="cart-path" style="flex-direction: {{ path_reverse }}">
+    <h1>{% trans 'سبد خرید' %}</h1>
     <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30 7.0812L3.42807 7.0812L9.0636 1.29919L7.79733 0L0 8L7.79733 16L9.0636 14.7008L3.42807 8.9188L30 8.9188V7.0812Z"
               fill="#009FA0" fill-opacity="0.28"/>
     </svg>
-    <h1 class="path-disable">تکمیل سفارش</h1>
+    <h1 class="path-disable">{% trans 'تکمیل سفارش' %}</h1>
     <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30 7.0812L3.42807 7.0812L9.0636 1.29919L7.79733 0L0 8L7.79733 16L9.0636 14.7008L3.42807 8.9188L30 8.9188V7.0812Z"
               fill="#009FA0" fill-opacity="0.28"/>
     </svg>
-    <h1 class="path-disable">تسویه حساب</h1>
+    <h1 class="path-disable">{% trans 'تسویه حساب' %}</h1>
 </div>
 
 <div class="cart-container">
     <div class="cart-products">
         {% if order_items.count > 0 %}
         <div id="titles">
-            <p>محصول</p>
-            <p style="margin: 0 33%;">تعداد</p>
+            <p>{% trans 'محصول' %}</p>
+            <p style="margin: 0 33%;">{% trans 'تعداد' %}</p>
         </div>
         {% endif %}
         <!-- products loop over    -->
@@ -52,16 +58,16 @@
 
     </div>
     <div class="total-cart">
-        <h2>جمع کل سبد خرید </h2>
+        <h2>{% trans 'جمع کل سبد خرید' %}</h2>
         <div>
             <p id="title">
-                حمل و نقل
+                {% trans 'حمل و نقل' %}
             </p>
             <p>
-                هزینه حمل‌ و نقل در هنگام پرداخت محاسبه می شود.
+                {% trans 'هزینه حمل‌ و نقل در هنگام پرداخت محاسبه می شود.' %}
             </p>
         </div>
-        <a href="{% url 'home:cart_info' %}">نهایی کردن سفارش</a>
+        <a href="{% url 'home:cart_info' %}">{% trans 'نهایی کردن سفارش' %}</a>
     </div>
 </div>
 

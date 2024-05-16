@@ -3,65 +3,60 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 {% endblock %}
 {% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+{% load set_var %}
+{% if LANGUAGE_CODE == 'en' or LANGUAGE_CODE == 'ka' %}
+{% set path_reverse = "row-reverse" %}
+{% endif %}
 
-<div class="cart-path">
-    <h1 class="path-disable" >سبد خرید</h1>
+<div class="cart-path" style="flex-direction: {{ path_reverse }}">
+    <h1 class="path-disable">{% trans 'سبد خرید' %}</h1>
     <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30 7.0812L3.42807 7.0812L9.0636 1.29919L7.79733 0L0 8L7.79733 16L9.0636 14.7008L3.42807 8.9188L30 8.9188V7.0812Z"
               fill="#009FA0" fill-opacity="0.28"/>
     </svg>
-    <h1 class="path-disable">تکمیل سفارش</h1>
+    <h1 class="path-disable">{% trans 'تکمیل سفارش' %}</h1>
     <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30 7.0812L3.42807 7.0812L9.0636 1.29919L7.79733 0L0 8L7.79733 16L9.0636 14.7008L3.42807 8.9188L30 8.9188V7.0812Z"
               fill="#009FA0" fill-opacity="0.28"/>
     </svg>
-    <h1>تسویه حساب</h1>
+    <h1>{% trans 'تسویه حساب' %}</h1>
 </div>
 
 <div class="cart-container">
     <div class="cart-products">
         <div id="titles">
-            <p>محصول</p>
-            <p>تعداد</p>
+            <p>{% trans 'محصول' %}</p>
+            <p>{% trans 'تعداد' %}</p>
         </div>
         <!-- products loop over    -->
+        {% for item in order_items %}
         <div class="cart-product">
             <div>
-                <img src="{% static 'images/ms2.png' %}" alt="">
-                <p>گان جراحی یکبار مصرف 38 گرم</p>
+                <img src="/media/{{ item.product.image }}" alt="">
+                <p>{{ item.product.name }}</p>
             </div>
             <div id="cart-pnums">
-                2
+                {{ item.quantity }}
+            </div>
+            <div class="controls">
+                <form action="{% url 'home:cart' item.product.slug %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" id="button" style="height:100%;width:100%"
+                           value="{% trans 'حذف' %}"/>
+                </form>
             </div>
         </div>
-        <div class="cart-product">
-            <div>
-                <img src="{% static 'images/ms2.png' %}" alt="">
-                <p>گان جراحی یکبار مصرف 38 گرم</p>
-            </div>
-            <div id="cart-pnums">
-                2
-            </div>
-        </div>
-        <div class="cart-product">
-            <div>
-                <img src="{% static 'images/ms2.png' %}" alt="">
-                <p>گان جراحی یکبار مصرف 38 گرم</p>
-            </div>
-            <div id="cart-pnums">
-                2
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <div class="total-cart">
-        <h2>جمع کل سبد خرید </h2>
+        <h2>{% trans 'جمع کل سبد خرید' %}</h2>
         <div>
             <p style="width: 100%">
-                سفارش شما با موفقیت ثبت شد
-                ما به زودی با شما تماس می گیریم
+                {% trans ' سفارش شما با موفقیت ثبت شد. ما به زودی با شما تماس می گیریم' %}
             </p>
         </div>
-        <a href="{% url 'home:home' %}">بازگشت به صفحه اصلی</a>
+        <a href="{% url 'home:home' %}">{% trans 'بازگشت به صفحه اصلی' %}</a>
     </div>
 </div>
 
