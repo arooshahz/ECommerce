@@ -3,9 +3,8 @@ from django.db.models.query_utils import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.views import View
-
 from Ecommerce import settings
-from .models import Product, Category, OrderItem, Order
+from .models import Product, Category, OrderItem, Order, ProductImage
 from django.core.paginator import Paginator
 
 
@@ -97,8 +96,10 @@ class ProductDetailView(View):
     def get(self, request, slug):
         categories = Category.objects.filter(is_sub=False)
         product = get_object_or_404(Product, slug=slug)
+        images = ProductImage.objects.filter(product=product)
         # print(product.features.name)
-        return render(request, 'home/detail.html', {'product': product, 'categories': categories})
+        return render(request, 'home/detail.html', {'product': product, 'categories': categories,
+                                                    'images': images})
 
 
 class DiscountedProducts(View):

@@ -57,6 +57,14 @@ class Product(models.Model):
         return self.price - discount
 
 
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='products/%y/%m/%d/')
+
+    def __str__(self):
+        return f'{self.product.name}'
+
+
 class Order(models.Model):
     name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
