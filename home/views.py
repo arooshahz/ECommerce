@@ -1,7 +1,10 @@
+from django.core.mail import send_mail
 from django.db.models.query_utils import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.views import View
+
+from Ecommerce import settings
 from .models import Product, Category, OrderItem, Order
 from django.core.paginator import Paginator
 
@@ -174,6 +177,15 @@ class ViewOrder(View):
 
         return render(request, 'home/cart.html', {'order_items': order_items})
 
+    def delete(self, request, slug):
+        product = get_object_or_404(Product, slug=slug)
+        order_id = request.session.get('order_id')
+        if order_id:
+            order = get_object_or_404(Order, id=order_id)
+            order_item = get_object_or_404(OrderItem, order=order, product=product)
+            order_item.delete()  # Delete the order item
+        return redirect('home:cart')
+
 
 class CartDoneView(View):
     def get(self, request):
@@ -183,3 +195,49 @@ class CartDoneView(View):
 class CartCompletionView(View):
     def get(self, request):
         return render(request, 'home/cart_info.html')
+
+    def post(self, request):
+        order_id = request.session.get('order_id')
+        if order_id:
+            order = get_object_or_404(Order, id=order_id)
+            order_items = OrderItem.objects.filter(order=order)
+        else:
+            order_items = []
+            order = Order()
+
+        order.name = request.POST['fname']
+        order.last_name = request.POST['lname']
+        order.company_name = request.POST['company']
+        order.province = request.POST['province']
+        order.City = request.POST['city']
+        order.street = request.POST['street']
+        order.apartment = request.POST['building']
+        order.Postalcode = request.POST['post_code']
+        order.phone_number = request.POST['mobile']
+        order.email = request.POST['email']
+        order.save()
+
+        subject = 'New Order Received'
+        order_items_details = "\n".join(
+            [f"- {item.product.name}: {item.quantity} units" for item in order_items]
+        )
+        message = (
+            f"New order received:\n\n"
+            f"Name: {order.name} {order.last_name}\n"
+            f"Company: {order.company_name}\n"
+            f"Province: {order.province}\n"
+            f"City: {order.City}\n"
+            f"Street: {order.street}\n"
+            f"Apartment: {order.apartment}\n"
+            f"Postal Code: {order.Postalcode}\n"
+            f"Phone Number: {order.phone_number}\n"
+            f"Email: {order.email}\n"
+            f"Order Items:\n{order_items_details}\n"
+        )
+        from_email = settings.DEFAULT_FROM_EMAIL
+        recipient_list = [settings.ADMIN_EMAIL]
+
+        # Send the email
+        send_mail(subject, message, from_email, recipient_list)
+
+        return redirect('home:cart_info')

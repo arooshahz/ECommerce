@@ -92,6 +92,7 @@ DATABASES = {
 }
 
 import pymysql
+
 pymysql.install_as_MySQLdb()
 
 # Password validation
@@ -157,10 +158,11 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'sam.group.med@gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_PASSWORD = 'wydddoqhrheyqluv'
-# EMAIL_USE_TLS = True
-# DEFAULT_FROM_EMAIL = 'Sam group'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sam.group.med@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = 'wydddoqhrheyqluv'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Sam group'
+ADMIN_EMAIL = 'aroosha.ha@gmail.com'
