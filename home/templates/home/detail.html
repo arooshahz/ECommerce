@@ -16,12 +16,16 @@
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner" style="height:100%;">
-                    {% for image in images %}
-                    <div class="carousel-item active" style="height:100%;" data-bs-interval="10000">
-                        <img src="/media/{{ image }}" class="d-block w-100" alt="...">
+                <div class="carousel-inner" style="height:100%; width: 95%">
+                    <div class="carousel-item active" style="height:100%;">
+                        <img src="/media/{{ images.0.image }}" class="d-block w-100" alt="...">
                     </div>
-                    {% endfor %}
+                    <div class="carousel-item" style="height:100%;">
+                        <img src="/media/{{ images.1.image }}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" style="height:100%;">
+                        <img src="/media/{{ images.2.image }}" class="d-block w-100" alt="...">
+                    </div>
 
                 </div>
                 <button class="carousel-control-prev" style="right: unset;left: 11px;" type="button"

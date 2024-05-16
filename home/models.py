@@ -74,8 +74,8 @@ class Order(models.Model):
     street = models.CharField(max_length=200, null=True)
     apartment = models.CharField(max_length=200, null=True)
     Postalcode = models.CharField(max_length=200, null=True)
-    phone_number = models.CharField(max_length=11, unique=True)
-    email = models.EmailField(max_length=255, unique=True)
+    phone_number = models.CharField(max_length=11)
+    email = models.EmailField(max_length=255)
     products = models.ManyToManyField('Product', through='OrderItem')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -95,8 +95,3 @@ class OrderItem(models.Model):
     def __str__(self):
         return f'{self.quantity} of {self.product.name}'
 
-    # def get_total_item_price(self):
-    #     return self.quantity * self.product.get_asking_price
-    #
-    # def get_final_price(self):
-    #     return self.get_total_item_price()
