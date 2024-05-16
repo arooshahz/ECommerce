@@ -165,4 +165,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_PASSWORD = 'wydddoqhrheyqluv'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'Sam group'
-ADMIN_EMAIL = 'aroosha.ha@gmail.com'
+ADMIN_EMAIL = 'aliahadi11n@gmail.com'

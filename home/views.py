@@ -240,4 +240,4 @@ class CartCompletionView(View):
         # Send the email
         send_mail(subject, message, from_email, recipient_list)
 
-        return redirect('home:cart_info')
+        return redirect('home:cart_done')
