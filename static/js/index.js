@@ -29,6 +29,7 @@ var counter = document.getElementById("counting");
 var inputQuantity = document.getElementById("quantity");
 if (counter){
 counter.innerText = data;
+inputQuantity.value = data;
 }
 
 //creation of increment function
@@ -40,24 +41,13 @@ function increment() {
 //creation of decrement function
 function decrement() {
     data = data - 1;
-    if (data<0){
-        data=0;
+    if (data<=1){
+        data=1;
     }
     document.getElementById("counting").innerText = data;
     inputQuantity.value = data;
 
 }
-
-
-//var slider = document.getElementById("price-slider");
-//var output = document.getElementById("filtered-price");
-//output.innerHTML = slider.value;
-//console.log(slider.value)
-//
-//// Update the current slider value (each time you drag the slider han
-//const priceSlider = () => {
-//  output.innerHTML = slider.value;
-//}
 
 
 

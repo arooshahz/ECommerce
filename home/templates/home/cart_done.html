@@ -23,32 +23,32 @@
     <h1>{% trans 'تسویه حساب' %}</h1>
 </div>
 
-<div class="cart-container">
-    <div class="cart-products">
-        <div id="titles">
-            <p>{% trans 'محصول' %}</p>
-            <p>{% trans 'تعداد' %}</p>
-        </div>
-        <!-- products loop over    -->
-        {% for item in order_items %}
-        <div class="cart-product">
-            <div>
-                <img src="/media/{{ item.product.image }}" alt="">
-                <p>{{ item.product.name }}</p>
-            </div>
-            <div id="cart-pnums">
-                {{ item.quantity }}
-            </div>
-            <div class="controls">
-                <form action="{% url 'home:cart' item.product.slug %}" method="post">
-                    {% csrf_token %}
-                    <input type="submit" id="button" style="height:100%;width:100%"
-                           value="{% trans 'حذف' %}"/>
-                </form>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+<div class="cart-container" style="justify-content: center;">
+<!--    <div class="cart-products">-->
+<!--        <div id="titles">-->
+<!--            <p>{% trans 'محصول' %}</p>-->
+<!--            <p>{% trans 'تعداد' %}</p>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; products loop over    &ndash;&gt;-->
+<!--        {% for item in order_items %}-->
+<!--        <div class="cart-product">-->
+<!--            <div>-->
+<!--                <img src="/media/{{ item.product.image }}" alt="">-->
+<!--                <p>{{ item.product.name }}</p>-->
+<!--            </div>-->
+<!--            <div id="cart-pnums">-->
+<!--                {{ item.quantity }}-->
+<!--            </div>-->
+<!--            <div class="controls">-->
+<!--                <form action="{% url 'home:cart' item.product.slug %}" method="post">-->
+<!--                    {% csrf_token %}-->
+<!--                    <input type="submit" id="button" style="height:100%;width:100%"-->
+<!--                           value="{% trans 'حذف' %}"/>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
     <div class="total-cart">
         <h2>{% trans 'جمع کل سبد خرید' %}</h2>
         <div>

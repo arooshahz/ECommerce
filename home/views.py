@@ -218,6 +218,9 @@ class AddToOrder(View):
             order_item.quantity += int(quantity)
             order_item.save()
 
+        if quantity == 1:
+            return redirect('home:cart', 'all')
+
         return redirect('home:product_detail', product.slug)
 
 
@@ -240,7 +243,7 @@ class ViewOrder(View):
         if order_id:
             order = get_object_or_404(Order, id=order_id)
             order_item = get_object_or_404(OrderItem, order=order, product=product)
-            order_item.delete()  # Delete the order item
+            order_item.delete()
             del request.session['order_id']
         return redirect('home:cart', 'all')
 
@@ -297,5 +300,6 @@ class CartCompletionView(View):
 
         # Send the email
         send_mail(subject, message, from_email, recipient_list)
+        del request.session['order_id']
 
         return redirect('home:cart_done')

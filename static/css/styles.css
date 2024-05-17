@@ -1594,7 +1594,6 @@ input[type="range"] {
     font-weight: 600;
     line-height: 37.5px;
     letter-spacing: -0.02em;
-    text-align: right;
     color: #00A1A2;
 }
 
@@ -1622,7 +1621,6 @@ input[type="range"] {
     font-weight: 400;
     line-height: 25px;
     letter-spacing: -0.02em;
-    text-align: right;
     color: #595959;
     width:50%;
 
